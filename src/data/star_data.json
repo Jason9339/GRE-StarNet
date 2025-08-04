@@ -1,6 +1,6723 @@
 [
   {
+    "word": "\"conform to\"",
+    "meaning": "遵從,與...一致",
+    "synonyms": [
+      "square with"
+    ]
+  },
+  {
+    "word": "\"long-winded\"",
+    "meaning": "冗長的",
+    "synonyms": [
+      "verbose",
+      "prolix"
+    ]
+  },
+  {
+    "word": "abandon",
+    "meaning": "放棄",
+    "synonyms": [
+      "desert",
+      "relinquish"
+    ]
+  },
+  {
+    "word": "abate",
+    "meaning": "減弱",
+    "synonyms": [
+      "mitigate"
+    ]
+  },
+  {
+    "word": "aberration",
+    "meaning": "異常",
+    "synonyms": [
+      "anomaly"
+    ]
+  },
+  {
+    "word": "abet",
+    "meaning": "支持,慫恿",
+    "synonyms": [
+      "instigate"
+    ]
+  },
+  {
+    "word": "abeyance",
+    "meaning": "中止",
+    "synonyms": [
+      "quiescence"
+    ]
+  },
+  {
+    "word": "abound",
+    "meaning": "充滿",
+    "synonyms": [
+      "proliferate"
+    ]
+  },
+  {
+    "word": "absolve",
+    "meaning": "免罪",
+    "synonyms": [
+      "exonerate"
+    ]
+  },
+  {
+    "word": "abstemious",
+    "meaning": "有節制的",
+    "synonyms": [
+      "austere",
+      "moderate"
+    ]
+  },
+  {
+    "word": "abstract",
+    "meaning": "籠統的,抽象的,深奧的,摘要,提取,分散注意力",
+    "synonyms": [
+      "general"
+    ]
+  },
+  {
+    "word": "abstruse",
+    "meaning": "難理解的",
+    "synonyms": [
+      "esoteric",
+      "arcane",
+      "recondite"
+    ]
+  },
+  {
+    "word": "abundance",
+    "meaning": "大量",
+    "synonyms": [
+      "glut"
+    ]
+  },
+  {
+    "word": "abundant",
+    "meaning": "豐富的",
+    "synonyms": [
+      "dominant"
+    ]
+  },
+  {
+    "word": "abuse",
+    "meaning": "虐待,誤用,惡習",
+    "synonyms": [
+      "misuse"
+    ]
+  },
+  {
+    "word": "accession",
+    "meaning": "遵守",
+    "synonyms": [
+      "acquiescence"
+    ]
+  },
+  {
+    "word": "acclaim",
+    "meaning": "稱讚",
+    "synonyms": [
+      "hail"
+    ]
+  },
+  {
+    "word": "acknowledge",
+    "meaning": "承認",
+    "synonyms": [
+      "concede"
+    ]
+  },
+  {
+    "word": "acquiescence",
+    "meaning": "默許",
+    "synonyms": [
+      "accession"
+    ]
+  },
+  {
+    "word": "acumen",
+    "meaning": "敏銳",
+    "synonyms": [
+      "shrewdness"
+    ]
+  },
+  {
+    "word": "acute",
+    "meaning": "敏銳的,嚴峻的",
+    "synonyms": [
+      "incisive",
+      "severe"
+    ]
+  },
+  {
+    "word": "admonish",
+    "meaning": "反對,批評,告誡",
+    "synonyms": [
+      "scold"
+    ]
+  },
+  {
+    "word": "adopt",
+    "meaning": "收養,採用",
+    "synonyms": [
+      "foster"
+    ]
+  },
+  {
+    "word": "adroit",
+    "meaning": "精明的,靈巧的",
+    "synonyms": [
+      "nimble",
+      "dexterous",
+      "deft",
+      "acumen"
+    ]
+  },
+  {
+    "word": "adulation",
+    "meaning": "諂媚",
+    "synonyms": [
+      "approbation",
+      "sycophant"
+    ]
+  },
+  {
+    "word": "adversarial",
+    "meaning": "對立的",
+    "synonyms": [
+      "antagonistic"
+    ]
+  },
+  {
+    "word": "adverse",
+    "meaning": "不利的,逆的",
+    "synonyms": [
+      "unfavorable"
+    ]
+  },
+  {
+    "word": "affable",
+    "meaning": "和藹可親的",
+    "synonyms": [
+      "easygoing",
+      "cordial",
+      "genteel"
+    ]
+  },
+  {
+    "word": "aggravate",
+    "meaning": "加劇",
+    "synonyms": [
+      "exacerbate"
+    ]
+  },
+  {
+    "word": "all-encompassing",
+    "meaning": "包羅萬象的",
+    "synonyms": [
+      "inclusive"
+    ]
+  },
+  {
     "word": "alleviate",
-    "synonyms": ["mitigate", "allay", "relieve"]
+    "meaning": "減輕",
+    "synonyms": [
+      "mitigate"
+    ]
+  },
+  {
+    "word": "allure",
+    "meaning": "引誘",
+    "synonyms": [
+      "charm"
+    ]
+  },
+  {
+    "word": "altruistic",
+    "meaning": "無私的",
+    "synonyms": [
+      "benevolent"
+    ]
+  },
+  {
+    "word": "ambiguous",
+    "meaning": "模稜兩可的",
+    "synonyms": [
+      "mute"
+    ]
+  },
+  {
+    "word": "analogous",
+    "meaning": "類似的",
+    "synonyms": [
+      "comparable"
+    ]
+  },
+  {
+    "word": "analytical",
+    "meaning": "善於分析的,冷靜客觀的",
+    "synonyms": [
+      "dispassionate"
+    ]
+  },
+  {
+    "word": "anathema",
+    "meaning": "厭惡",
+    "synonyms": [
+      "repellent"
+    ]
+  },
+  {
+    "word": "ancillary",
+    "meaning": "補充的",
+    "synonyms": [
+      "supplementary"
+    ]
+  },
+  {
+    "word": "animate",
+    "meaning": "有生命力的,激勵,推動",
+    "synonyms": [
+      "galvanize",
+      "rouse",
+      "inspire"
+    ]
+  },
+  {
+    "word": "annihilate",
+    "meaning": "消滅,毀滅",
+    "synonyms": [
+      "destroy"
+    ]
+  },
+  {
+    "word": "anomaly",
+    "meaning": "異常",
+    "synonyms": [
+      "aberration"
+    ]
+  },
+  {
+    "word": "anonymous",
+    "meaning": "無名的,匿名的,無個性的",
+    "synonyms": [
+      "obscure"
+    ]
+  },
+  {
+    "word": "antagonistic",
+    "meaning": "敵對的",
+    "synonyms": [
+      "adversarial",
+      "inimical"
+    ]
+  },
+  {
+    "word": "antediluvian",
+    "meaning": "過時的",
+    "synonyms": [
+      "archaic"
+    ]
+  },
+  {
+    "word": "anticipate",
+    "meaning": "預期,先於某人做某事",
+    "synonyms": [
+      "prefigure",
+      "foresee"
+    ]
+  },
+  {
+    "word": "apathy",
+    "meaning": "冷漠",
+    "synonyms": [
+      "passivity"
+    ]
+  },
+  {
+    "word": "apogee",
+    "meaning": "頂點",
+    "synonyms": [
+      "pinnacle"
+    ]
+  },
+  {
+    "word": "apposite",
+    "meaning": "合適的",
+    "synonyms": [
+      "fitting",
+      "germane"
+    ]
+  },
+  {
+    "word": "approbation",
+    "meaning": "贊同",
+    "synonyms": [
+      "adulation",
+      "commendation"
+    ]
+  },
+  {
+    "word": "appropriate",
+    "meaning": "挪用",
+    "synonyms": [
+      "borrow"
+    ]
+  },
+  {
+    "word": "arbitrary",
+    "meaning": "隨意的,武斷的",
+    "synonyms": [
+      "capricious"
+    ]
+  },
+  {
+    "word": "arcane",
+    "meaning": "難懂的",
+    "synonyms": [
+      "Esoteric",
+      "recondite",
+      "abstruse"
+    ]
+  },
+  {
+    "word": "archaic",
+    "meaning": "古老的",
+    "synonyms": [
+      "antediluvian",
+      "outdated"
+    ]
+  },
+  {
+    "word": "archetypical",
+    "meaning": "典型的",
+    "synonyms": [
+      "classic"
+    ]
+  },
+  {
+    "word": "arrogant",
+    "meaning": "傲慢的",
+    "synonyms": [
+      "hubristic"
+    ]
+  },
+  {
+    "word": "artful",
+    "meaning": "巧妙的",
+    "synonyms": [
+      "shrewd"
+    ]
+  },
+  {
+    "word": "artificial",
+    "meaning": "虛假的,人造的",
+    "synonyms": [
+      "spurious"
+    ]
+  },
+  {
+    "word": "artless",
+    "meaning": "純真的,樸素的",
+    "synonyms": [
+      "simplistic"
+    ]
+  },
+  {
+    "word": "aspersion",
+    "meaning": "誹謗",
+    "synonyms": [
+      "slur"
+    ]
+  },
+  {
+    "word": "asymmetrical",
+    "meaning": "不對稱的",
+    "synonyms": [
+      "uneven"
+    ]
+  },
+  {
+    "word": "attenuate",
+    "meaning": "減弱,變稀",
+    "synonyms": [
+      "dissipate",
+      "mute"
+    ]
+  },
+  {
+    "word": "attributed to",
+    "meaning": "歸因於",
+    "synonyms": [
+      "explained by"
+    ]
+  },
+  {
+    "word": "audacious",
+    "meaning": "大膽的",
+    "synonyms": [
+      "striking"
+    ]
+  },
+  {
+    "word": "augment",
+    "meaning": "增加",
+    "synonyms": [
+      "extend",
+      "expand",
+      "enhance"
+    ]
+  },
+  {
+    "word": "auspicious",
+    "meaning": "有望成功的",
+    "synonyms": [
+      "favorable"
+    ]
+  },
+  {
+    "word": "authoritative",
+    "meaning": "權威的",
+    "synonyms": [
+      "definitive",
+      "cogent"
+    ]
+  },
+  {
+    "word": "avaricious",
+    "meaning": "貪婪的",
+    "synonyms": [
+      "rapacious"
+    ]
+  },
+  {
+    "word": "avert",
+    "meaning": "轉移,防止",
+    "synonyms": [
+      "forestall"
+    ]
+  },
+  {
+    "word": "awkward",
+    "meaning": "笨拙的,不適合的,尷尬的,棘手的",
+    "synonyms": [
+      "ungainly"
+    ]
+  },
+  {
+    "word": "banal",
+    "meaning": "陳腐的,平凡的",
+    "synonyms": [
+      "stale"
+    ]
+  },
+  {
+    "word": "banish",
+    "meaning": "驅逐",
+    "synonyms": [
+      "expel",
+      "oust"
+    ]
+  },
+  {
+    "word": "banter",
+    "meaning": "打趣",
+    "synonyms": [
+      "raillery"
+    ]
+  },
+  {
+    "word": "baseless",
+    "meaning": "無根據的",
+    "synonyms": [
+      "unfounded",
+      "untenable"
+    ]
+  },
+  {
+    "word": "bedrock",
+    "meaning": "基礎",
+    "synonyms": [
+      "foundation"
+    ]
+  },
+  {
+    "word": "beget",
+    "meaning": "產生",
+    "synonyms": [
+      "create"
+    ]
+  },
+  {
+    "word": "beholden",
+    "meaning": "欠...人情的",
+    "synonyms": [
+      "indebted"
+    ]
+  },
+  {
+    "word": "belabor",
+    "meaning": "過度強調,抨擊",
+    "synonyms": [
+      "overemphasize"
+    ]
+  },
+  {
+    "word": "belie",
+    "meaning": "證明...是錯誤的,掩飾,與...不符",
+    "synonyms": [
+      "mask",
+      "contradict"
+    ]
+  },
+  {
+    "word": "belligerent",
+    "meaning": "好戰的",
+    "synonyms": [
+      "pugnacious"
+    ]
+  },
+  {
+    "word": "beneficence",
+    "meaning": "慈善,善行",
+    "synonyms": [
+      "altruism"
+    ]
+  },
+  {
+    "word": "benevolent",
+    "meaning": "仁慈的",
+    "synonyms": [
+      "altruistic",
+      "magnanimous"
+    ]
+  },
+  {
+    "word": "benign",
+    "meaning": "和善的",
+    "synonyms": [
+      "innocuous",
+      "anodyne"
+    ]
+  },
+  {
+    "word": "betoken",
+    "meaning": "表示",
+    "synonyms": [
+      "signify"
+    ]
+  },
+  {
+    "word": "blameless",
+    "meaning": "無可指責的",
+    "synonyms": [
+      "unimpeachable"
+    ]
+  },
+  {
+    "word": "bland",
+    "meaning": "乏味的,無動於衷的",
+    "synonyms": [
+      "insipid"
+    ]
+  },
+  {
+    "word": "blemish",
+    "meaning": "1.玷汙 2.缺點,污點",
+    "synonyms": [
+      "defect"
+    ]
+  },
+  {
+    "word": "boast",
+    "meaning": "吹噓,自誇",
+    "synonyms": [
+      "brandish"
+    ]
+  },
+  {
+    "word": "bolster",
+    "meaning": "支持",
+    "synonyms": [
+      "buttress",
+      "prop up"
+    ]
+  },
+  {
+    "word": "boon",
+    "meaning": "好處,恩惠",
+    "synonyms": [
+      "benefit",
+      "windfall"
+    ]
+  },
+  {
+    "word": "bound",
+    "meaning": "界線",
+    "synonyms": [
+      "limit"
+    ]
+  },
+  {
+    "word": "brandish",
+    "meaning": "炫耀",
+    "synonyms": [
+      "boast"
+    ]
+  },
+  {
+    "word": "brook",
+    "meaning": "容忍",
+    "synonyms": [
+      "tolerate"
+    ]
+  },
+  {
+    "word": "bucolic",
+    "meaning": "鄉村的",
+    "synonyms": [
+      "pastoral"
+    ]
+  },
+  {
+    "word": "budding",
+    "meaning": "萌芽期的",
+    "synonyms": [
+      "nascent"
+    ]
+  },
+  {
+    "word": "buoy",
+    "meaning": "使振奮",
+    "synonyms": [
+      "help"
+    ]
+  },
+  {
+    "word": "burdensome",
+    "meaning": "繁重的",
+    "synonyms": [
+      "onerous"
+    ]
+  },
+  {
+    "word": "burgeon",
+    "meaning": "迅速生長",
+    "synonyms": [
+      "expand",
+      "flourish"
+    ]
+  },
+  {
+    "word": "businesslike",
+    "meaning": "高效率的",
+    "synonyms": [
+      "no-nonsense"
+    ]
+  },
+  {
+    "word": "buttress",
+    "meaning": "支持",
+    "synonyms": [
+      "bolster"
+    ]
+  },
+  {
+    "word": "calamity",
+    "meaning": "災難",
+    "synonyms": [
+      "disaster"
+    ]
+  },
+  {
+    "word": "callous",
+    "meaning": "冷酷無情的",
+    "synonyms": [
+      "heartless"
+    ]
+  },
+  {
+    "word": "calumny",
+    "meaning": "誹謗",
+    "synonyms": [
+      "defamation"
+    ]
+  },
+  {
+    "word": "camaraderie",
+    "meaning": "友誼,友誼",
+    "synonyms": [
+      "solidarity"
+    ]
+  },
+  {
+    "word": "canned",
+    "meaning": "無新意的",
+    "synonyms": [
+      "formulaic"
+    ]
+  },
+  {
+    "word": "canny",
+    "meaning": "精明的",
+    "synonyms": [
+      "shrewd",
+      "deft"
+    ]
+  },
+  {
+    "word": "capricious",
+    "meaning": "變化無常的",
+    "synonyms": [
+      "unpredictable",
+      "impulsive",
+      "cavalier",
+      "versatile",
+      "volatile"
+    ]
+  },
+  {
+    "word": "captivate",
+    "meaning": "迷住",
+    "synonyms": [
+      "enamor"
+    ]
+  },
+  {
+    "word": "capture",
+    "meaning": "俘虜",
+    "synonyms": [
+      "secure"
+    ]
+  },
+  {
+    "word": "castigate",
+    "meaning": "嚴厲批評",
+    "synonyms": [
+      "chastise"
+    ]
+  },
+  {
+    "word": "caterwaul",
+    "meaning": "發出讓人不爽的噪音",
+    "synonyms": [
+      "shriek"
+    ]
+  },
+  {
+    "word": "caustic",
+    "meaning": "尖刻的",
+    "synonyms": [
+      "acerbic"
+    ]
+  },
+  {
+    "word": "cede to",
+    "meaning": "讓與",
+    "synonyms": [
+      "left to"
+    ]
+  },
+  {
+    "word": "celerity",
+    "meaning": "速度,迅速",
+    "synonyms": [
+      "dispatch"
+    ]
+  },
+  {
+    "word": "censure",
+    "meaning": "譴責",
+    "synonyms": [
+      "reprehend"
+    ]
+  },
+  {
+    "word": "chagrin",
+    "meaning": "失望",
+    "synonyms": [
+      "vexation"
+    ]
+  },
+  {
+    "word": "challenge",
+    "meaning": "蔑視,挑戰",
+    "synonyms": [
+      "flout"
+    ]
+  },
+  {
+    "word": "champion",
+    "meaning": "支持",
+    "synonyms": [
+      "defend",
+      "espouse",
+      "support"
+    ]
+  },
+  {
+    "word": "chastise",
+    "meaning": "嚴厲批評",
+    "synonyms": [
+      "castigate"
+    ]
+  },
+  {
+    "word": "check",
+    "meaning": "阻止",
+    "synonyms": [
+      "stem"
+    ]
+  },
+  {
+    "word": "cheerless",
+    "meaning": "陰鬱的",
+    "synonyms": [
+      "gloomy"
+    ]
+  },
+  {
+    "word": "chic",
+    "meaning": "時髦的",
+    "synonyms": [
+      "elegant"
+    ]
+  },
+  {
+    "word": "chimera",
+    "meaning": "幻想",
+    "synonyms": [
+      "illusion"
+    ]
+  },
+  {
+    "word": "circuitous",
+    "meaning": "拐彎抹角的",
+    "synonyms": [
+      "indirect"
+    ]
+  },
+  {
+    "word": "circumscribe",
+    "meaning": "限制",
+    "synonyms": [
+      "confine",
+      "limit"
+    ]
+  },
+  {
+    "word": "circumspect",
+    "meaning": "謹慎的",
+    "synonyms": [
+      "prudent",
+      "chary",
+      "cautious"
+    ]
+  },
+  {
+    "word": "circumstantial",
+    "meaning": "依情況而定的",
+    "synonyms": [
+      "contingent"
+    ]
+  },
+  {
+    "word": "civility",
+    "meaning": "禮貌",
+    "synonyms": [
+      "comity"
+    ]
+  },
+  {
+    "word": "clandestine",
+    "meaning": "秘密的",
+    "synonyms": [
+      "covert",
+      "surreptitious"
+    ]
+  },
+  {
+    "word": "coherent",
+    "meaning": "連貫的,條理清楚的",
+    "synonyms": [
+      "orderly"
+    ]
+  },
+  {
+    "word": "colossal",
+    "meaning": "巨大的",
+    "synonyms": [
+      "immense"
+    ]
+  },
+  {
+    "word": "comity",
+    "meaning": "禮儀",
+    "synonyms": [
+      "civility"
+    ]
+  },
+  {
+    "word": "commendation",
+    "meaning": "稱讚",
+    "synonyms": [
+      "approbation"
+    ]
+  },
+  {
+    "word": "commensurate",
+    "meaning": "相稱的",
+    "synonyms": [
+      "proportionate"
+    ]
+  },
+  {
+    "word": "commonplace",
+    "meaning": "常見,陳腔濫調",
+    "synonyms": [
+      "pervasive",
+      "widespread"
+    ]
+  },
+  {
+    "word": "comparable",
+    "meaning": "相似的",
+    "synonyms": [
+      "analogous"
+    ]
+  },
+  {
+    "word": "compelling",
+    "meaning": "激發興趣的,令人信服的,強大的",
+    "synonyms": [
+      "interesting"
+    ]
+  },
+  {
+    "word": "competing",
+    "meaning": "競爭的",
+    "synonyms": [
+      "contending"
+    ]
+  },
+  {
+    "word": "complaisant",
+    "meaning": "順從的",
+    "synonyms": [
+      "deferential"
+    ]
+  },
+  {
+    "word": "complexity",
+    "meaning": "複雜",
+    "synonyms": [
+      "intricacy"
+    ]
+  },
+  {
+    "word": "complicated",
+    "meaning": "複雜難懂的",
+    "synonyms": [
+      "knotty"
+    ]
+  },
+  {
+    "word": "composed",
+    "meaning": "鎮定的",
+    "synonyms": [
+      "unperturbed",
+      "collected",
+      "coolheaded"
+    ]
+  },
+  {
+    "word": "compromise",
+    "meaning": "妥協,危害",
+    "synonyms": [
+      "impair",
+      "concession"
+    ]
+  },
+  {
+    "word": "concede",
+    "meaning": "承認",
+    "synonyms": [
+      "acknowledge"
+    ]
+  },
+  {
+    "word": "conceivable",
+    "meaning": "可想像的",
+    "synonyms": [
+      "plausible"
+    ]
+  },
+  {
+    "word": "conciliatory",
+    "meaning": "願意和解的",
+    "synonyms": [
+      "placatory"
+    ]
+  },
+  {
+    "word": "condemn",
+    "meaning": "譴責",
+    "synonyms": [
+      "decry"
+    ]
+  },
+  {
+    "word": "condign",
+    "meaning": "適當的",
+    "synonyms": [
+      "meet"
+    ]
+  },
+  {
+    "word": "confine",
+    "meaning": "限制",
+    "synonyms": [
+      "limit",
+      "circumscribe"
+    ]
+  },
+  {
+    "word": "confound",
+    "meaning": "1. 讓迷惑 2. 挫敗",
+    "synonyms": [
+      "perplex",
+      "flummox",
+      "resist"
+    ]
+  },
+  {
+    "word": "confused",
+    "meaning": "迷惑的",
+    "synonyms": [
+      "muddled"
+    ]
+  },
+  {
+    "word": "conjecture",
+    "meaning": "推測",
+    "synonyms": [
+      "speculation"
+    ]
+  },
+  {
+    "word": "consensus",
+    "meaning": "一致意見",
+    "synonyms": [
+      "accord"
+    ]
+  },
+  {
+    "word": "conspicuous",
+    "meaning": "顯眼的",
+    "synonyms": [
+      "obtrusive",
+      "prominent",
+      "salient",
+      "remarkable"
+    ]
+  },
+  {
+    "word": "constrain",
+    "meaning": "限制",
+    "synonyms": [
+      "deter"
+    ]
+  },
+  {
+    "word": "construe",
+    "meaning": "詮釋,分析",
+    "synonyms": [
+      "interpret"
+    ]
+  },
+  {
+    "word": "contemplate",
+    "meaning": "深入思考",
+    "synonyms": [
+      "ponder"
+    ]
+  },
+  {
+    "word": "contemptuous",
+    "meaning": "輕蔑的",
+    "synonyms": [
+      "disdainful"
+    ]
+  },
+  {
+    "word": "contentious",
+    "meaning": "好爭議的",
+    "synonyms": [
+      "controversial"
+    ]
+  },
+  {
+    "word": "contingent",
+    "meaning": "取決於",
+    "synonyms": [
+      "circumstantial"
+    ]
+  },
+  {
+    "word": "contract",
+    "meaning": "逐漸減少,逐漸變小",
+    "synonyms": [
+      "dwindle"
+    ]
+  },
+  {
+    "word": "contradictory",
+    "meaning": "矛盾的",
+    "synonyms": [
+      "dichotomous"
+    ]
+  },
+  {
+    "word": "contravene",
+    "meaning": "觸犯",
+    "synonyms": [
+      "violate"
+    ]
+  },
+  {
+    "word": "controversial",
+    "meaning": "有爭議的",
+    "synonyms": [
+      "contentious"
+    ]
+  },
+  {
+    "word": "conundrum",
+    "meaning": "複雜難解的問題",
+    "synonyms": [
+      "riddle",
+      "puzzle",
+      "enigma"
+    ]
+  },
+  {
+    "word": "convoluted",
+    "meaning": "複雜難解的",
+    "synonyms": [
+      "intricate",
+      "tortuous"
+    ]
+  },
+  {
+    "word": "convulsion",
+    "meaning": "動亂",
+    "synonyms": [
+      "upheaval"
+    ]
+  },
+  {
+    "word": "counterfeit",
+    "meaning": "虛假的",
+    "synonyms": [
+      "spurious"
+    ]
+  },
+  {
+    "word": "counterintuitive",
+    "meaning": "違反直覺的",
+    "synonyms": [
+      "unexpected"
+    ]
+  },
+  {
+    "word": "counterpart",
+    "meaning": "對應的人或物",
+    "synonyms": [
+      "parallel",
+      "correlative"
+    ]
+  },
+  {
+    "word": "counterproductive",
+    "meaning": "事與願違的",
+    "synonyms": [
+      "deleterious"
+    ]
+  },
+  {
+    "word": "covert",
+    "meaning": "秘密的",
+    "synonyms": [
+      "clandestine"
+    ]
+  },
+  {
+    "word": "covet",
+    "meaning": "貪求",
+    "synonyms": [
+      "envy"
+    ]
+  },
+  {
+    "word": "crab",
+    "meaning": "抱怨",
+    "synonyms": [
+      "excoriate"
+    ]
+  },
+  {
+    "word": "craven",
+    "meaning": "怯懦的",
+    "synonyms": [
+      "cowardly"
+    ]
+  },
+  {
+    "word": "credulous",
+    "meaning": "輕信的",
+    "synonyms": [
+      "trusting"
+    ]
+  },
+  {
+    "word": "crestfallen",
+    "meaning": "不高興的",
+    "synonyms": [
+      "disgruntled"
+    ]
+  },
+  {
+    "word": "crumble",
+    "meaning": "崩潰,破碎",
+    "synonyms": [
+      "disintegrate"
+    ]
+  },
+  {
+    "word": "cryptic",
+    "meaning": "難解的",
+    "synonyms": [
+      "elusive"
+    ]
+  },
+  {
+    "word": "cumbersome",
+    "meaning": "笨重的,複雜難做的",
+    "synonyms": [
+      "unwieldy"
+    ]
+  },
+  {
+    "word": "cunning",
+    "meaning": "狡猾的",
+    "synonyms": [
+      "crafty"
+    ]
+  },
+  {
+    "word": "cure-all",
+    "meaning": "萬靈藥",
+    "synonyms": [
+      "panacea"
+    ]
+  },
+  {
+    "word": "cursory",
+    "meaning": "草率的",
+    "synonyms": [
+      "perfunctory",
+      "casual",
+      "fleeting"
+    ]
+  },
+  {
+    "word": "curt",
+    "meaning": "話少的,唐突無禮的",
+    "synonyms": [
+      "laconic",
+      "terse",
+      "taciturn"
+    ]
+  },
+  {
+    "word": "curtail",
+    "meaning": "減少",
+    "synonyms": [
+      "diminish"
+    ]
+  },
+  {
+    "word": "damp",
+    "meaning": "使減弱",
+    "synonyms": [
+      "palliate"
+    ]
+  },
+  {
+    "word": "darken",
+    "meaning": "使變暗,使憂鬱",
+    "synonyms": [
+      "dim"
+    ]
+  },
+  {
+    "word": "daunting",
+    "meaning": "使人畏懼的",
+    "synonyms": [
+      "formidable",
+      "sensational",
+      "forbidding"
+    ]
+  },
+  {
+    "word": "dearth",
+    "meaning": "缺乏",
+    "synonyms": [
+      "paucity",
+      "modicum"
+    ]
+  },
+  {
+    "word": "debacle",
+    "meaning": "徹底失敗",
+    "synonyms": [
+      "fiasco"
+    ]
+  },
+  {
+    "word": "decay",
+    "meaning": "腐朽",
+    "synonyms": [
+      "deterioration"
+    ]
+  },
+  {
+    "word": "decisive",
+    "meaning": "果斷的,毋庸置疑的",
+    "synonyms": [
+      "unmistakable"
+    ]
+  },
+  {
+    "word": "decline",
+    "meaning": "衰落,拒絕",
+    "synonyms": [
+      "wane"
+    ]
+  },
+  {
+    "word": "decrepitude",
+    "meaning": "老化,老化",
+    "synonyms": [
+      "senescence"
+    ]
+  },
+  {
+    "word": "decry",
+    "meaning": "公開譴責",
+    "synonyms": [
+      "condemn",
+      "reprehend"
+    ]
+  },
+  {
+    "word": "defend",
+    "meaning": "為...做辯護",
+    "synonyms": [
+      "champion"
+    ]
+  },
+  {
+    "word": "deferential",
+    "meaning": "恭敬的",
+    "synonyms": [
+      "respectful"
+    ]
+  },
+  {
+    "word": "deflate",
+    "meaning": "使減少",
+    "synonyms": [
+      "soothe"
+    ]
+  },
+  {
+    "word": "deflect",
+    "meaning": "使轉向",
+    "synonyms": [
+      "shrug off"
+    ]
+  },
+  {
+    "word": "defraud",
+    "meaning": "欺騙",
+    "synonyms": [
+      "swindle"
+    ]
+  },
+  {
+    "word": "deft",
+    "meaning": "靈巧的",
+    "synonyms": [
+      "canny"
+    ]
+  },
+  {
+    "word": "defy",
+    "meaning": "蔑視",
+    "synonyms": [
+      "disregard",
+      "flout"
+    ]
+  },
+  {
+    "word": "deliberate",
+    "meaning": "故意的",
+    "synonyms": [
+      "calculated"
+    ]
+  },
+  {
+    "word": "delight",
+    "meaning": "高興,使高興",
+    "synonyms": [
+      "relish"
+    ]
+  },
+  {
+    "word": "demanding",
+    "meaning": "苛求的",
+    "synonyms": [
+      "exacting"
+    ]
+  },
+  {
+    "word": "democratic",
+    "meaning": "平等主義的",
+    "synonyms": [
+      "egalitarian"
+    ]
+  },
+  {
+    "word": "denounce",
+    "meaning": "譴責",
+    "synonyms": [
+      "lambast"
+    ]
+  },
+  {
+    "word": "deplorable",
+    "meaning": "可悲的,應受譴責的",
+    "synonyms": [
+      "reprehensible"
+    ]
+  },
+  {
+    "word": "deploy",
+    "meaning": "安排,部署",
+    "synonyms": [
+      "marshal"
+    ]
+  },
+  {
+    "word": "deprecatory",
+    "meaning": "反對的",
+    "synonyms": [
+      "detracting"
+    ]
+  },
+  {
+    "word": "derision",
+    "meaning": "嘲笑",
+    "synonyms": [
+      "mockery"
+    ]
+  },
+  {
+    "word": "design",
+    "meaning": "故意,設計",
+    "synonyms": [
+      "purposefulness"
+    ]
+  },
+  {
+    "word": "destabilize",
+    "meaning": "削弱",
+    "synonyms": [
+      "weaken"
+    ]
+  },
+  {
+    "word": "detect",
+    "meaning": "發現",
+    "synonyms": [
+      "discern"
+    ]
+  },
+  {
+    "word": "deter",
+    "meaning": "阻止",
+    "synonyms": [
+      "constrain"
+    ]
+  },
+  {
+    "word": "deterioration",
+    "meaning": "惡化",
+    "synonyms": [
+      "decay",
+      "decline"
+    ]
+  },
+  {
+    "word": "detract",
+    "meaning": "貶低",
+    "synonyms": [
+      "deprecate"
+    ]
+  },
+  {
+    "word": "detrimental",
+    "meaning": "有害的",
+    "synonyms": [
+      "deleterious"
+    ]
+  },
+  {
+    "word": "devious",
+    "meaning": "狡詐的,彎曲的",
+    "synonyms": [
+      "guile",
+      "indirect"
+    ]
+  },
+  {
+    "word": "dexterous",
+    "meaning": "機敏的",
+    "synonyms": [
+      "nimble"
+    ]
+  },
+  {
+    "word": "diatribe",
+    "meaning": "抨擊",
+    "synonyms": [
+      "rant"
+    ]
+  },
+  {
+    "word": "dichotomous",
+    "meaning": "矛盾的",
+    "synonyms": [
+      "contradictory"
+    ]
+  },
+  {
+    "word": "didactic",
+    "meaning": "說教的",
+    "synonyms": [
+      "preachy"
+    ]
+  },
+  {
+    "word": "difficult",
+    "meaning": "難理解的",
+    "synonyms": [
+      "enigmatic"
+    ]
+  },
+  {
+    "word": "diffuse",
+    "meaning": "分散的,傳播,話多的",
+    "synonyms": [
+      "spread",
+      "disperse",
+      "wordy"
+    ]
+  },
+  {
+    "word": "dilatory",
+    "meaning": "拖延的",
+    "synonyms": [
+      "sluggish",
+      "remiss",
+      "laggard"
+    ]
+  },
+  {
+    "word": "diligent",
+    "meaning": "勤奮的",
+    "synonyms": [
+      "industrious"
+    ]
+  },
+  {
+    "word": "dim",
+    "meaning": "使變暗",
+    "synonyms": [
+      "darken"
+    ]
+  },
+  {
+    "word": "diminutive",
+    "meaning": "極小的",
+    "synonyms": [
+      "minuscule"
+    ]
+  },
+  {
+    "word": "disapprobation",
+    "meaning": "譴責",
+    "synonyms": [
+      "censure"
+    ]
+  },
+  {
+    "word": "discern",
+    "meaning": "覺察,分辨",
+    "synonyms": [
+      "detect",
+      "discover"
+    ]
+  },
+  {
+    "word": "disciple",
+    "meaning": "信徒",
+    "synonyms": [
+      "adherent"
+    ]
+  },
+  {
+    "word": "discordance",
+    "meaning": "不一致",
+    "synonyms": [
+      "contention"
+    ]
+  },
+  {
+    "word": "discrepancy",
+    "meaning": "矛盾",
+    "synonyms": [
+      "incongruity"
+    ]
+  },
+  {
+    "word": "disdain",
+    "meaning": "鄙視",
+    "synonyms": [
+      "opprobrium",
+      "contempt"
+    ]
+  },
+  {
+    "word": "disgorge",
+    "meaning": "排出",
+    "synonyms": [
+      "dump"
+    ]
+  },
+  {
+    "word": "disgruntle",
+    "meaning": "使不高興",
+    "synonyms": [
+      "crestfallen"
+    ]
+  },
+  {
+    "word": "disintegrate",
+    "meaning": "瓦解",
+    "synonyms": [
+      "crumble"
+    ]
+  },
+  {
+    "word": "disinterested",
+    "meaning": "公正的,沒有興趣的",
+    "synonyms": [
+      "fair",
+      "impartial"
+    ]
+  },
+  {
+    "word": "dismiss",
+    "meaning": "忽略",
+    "synonyms": [
+      "ignore",
+      "neglect"
+    ]
+  },
+  {
+    "word": "disparage",
+    "meaning": "貶低",
+    "synonyms": [
+      "slight"
+    ]
+  },
+  {
+    "word": "disparate",
+    "meaning": "不同的",
+    "synonyms": [
+      "heterogeneous",
+      "diverse",
+      "dissimilar",
+      "variant"
+    ]
+  },
+  {
+    "word": "dispassionate",
+    "meaning": "公正客觀的,冷靜客觀的",
+    "synonyms": [
+      "temperate",
+      "analytical"
+    ]
+  },
+  {
+    "word": "dispatch",
+    "meaning": "迅速",
+    "synonyms": [
+      "celerity"
+    ]
+  },
+  {
+    "word": "displace",
+    "meaning": "取代,迫使離開",
+    "synonyms": [
+      "obviate"
+    ]
+  },
+  {
+    "word": "disregard",
+    "meaning": "貶低",
+    "synonyms": [
+      "defy",
+      "contempt"
+    ]
+  },
+  {
+    "word": "dissemble",
+    "meaning": "偽裝",
+    "synonyms": [
+      "duplicity"
+    ]
+  },
+  {
+    "word": "dissimilar",
+    "meaning": "不同的",
+    "synonyms": [
+      "heterogeneous"
+    ]
+  },
+  {
+    "word": "distinct",
+    "meaning": "獨特的",
+    "synonyms": [
+      "idiosyncratic"
+    ]
+  },
+  {
+    "word": "diversity",
+    "meaning": "多樣性,差異化",
+    "synonyms": [
+      "heterogeneity"
+    ]
+  },
+  {
+    "word": "divorced",
+    "meaning": "分離的",
+    "synonyms": [
+      "untethered",
+      "abstracted"
+    ]
+  },
+  {
+    "word": "doctrinaire",
+    "meaning": "教條主義的",
+    "synonyms": [
+      "dogmatic"
+    ]
+  },
+  {
+    "word": "dogmatic",
+    "meaning": "武斷的,教條主義的",
+    "synonyms": [
+      "doctrinaire",
+      "rigid"
+    ]
+  },
+  {
+    "word": "douse",
+    "meaning": "熄滅",
+    "synonyms": [
+      "extinguish"
+    ]
+  },
+  {
+    "word": "dovish",
+    "meaning": "和平主義的",
+    "synonyms": [
+      "pacific"
+    ]
+  },
+  {
+    "word": "dramatic",
+    "meaning": "劇烈的,引人注目的",
+    "synonyms": [
+      "spectacular"
+    ]
+  },
+  {
+    "word": "draw",
+    "meaning": "吸引",
+    "synonyms": [
+      "elicit"
+    ]
+  },
+  {
+    "word": "dreary",
+    "meaning": "枯燥乏味的",
+    "synonyms": [
+      "tedious"
+    ]
+  },
+  {
+    "word": "dubious",
+    "meaning": "不確定的,可疑的",
+    "synonyms": [
+      "suspect",
+      "questionable"
+    ]
+  },
+  {
+    "word": "dump",
+    "meaning": "排出",
+    "synonyms": [
+      "disgorge"
+    ]
+  },
+  {
+    "word": "duplicity",
+    "meaning": "欺騙",
+    "synonyms": [
+      "dissemblance"
+    ]
+  },
+  {
+    "word": "durability",
+    "meaning": "持久",
+    "synonyms": [
+      "persistence"
+    ]
+  },
+  {
+    "word": "dwindle",
+    "meaning": "逐漸減少,逐漸變小",
+    "synonyms": [
+      "contract"
+    ]
+  },
+  {
+    "word": "dynamic",
+    "meaning": "動態的,可變的",
+    "synonyms": [
+      "mutable"
+    ]
+  },
+  {
+    "word": "easygoing",
+    "meaning": "悠閒的",
+    "synonyms": [
+      "affable"
+    ]
+  },
+  {
+    "word": "ebb",
+    "meaning": "衰退",
+    "synonyms": [
+      "wane",
+      "decline"
+    ]
+  },
+  {
+    "word": "eclipse",
+    "meaning": "衰退,使..不重要,勝過",
+    "synonyms": [
+      "outdo"
+    ]
+  },
+  {
+    "word": "economic",
+    "meaning": "有利可圖的",
+    "synonyms": [
+      "pecuniary"
+    ]
+  },
+  {
+    "word": "economy",
+    "meaning": "節約",
+    "synonyms": [
+      "brevity"
+    ]
+  },
+  {
+    "word": "ecstasy",
+    "meaning": "狂喜",
+    "synonyms": [
+      "euphoria"
+    ]
+  },
+  {
+    "word": "effusive",
+    "meaning": "溢於言表的,感情豐富的",
+    "synonyms": [
+      "emotional"
+    ]
+  },
+  {
+    "word": "egregious",
+    "meaning": "臭名昭著的",
+    "synonyms": [
+      "flagrant"
+    ]
+  },
+  {
+    "word": "elegiac",
+    "meaning": "哀悼的",
+    "synonyms": [
+      "plaintive"
+    ]
+  },
+  {
+    "word": "elegy",
+    "meaning": "輓歌",
+    "synonyms": [
+      "requiem"
+    ]
+  },
+  {
+    "word": "elemental",
+    "meaning": "基本的",
+    "synonyms": [
+      "rudimentary"
+    ]
+  },
+  {
+    "word": "elicit",
+    "meaning": "引出",
+    "synonyms": [
+      "draw out"
+    ]
+  },
+  {
+    "word": "eliminate",
+    "meaning": "消除,淘汰",
+    "synonyms": [
+      "extirpate",
+      "put to rest"
+    ]
+  },
+  {
+    "word": "eloquent",
+    "meaning": "雄辯的",
+    "synonyms": [
+      "rhetoric"
+    ]
+  },
+  {
+    "word": "elude",
+    "meaning": "避開,不能被...理解",
+    "synonyms": [
+      "puzzle"
+    ]
+  },
+  {
+    "word": "elusive",
+    "meaning": "難抓住的,難理解的",
+    "synonyms": [
+      "slippery",
+      "evasive",
+      "cryptic"
+    ]
+  },
+  {
+    "word": "emblematic",
+    "meaning": "象徵的",
+    "synonyms": [
+      "totemic"
+    ]
+  },
+  {
+    "word": "embryonic",
+    "meaning": "萌芽期的",
+    "synonyms": [
+      "rudimentary"
+    ]
+  },
+  {
+    "word": "emendation",
+    "meaning": "修訂",
+    "synonyms": [
+      "revision"
+    ]
+  },
+  {
+    "word": "eminent",
+    "meaning": "傑出的,異乎尋常的",
+    "synonyms": [
+      "famous",
+      "particular"
+    ]
+  },
+  {
+    "word": "emulate",
+    "meaning": "模仿,努力追趕",
+    "synonyms": [
+      "imitate"
+    ]
+  },
+  {
+    "word": "enamor",
+    "meaning": "使迷惑",
+    "synonyms": [
+      "favor",
+      "captivate",
+      "hooked on"
+    ]
+  },
+  {
+    "word": "encomium",
+    "meaning": "讚美",
+    "synonyms": [
+      "tribute"
+    ]
+  },
+  {
+    "word": "encyclopedic",
+    "meaning": "廣博的,全面的",
+    "synonyms": [
+      "exhaustive",
+      "polymathic"
+    ]
+  },
+  {
+    "word": "endemic",
+    "meaning": "地方性的",
+    "synonyms": [
+      "native",
+      "domestic",
+      "indigenous"
+    ]
+  },
+  {
+    "word": "endorse",
+    "meaning": "支援",
+    "synonyms": [
+      "sanction",
+      "commend",
+      "support",
+      "authorize"
+    ]
+  },
+  {
+    "word": "engaging",
+    "meaning": "迷人的",
+    "synonyms": [
+      "winning"
+    ]
+  },
+  {
+    "word": "engender",
+    "meaning": "導致",
+    "synonyms": [
+      "yield",
+      "induce"
+    ]
+  },
+  {
+    "word": "enhance",
+    "meaning": "提高,改善",
+    "synonyms": [
+      "hone"
+    ]
+  },
+  {
+    "word": "enigmatic",
+    "meaning": "神秘難懂的",
+    "synonyms": [
+      "perplexing"
+    ]
+  },
+  {
+    "word": "entailed by",
+    "meaning": "使需要,導致",
+    "synonyms": [
+      "inferable from"
+    ]
+  },
+  {
+    "word": "entertaining",
+    "meaning": "有趣的",
+    "synonyms": [
+      "diverting",
+      "fun"
+    ]
+  },
+  {
+    "word": "enthrall",
+    "meaning": "吸引",
+    "synonyms": [
+      "captivate"
+    ]
+  },
+  {
+    "word": "enviable",
+    "meaning": "令人羨慕的",
+    "synonyms": [
+      "coveted"
+    ]
+  },
+  {
+    "word": "ephemeral",
+    "meaning": "短暫的",
+    "synonyms": [
+      "transitory",
+      "short-lived"
+    ]
+  },
+  {
+    "word": "equivalent",
+    "meaning": "相同的,等價的",
+    "synonyms": [
+      "commensurate"
+    ]
+  },
+  {
+    "word": "equivocal",
+    "meaning": "模稜兩可的",
+    "synonyms": [
+      "ambiguous"
+    ]
+  },
+  {
+    "word": "errant",
+    "meaning": "不定的,行為錯誤的",
+    "synonyms": [
+      "wayward"
+    ]
+  },
+  {
+    "word": "erroneous",
+    "meaning": "錯誤的",
+    "synonyms": [
+      "inaccurate"
+    ]
+  },
+  {
+    "word": "erstwhile",
+    "meaning": "過去的",
+    "synonyms": [
+      "onetime"
+    ]
+  },
+  {
+    "word": "erudite",
+    "meaning": "博學的",
+    "synonyms": [
+      "learned"
+    ]
+  },
+  {
+    "word": "esoteric",
+    "meaning": "深奧難懂的",
+    "synonyms": [
+      "recondite",
+      "arcane",
+      "abstruse"
+    ]
+  },
+  {
+    "word": "essential",
+    "meaning": "完全必要的,基本的",
+    "synonyms": [
+      "indispensable",
+      "foundational"
+    ]
+  },
+  {
+    "word": "estimable",
+    "meaning": "值得稱讚的",
+    "synonyms": [
+      "praiseworthy"
+    ]
+  },
+  {
+    "word": "estrange",
+    "meaning": "使疏離",
+    "synonyms": [
+      "unlinked",
+      "disaffect",
+      "alienate"
+    ]
+  },
+  {
+    "word": "eulogize",
+    "meaning": "讚美",
+    "synonyms": [
+      "lionize"
+    ]
+  },
+  {
+    "word": "euphoria",
+    "meaning": "狂喜",
+    "synonyms": [
+      "ecstasy"
+    ]
+  },
+  {
+    "word": "evanescent",
+    "meaning": "短暫的",
+    "synonyms": [
+      "momentary"
+    ]
+  },
+  {
+    "word": "evasive",
+    "meaning": "逃避的,閃爍其詞的",
+    "synonyms": [
+      "elusive",
+      "equivocal"
+    ]
+  },
+  {
+    "word": "evenhanded",
+    "meaning": "公平的",
+    "synonyms": [
+      "impartial"
+    ]
+  },
+  {
+    "word": "evince",
+    "meaning": "表明",
+    "synonyms": [
+      "betray"
+    ]
+  },
+  {
+    "word": "exacerbate",
+    "meaning": "使惡化",
+    "synonyms": [
+      "aggravate"
+    ]
+  },
+  {
+    "word": "exacting",
+    "meaning": "嚴格的",
+    "synonyms": [
+      "prescriptive",
+      "rigorous",
+      "demanding"
+    ]
+  },
+  {
+    "word": "exactitude",
+    "meaning": "精確性",
+    "synonyms": [
+      "meticulousness"
+    ]
+  },
+  {
+    "word": "exaggerate",
+    "meaning": "誇大",
+    "synonyms": [
+      "hyperbole",
+      "overrate"
+    ]
+  },
+  {
+    "word": "exalt",
+    "meaning": "讚揚",
+    "synonyms": [
+      "valorize"
+    ]
+  },
+  {
+    "word": "exasperation",
+    "meaning": "惱怒",
+    "synonyms": [
+      "irascibility"
+    ]
+  },
+  {
+    "word": "exceptional",
+    "meaning": "不同尋常的,傑出的",
+    "synonyms": [
+      "preternatural",
+      "rare"
+    ]
+  },
+  {
+    "word": "excoriate",
+    "meaning": "嚴厲指責",
+    "synonyms": [
+      "indict",
+      "crab"
+    ]
+  },
+  {
+    "word": "exculpate",
+    "meaning": "開脫罪行",
+    "synonyms": [
+      "vindicate"
+    ]
+  },
+  {
+    "word": "exemplary",
+    "meaning": "楷模的,典型的",
+    "synonyms": [
+      "model"
+    ]
+  },
+  {
+    "word": "exhaustive",
+    "meaning": "全面的",
+    "synonyms": [
+      "encyclopedic",
+      "comprehensive"
+    ]
+  },
+  {
+    "word": "exigent",
+    "meaning": "迫切的",
+    "synonyms": [
+      "pressing"
+    ]
+  },
+  {
+    "word": "exiguous",
+    "meaning": "稀少的",
+    "synonyms": [
+      "tenuous"
+    ]
+  },
+  {
+    "word": "exonerate",
+    "meaning": "免罪",
+    "synonyms": [
+      "absolve"
+    ]
+  },
+  {
+    "word": "expansion",
+    "meaning": "擴張,增長",
+    "synonyms": [
+      "augmentation",
+      "burgeoning"
+    ]
+  },
+  {
+    "word": "expedite",
+    "meaning": "促使",
+    "synonyms": [
+      "facilitate"
+    ]
+  },
+  {
+    "word": "expel",
+    "meaning": "開除,驅逐",
+    "synonyms": [
+      "oust"
+    ]
+  },
+  {
+    "word": "experimental",
+    "meaning": "實驗的,創新的",
+    "synonyms": [
+      "innovative"
+    ]
+  },
+  {
+    "word": "extinguish",
+    "meaning": "熄滅,毀滅",
+    "synonyms": [
+      "douse"
+    ]
+  },
+  {
+    "word": "extirpate",
+    "meaning": "根除",
+    "synonyms": [
+      "eliminate"
+    ]
+  },
+  {
+    "word": "extol",
+    "meaning": "讚揚",
+    "synonyms": [
+      "applaud"
+    ]
+  },
+  {
+    "word": "extraneous",
+    "meaning": "無關的",
+    "synonyms": [
+      "irrelevant"
+    ]
+  },
+  {
+    "word": "extremist",
+    "meaning": "極端分子",
+    "synonyms": [
+      "zealot"
+    ]
+  },
+  {
+    "word": "facilitate",
+    "meaning": "促進,加快",
+    "synonyms": [
+      "further"
+    ]
+  },
+  {
+    "word": "factious",
+    "meaning": "宗派的,派系的",
+    "synonyms": [
+      "schism"
+    ]
+  },
+  {
+    "word": "fairness",
+    "meaning": "公平",
+    "synonyms": [
+      "objectivity"
+    ]
+  },
+  {
+    "word": "faultless",
+    "meaning": "無可挑剔的",
+    "synonyms": [
+      "perfect"
+    ]
+  },
+  {
+    "word": "favorable",
+    "meaning": "有利的",
+    "synonyms": [
+      "auspicious"
+    ]
+  },
+  {
+    "word": "fickle",
+    "meaning": "善變的",
+    "synonyms": [
+      "versatile",
+      "volatile",
+      "flighty",
+      "erratic",
+      "capricious"
+    ]
+  },
+  {
+    "word": "fiery",
+    "meaning": "熱烈的,暴躁的",
+    "synonyms": [
+      "impassioned"
+    ]
+  },
+  {
+    "word": "figurative",
+    "meaning": "比喻的,象徵的",
+    "synonyms": [
+      "symbolic"
+    ]
+  },
+  {
+    "word": "fitting",
+    "meaning": "適合的",
+    "synonyms": [
+      "apposite"
+    ]
+  },
+  {
+    "word": "fixated",
+    "meaning": "過度迷戀的",
+    "synonyms": [
+      "obsessed"
+    ]
+  },
+  {
+    "word": "flagrant",
+    "meaning": "明目張膽的",
+    "synonyms": [
+      "egregious"
+    ]
+  },
+  {
+    "word": "fleeting",
+    "meaning": "短暫的",
+    "synonyms": [
+      "momentary"
+    ]
+  },
+  {
+    "word": "flexibility",
+    "meaning": "彈性,適應性",
+    "synonyms": [
+      "adaptability",
+      "suppleness",
+      "malleability"
+    ]
+  },
+  {
+    "word": "flout",
+    "meaning": "公然蔑視",
+    "synonyms": [
+      "spurn",
+      "defy",
+      "disregard"
+    ]
+  },
+  {
+    "word": "fluctuate",
+    "meaning": "波動,搖擺不定",
+    "synonyms": [
+      "vary",
+      "vacillate"
+    ]
+  },
+  {
+    "word": "fluid",
+    "meaning": "不穩定的",
+    "synonyms": [
+      "untethered",
+      "abstracted"
+    ]
+  },
+  {
+    "word": "flummox",
+    "meaning": "使困惑",
+    "synonyms": [
+      "confound"
+    ]
+  },
+  {
+    "word": "forerunner",
+    "meaning": "先驅,預兆",
+    "synonyms": [
+      "precursor"
+    ]
+  },
+  {
+    "word": "foresee",
+    "meaning": "預見",
+    "synonyms": [
+      "anticipate"
+    ]
+  },
+  {
+    "word": "forestall",
+    "meaning": "預先阻止,提前行動",
+    "synonyms": [
+      "stave off",
+      "avert",
+      "prevent"
+    ]
+  },
+  {
+    "word": "forge",
+    "meaning": "鍛造,偽造",
+    "synonyms": [
+      "fabricate"
+    ]
+  },
+  {
+    "word": "formidable",
+    "meaning": "可怕的",
+    "synonyms": [
+      "daunting"
+    ]
+  },
+  {
+    "word": "formulaic",
+    "meaning": "老派的,公式化的",
+    "synonyms": [
+      "canned"
+    ]
+  },
+  {
+    "word": "forsake",
+    "meaning": "拋棄",
+    "synonyms": [
+      "neglect"
+    ]
+  },
+  {
+    "word": "foster",
+    "meaning": "養育,促進",
+    "synonyms": [
+      "spur",
+      "adopt"
+    ]
+  },
+  {
+    "word": "foundation",
+    "meaning": "創建,基礎,根據",
+    "synonyms": [
+      "inception",
+      "bedrock"
+    ]
+  },
+  {
+    "word": "fractious",
+    "meaning": "易怒的,難對付的",
+    "synonyms": [
+      "restive",
+      "skittish"
+    ]
+  },
+  {
+    "word": "fraud",
+    "meaning": "詐欺",
+    "synonyms": [
+      "duplicity"
+    ]
+  },
+  {
+    "word": "fraudulent",
+    "meaning": "欺騙性的",
+    "synonyms": [
+      "malfeasant"
+    ]
+  },
+  {
+    "word": "fringe",
+    "meaning": "邊緣",
+    "synonyms": [
+      "marginal",
+      "peripheral"
+    ]
+  },
+  {
+    "word": "frugal",
+    "meaning": "簡樸的",
+    "synonyms": [
+      "thrifty"
+    ]
+  },
+  {
+    "word": "fungible",
+    "meaning": "可取代的",
+    "synonyms": [
+      "interchangeable"
+    ]
+  },
+  {
+    "word": "fusion",
+    "meaning": "融合",
+    "synonyms": [
+      "synthesis"
+    ]
+  },
+  {
+    "word": "fusty",
+    "meaning": "黴臭的,守舊的",
+    "synonyms": [
+      "obsolete",
+      "outmoded"
+    ]
+  },
+  {
+    "word": "futile",
+    "meaning": "無用的",
+    "synonyms": [
+      "pointless"
+    ]
+  },
+  {
+    "word": "galvanize",
+    "meaning": "激勵",
+    "synonyms": [
+      "animate",
+      "rouse"
+    ]
+  },
+  {
+    "word": "garrulous",
+    "meaning": "喋喋不休的",
+    "synonyms": [
+      "loquacious"
+    ]
+  },
+  {
+    "word": "gauge",
+    "meaning": "估計,判斷,衡量儀器",
+    "synonyms": [
+      "reckon"
+    ]
+  },
+  {
+    "word": "general",
+    "meaning": "籠統的",
+    "synonyms": [
+      "abstract"
+    ]
+  },
+  {
+    "word": "generate",
+    "meaning": "產生",
+    "synonyms": [
+      "originate"
+    ]
+  },
+  {
+    "word": "generic",
+    "meaning": "通用的",
+    "synonyms": [
+      "inclusive"
+    ]
+  },
+  {
+    "word": "genial",
+    "meaning": "友善的",
+    "synonyms": [
+      "friendly"
+    ]
+  },
+  {
+    "word": "germane",
+    "meaning": "密切相關的",
+    "synonyms": [
+      "relevant",
+      "apposite"
+    ]
+  },
+  {
+    "word": "glean",
+    "meaning": "蒐集,取得",
+    "synonyms": [
+      "obtain"
+    ]
+  },
+  {
+    "word": "gloomy",
+    "meaning": "憂鬱的",
+    "synonyms": [
+      "lugubrious",
+      "cheerless"
+    ]
+  },
+  {
+    "word": "glut",
+    "meaning": "過量",
+    "synonyms": [
+      "surfeit",
+      "plethora"
+    ]
+  },
+  {
+    "word": "govern",
+    "meaning": "決定",
+    "synonyms": [
+      "determine"
+    ]
+  },
+  {
+    "word": "gratify",
+    "meaning": "使滿足,使高興",
+    "synonyms": [
+      "please"
+    ]
+  },
+  {
+    "word": "gregarious",
+    "meaning": "愛交際的,群居的",
+    "synonyms": [
+      "sociable"
+    ]
+  },
+  {
+    "word": "groundless",
+    "meaning": "無根據的",
+    "synonyms": [
+      "unwarranted"
+    ]
+  },
+  {
+    "word": "guarded with",
+    "meaning": "謹慎的",
+    "synonyms": [
+      "stinting with"
+    ]
+  },
+  {
+    "word": "guile",
+    "meaning": "姦詐",
+    "synonyms": [
+      "deviousness"
+    ]
+  },
+  {
+    "word": "hail",
+    "meaning": "稱讚",
+    "synonyms": [
+      "acclaim"
+    ]
+  },
+  {
+    "word": "halfhearted",
+    "meaning": "不熱情的",
+    "synonyms": [
+      "tepid",
+      "lukewarm"
+    ]
+  },
+  {
+    "word": "hallow",
+    "meaning": "極度崇敬",
+    "synonyms": [
+      "respect"
+    ]
+  },
+  {
+    "word": "hamper",
+    "meaning": "阻礙",
+    "synonyms": [
+      "impede"
+    ]
+  },
+  {
+    "word": "hamstring",
+    "meaning": "使無能為力",
+    "synonyms": [
+      "impair"
+    ]
+  },
+  {
+    "word": "haphazard",
+    "meaning": "隨意的",
+    "synonyms": [
+      "random",
+      "helter-skelter"
+    ]
+  },
+  {
+    "word": "hasty",
+    "meaning": "匆忙的,草率的",
+    "synonyms": [
+      "impulsive",
+      "rapid"
+    ]
+  },
+  {
+    "word": "hauteur",
+    "meaning": "傲慢",
+    "synonyms": [
+      "superciliousness"
+    ]
+  },
+  {
+    "word": "heartless",
+    "meaning": "殘酷的",
+    "synonyms": [
+      "callous"
+    ]
+  },
+  {
+    "word": "helter-skelter",
+    "meaning": "雜亂的",
+    "synonyms": [
+      "haphazard"
+    ]
+  },
+  {
+    "word": "heterodox",
+    "meaning": "異端的",
+    "synonyms": [
+      "iconoclastic"
+    ]
+  },
+  {
+    "word": "heterogeneous",
+    "meaning": "各種各樣的",
+    "synonyms": [
+      "disparate",
+      "dissimilar"
+    ]
+  },
+  {
+    "word": "hew to",
+    "meaning": "遵守",
+    "synonyms": [
+      "conform to"
+    ]
+  },
+  {
+    "word": "hierarchical",
+    "meaning": "等級制度的",
+    "synonyms": [
+      "stratified"
+    ]
+  },
+  {
+    "word": "hinder",
+    "meaning": "妨礙",
+    "synonyms": [
+      "stymie",
+      "inhibit",
+      "block"
+    ]
+  },
+  {
+    "word": "hitch",
+    "meaning": "故障",
+    "synonyms": [
+      "snag"
+    ]
+  },
+  {
+    "word": "hodgepodge",
+    "meaning": "大雜燴",
+    "synonyms": [
+      "patchwork",
+      "welter",
+      "pastiche"
+    ]
+  },
+  {
+    "word": "homogeneity",
+    "meaning": "同質",
+    "synonyms": [
+      "resemblance",
+      "uniform"
+    ]
+  },
+  {
+    "word": "hone",
+    "meaning": "磨礪,提升",
+    "synonyms": [
+      "enhance"
+    ]
+  },
+  {
+    "word": "honor",
+    "meaning": "榮譽,尊敬",
+    "synonyms": [
+      "venerate"
+    ]
+  },
+  {
+    "word": "hubris",
+    "meaning": "傲慢自大的",
+    "synonyms": [
+      "arrogance"
+    ]
+  },
+  {
+    "word": "humdrum",
+    "meaning": "單調的,乏味的",
+    "synonyms": [
+      "dull"
+    ]
+  },
+  {
+    "word": "humility",
+    "meaning": "謙遜",
+    "synonyms": [
+      "modesty"
+    ]
+  },
+  {
+    "word": "hyperbole",
+    "meaning": "誇大",
+    "synonyms": [
+      "exaggeration"
+    ]
+  },
+  {
+    "word": "hypocrisy",
+    "meaning": "偽善",
+    "synonyms": [
+      "mendacity",
+      "insincerity"
+    ]
+  },
+  {
+    "word": "idealistic",
+    "meaning": "空想的",
+    "synonyms": [
+      "quixotic"
+    ]
+  },
+  {
+    "word": "identify",
+    "meaning": "確定",
+    "synonyms": [
+      "diagnose"
+    ]
+  },
+  {
+    "word": "ideologue",
+    "meaning": "狂熱支持某種理念的人",
+    "synonyms": [
+      "zealot"
+    ]
+  },
+  {
+    "word": "ignoble",
+    "meaning": "可恥的,應收譴責的",
+    "synonyms": [
+      "reprehensible"
+    ]
+  },
+  {
+    "word": "ignorance",
+    "meaning": "無知",
+    "synonyms": [
+      "unfamiliarity"
+    ]
+  },
+  {
+    "word": "imbibe",
+    "meaning": "飲酒,吸收,接受",
+    "synonyms": [
+      "quaff"
+    ]
+  },
+  {
+    "word": "imitate",
+    "meaning": "模仿",
+    "synonyms": [
+      "emulate",
+      "mimic"
+    ]
+  },
+  {
+    "word": "immaterial",
+    "meaning": "不重要的",
+    "synonyms": [
+      "inconsequential"
+    ]
+  },
+  {
+    "word": "immense",
+    "meaning": "巨大的",
+    "synonyms": [
+      "colossal"
+    ]
+  },
+  {
+    "word": "impair",
+    "meaning": "損害",
+    "synonyms": [
+      "hamstring",
+      "undermine",
+      "vitiate",
+      "compromise",
+      "undercut"
+    ]
+  },
+  {
+    "word": "impartial",
+    "meaning": "公正的",
+    "synonyms": [
+      "evenhanded",
+      "disinterested",
+      "fair",
+      "detachment"
+    ]
+  },
+  {
+    "word": "impassioned",
+    "meaning": "熱情的",
+    "synonyms": [
+      "fiery"
+    ]
+  },
+  {
+    "word": "impatient",
+    "meaning": "急切的",
+    "synonyms": [
+      "keen"
+    ]
+  },
+  {
+    "word": "impecunious",
+    "meaning": "貧窮的",
+    "synonyms": [
+      "indigent"
+    ]
+  },
+  {
+    "word": "impede",
+    "meaning": "阻礙",
+    "synonyms": [
+      "hamper"
+    ]
+  },
+  {
+    "word": "imperceptible",
+    "meaning": "難以察覺的",
+    "synonyms": [
+      "gradual"
+    ]
+  },
+  {
+    "word": "impetuous",
+    "meaning": "魯莽的",
+    "synonyms": [
+      "precipitate"
+    ]
+  },
+  {
+    "word": "implacable",
+    "meaning": "無法安撫的",
+    "synonyms": [
+      "unyielding",
+      "inexorable"
+    ]
+  },
+  {
+    "word": "impolitic",
+    "meaning": "不智的",
+    "synonyms": [
+      "tactless"
+    ]
+  },
+  {
+    "word": "impulsive",
+    "meaning": "衝動的",
+    "synonyms": [
+      "capricious",
+      "hasty"
+    ]
+  },
+  {
+    "word": "inaccessible",
+    "meaning": "難以達到的,難以理解的",
+    "synonyms": [
+      "opaque",
+      "insurmountable"
+    ]
+  },
+  {
+    "word": "inadequate",
+    "meaning": "無效的",
+    "synonyms": [
+      "ineffective"
+    ]
+  },
+  {
+    "word": "inapposite",
+    "meaning": "不合適的,誤導的",
+    "synonyms": [
+      "misguided"
+    ]
+  },
+  {
+    "word": "inception",
+    "meaning": "開始",
+    "synonyms": [
+      "foundation"
+    ]
+  },
+  {
+    "word": "inclusive",
+    "meaning": "全包括的,包括首尾兩項的",
+    "synonyms": [
+      "generic",
+      "all-encompassing"
+    ]
+  },
+  {
+    "word": "incomprehensible",
+    "meaning": "費解的",
+    "synonyms": [
+      "inexplicable"
+    ]
+  },
+  {
+    "word": "incongruity",
+    "meaning": "矛盾",
+    "synonyms": [
+      "discrepancy"
+    ]
+  },
+  {
+    "word": "inconsequential",
+    "meaning": "不重要的",
+    "synonyms": [
+      "trivial",
+      "immaterial",
+      "pointless"
+    ]
+  },
+  {
+    "word": "inconsistent",
+    "meaning": "不一致的,矛盾的",
+    "synonyms": [
+      "mixed",
+      "erratic"
+    ]
+  },
+  {
+    "word": "inconspicuous",
+    "meaning": "低調的,不顯眼的",
+    "synonyms": [
+      "discreet"
+    ]
+  },
+  {
+    "word": "indebted",
+    "meaning": "感激的",
+    "synonyms": [
+      "beholden"
+    ]
+  },
+  {
+    "word": "indict",
+    "meaning": "控告",
+    "synonyms": [
+      "excoriate"
+    ]
+  },
+  {
+    "word": "indifferent",
+    "meaning": "冷漠",
+    "synonyms": [
+      "apathy"
+    ]
+  },
+  {
+    "word": "indigence",
+    "meaning": "貧窮",
+    "synonyms": [
+      "penury"
+    ]
+  },
+  {
+    "word": "indigent",
+    "meaning": "貧窮的",
+    "synonyms": [
+      "impecunious"
+    ]
+  },
+  {
+    "word": "indiscernible",
+    "meaning": "難以理解的",
+    "synonyms": [
+      "imperceptible"
+    ]
+  },
+  {
+    "word": "indispensable",
+    "meaning": "不可或缺的",
+    "synonyms": [
+      "essential",
+      "crucial"
+    ]
+  },
+  {
+    "word": "indolence",
+    "meaning": "懶惰",
+    "synonyms": [
+      "sloth"
+    ]
+  },
+  {
+    "word": "indubitable",
+    "meaning": "不容置疑的",
+    "synonyms": [
+      "incontrovertible"
+    ]
+  },
+  {
+    "word": "induce",
+    "meaning": "引起",
+    "synonyms": [
+      "engender"
+    ]
+  },
+  {
+    "word": "industrious",
+    "meaning": "勤奮的",
+    "synonyms": [
+      "diligent"
+    ]
+  },
+  {
+    "word": "inert",
+    "meaning": "遲鈍的,呆滯的",
+    "synonyms": [
+      "passive",
+      "dormant"
+    ]
+  },
+  {
+    "word": "inevitable",
+    "meaning": "必然的",
+    "synonyms": [
+      "unavoidable",
+      "preordained",
+      "ineluctable"
+    ]
+  },
+  {
+    "word": "inexplicable",
+    "meaning": "費解的",
+    "synonyms": [
+      "incomprehensible"
+    ]
+  },
+  {
+    "word": "inferable from",
+    "meaning": "能從...推斷的",
+    "synonyms": [
+      "entailed by"
+    ]
+  },
+  {
+    "word": "inflammatory",
+    "meaning": "煽動性的",
+    "synonyms": [
+      "provocative"
+    ]
+  },
+  {
+    "word": "inhibit",
+    "meaning": "抑制,禁止",
+    "synonyms": [
+      "hinder",
+      "bridle",
+      "suppress",
+      "constrain"
+    ]
+  },
+  {
+    "word": "inimical",
+    "meaning": "1.有害的 2.不友善的",
+    "synonyms": [
+      "antagonistic",
+      "deleterious"
+    ]
+  },
+  {
+    "word": "innate",
+    "meaning": "天生的",
+    "synonyms": [
+      "inborn"
+    ]
+  },
+  {
+    "word": "innocuous",
+    "meaning": "無害的,無意冒犯的",
+    "synonyms": [
+      "harmless",
+      "benign",
+      "inoffensive"
+    ]
+  },
+  {
+    "word": "innovative",
+    "meaning": "創新的",
+    "synonyms": [
+      "experimental"
+    ]
+  },
+  {
+    "word": "insatiable",
+    "meaning": "不滿足的",
+    "synonyms": [
+      "voracious",
+      "quenchless"
+    ]
+  },
+  {
+    "word": "insipid",
+    "meaning": "枯燥乏味的",
+    "synonyms": [
+      "bland"
+    ]
+  },
+  {
+    "word": "insufficient",
+    "meaning": "不充足的",
+    "synonyms": [
+      "meager"
+    ]
+  },
+  {
+    "word": "insular",
+    "meaning": "狹隘的",
+    "synonyms": [
+      "provincial",
+      "private"
+    ]
+  },
+  {
+    "word": "insulated from",
+    "meaning": "與...隔絕",
+    "synonyms": [
+      "buffered against"
+    ]
+  },
+  {
+    "word": "intelligible",
+    "meaning": "可理解的",
+    "synonyms": [
+      "readable"
+    ]
+  },
+  {
+    "word": "intemperate",
+    "meaning": "過度的",
+    "synonyms": [
+      "excessive"
+    ]
+  },
+  {
+    "word": "interchangeable",
+    "meaning": "可交換的",
+    "synonyms": [
+      "fungible"
+    ]
+  },
+  {
+    "word": "interdependent",
+    "meaning": "互相依賴的",
+    "synonyms": [
+      "interrelated"
+    ]
+  },
+  {
+    "word": "interested in",
+    "meaning": "對...有興趣",
+    "synonyms": [
+      "drawn to"
+    ]
+  },
+  {
+    "word": "interrelated",
+    "meaning": "互相連結的",
+    "synonyms": [
+      "interdependent"
+    ]
+  },
+  {
+    "word": "intransigent",
+    "meaning": "不妥協的",
+    "synonyms": [
+      "obdurate",
+      "resolute"
+    ]
+  },
+  {
+    "word": "intricate",
+    "meaning": "錯綜複雜的",
+    "synonyms": [
+      "convoluted"
+    ]
+  },
+  {
+    "word": "intrinsic",
+    "meaning": "本質的",
+    "synonyms": [
+      "inherent"
+    ]
+  },
+  {
+    "word": "intuitive",
+    "meaning": "憑直覺的",
+    "synonyms": [
+      "spontaneous",
+      "instinctive"
+    ]
+  },
+  {
+    "word": "invariable",
+    "meaning": "不變的,靜止的",
+    "synonyms": [
+      "static"
+    ]
+  },
+  {
+    "word": "irascible",
+    "meaning": "易怒的",
+    "synonyms": [
+      "exasperation"
+    ]
+  },
+  {
+    "word": "ironic",
+    "meaning": "諷刺的",
+    "synonyms": [
+      "paradoxical"
+    ]
+  },
+  {
+    "word": "irrefutable",
+    "meaning": "無法反駁的",
+    "synonyms": [
+      "undeniable"
+    ]
+  },
+  {
+    "word": "irregularity",
+    "meaning": "異常",
+    "synonyms": [
+      "anomaly"
+    ]
+  },
+  {
+    "word": "irresolution",
+    "meaning": "猶豫不決",
+    "synonyms": [
+      "vacillation"
+    ]
+  },
+  {
+    "word": "isolated",
+    "meaning": "分離的",
+    "synonyms": [
+      "discrete"
+    ]
+  },
+  {
+    "word": "itinerant",
+    "meaning": "流動的,巡迴的",
+    "synonyms": [
+      "peripatetic"
+    ]
+  },
+  {
+    "word": "jejune",
+    "meaning": "乏味的,幼稚的",
+    "synonyms": [
+      "vapid"
+    ]
+  },
+  {
+    "word": "judicious",
+    "meaning": "明智的",
+    "synonyms": [
+      "sensible"
+    ]
+  },
+  {
+    "word": "keen",
+    "meaning": "渴望的",
+    "synonyms": [
+      "eager"
+    ]
+  },
+  {
+    "word": "kindred",
+    "meaning": "同類的,相似的",
+    "synonyms": [
+      "affiliated"
+    ]
+  },
+  {
+    "word": "kinfolk",
+    "meaning": "親戚",
+    "synonyms": [
+      "relative"
+    ]
+  },
+  {
+    "word": "knotty",
+    "meaning": "複雜的,棘手的",
+    "synonyms": [
+      "complicated"
+    ]
+  },
+  {
+    "word": "laborious",
+    "meaning": "勤勞的",
+    "synonyms": [
+      "arduous"
+    ]
+  },
+  {
+    "word": "laconic",
+    "meaning": "話少的",
+    "synonyms": [
+      "spare"
+    ]
+  },
+  {
+    "word": "lambaste",
+    "meaning": "嚴厲批評",
+    "synonyms": [
+      "denounce"
+    ]
+  },
+  {
+    "word": "latitude",
+    "meaning": "自由",
+    "synonyms": [
+      "leeway"
+    ]
+  },
+  {
+    "word": "layperson",
+    "meaning": "門外漢",
+    "synonyms": [
+      "nonspecialist"
+    ]
+  },
+  {
+    "word": "learned",
+    "meaning": "博學的",
+    "synonyms": [
+      "erudite"
+    ]
+  },
+  {
+    "word": "lethargic",
+    "meaning": "無精打采的",
+    "synonyms": [
+      "somnolent",
+      "slumberous"
+    ]
+  },
+  {
+    "word": "levelheaded",
+    "meaning": "頭腦冷靜的",
+    "synonyms": [
+      "sober"
+    ]
+  },
+  {
+    "word": "liberation",
+    "meaning": "解放,解脫",
+    "synonyms": [
+      "rejection"
+    ]
+  },
+  {
+    "word": "limpid",
+    "meaning": "清晰的",
+    "synonyms": [
+      "pellucid"
+    ]
+  },
+  {
+    "word": "lionize",
+    "meaning": "崇拜,把...視為名人",
+    "synonyms": [
+      "eulogize"
+    ]
+  },
+  {
+    "word": "list",
+    "meaning": "傾斜",
+    "synonyms": [
+      "tilt"
+    ]
+  },
+  {
+    "word": "loath",
+    "meaning": "不情願的",
+    "synonyms": [
+      "reluctant",
+      "unwilling",
+      "disinclined"
+    ]
+  },
+  {
+    "word": "loquacious",
+    "meaning": "健談的",
+    "synonyms": [
+      "garrulous"
+    ]
+  },
+  {
+    "word": "ludicrous",
+    "meaning": "荒唐可笑的",
+    "synonyms": [
+      "risible"
+    ]
+  },
+  {
+    "word": "lugubrious",
+    "meaning": "悲傷的",
+    "synonyms": [
+      "gloomy"
+    ]
+  },
+  {
+    "word": "lull",
+    "meaning": "使平靜,蒙蔽,間歇",
+    "synonyms": [
+      "respite"
+    ]
+  },
+  {
+    "word": "luxuriant",
+    "meaning": "茂盛的,豐富的",
+    "synonyms": [
+      "rampant"
+    ]
+  },
+  {
+    "word": "maintain",
+    "meaning": "斷言",
+    "synonyms": [
+      "assert"
+    ]
+  },
+  {
+    "word": "malfeasance",
+    "meaning": "瀆職",
+    "synonyms": [
+      "fraudulence"
+    ]
+  },
+  {
+    "word": "malleable",
+    "meaning": "可塑的,易變的",
+    "synonyms": [
+      "plastic"
+    ]
+  },
+  {
+    "word": "malodorous",
+    "meaning": "難聞的",
+    "synonyms": [
+      "noisome"
+    ]
+  },
+  {
+    "word": "manifest",
+    "meaning": "明顯的,清楚顯示",
+    "synonyms": [
+      "reveal",
+      "self-evident",
+      "obvious"
+    ]
+  },
+  {
+    "word": "mar",
+    "meaning": "污染",
+    "synonyms": [
+      "taint"
+    ]
+  },
+  {
+    "word": "marginal",
+    "meaning": "不重要的,邊緣的",
+    "synonyms": [
+      "peripheral"
+    ]
+  },
+  {
+    "word": "mask",
+    "meaning": "掩飾",
+    "synonyms": [
+      "belie"
+    ]
+  },
+  {
+    "word": "maverick",
+    "meaning": "特立獨行的人",
+    "synonyms": [
+      "nonconformist"
+    ]
+  },
+  {
+    "word": "meager",
+    "meaning": "缺乏的,瘦削的",
+    "synonyms": [
+      "insufficient",
+      "paltry"
+    ]
+  },
+  {
+    "word": "meet",
+    "meaning": "合適的",
+    "synonyms": [
+      "condign"
+    ]
+  },
+  {
+    "word": "meld",
+    "meaning": "混合",
+    "synonyms": [
+      "combine"
+    ]
+  },
+  {
+    "word": "mendacity",
+    "meaning": "不誠實",
+    "synonyms": [
+      "hypocrisy"
+    ]
+  },
+  {
+    "word": "mercurial",
+    "meaning": "變化無常的",
+    "synonyms": [
+      "volatile",
+      "inconstant"
+    ]
+  },
+  {
+    "word": "meticulous",
+    "meaning": "周密的,一絲不苟的",
+    "synonyms": [
+      "thorough",
+      "exact",
+      "painstaking"
+    ]
+  },
+  {
+    "word": "mimic",
+    "meaning": "1.模仿 2.和...相似",
+    "synonyms": [
+      "camouflage",
+      "replicate"
+    ]
+  },
+  {
+    "word": "minuscule",
+    "meaning": "極小的",
+    "synonyms": [
+      "diminutive"
+    ]
+  },
+  {
+    "word": "minutiae",
+    "meaning": "細節",
+    "synonyms": [
+      "particular"
+    ]
+  },
+  {
+    "word": "misgiving",
+    "meaning": "疑慮,擔憂",
+    "synonyms": [
+      "trepidation",
+      "qualm"
+    ]
+  },
+  {
+    "word": "misuse",
+    "meaning": "誤用",
+    "synonyms": [
+      "abuse"
+    ]
+  },
+  {
+    "word": "mitigate",
+    "meaning": "緩和",
+    "synonyms": [
+      "abate",
+      "curtail",
+      "temper",
+      "ameliorate"
+    ]
+  },
+  {
+    "word": "mixed",
+    "meaning": "混合的,矛盾的",
+    "synonyms": [
+      "inconsistent"
+    ]
+  },
+  {
+    "word": "mockery",
+    "meaning": "嘲笑",
+    "synonyms": [
+      "derision"
+    ]
+  },
+  {
+    "word": "modest",
+    "meaning": "謙虛的,樸實無華的,適度的,有限的",
+    "synonyms": [
+      "unassuming",
+      "unostentatious"
+    ]
+  },
+  {
+    "word": "modicum",
+    "meaning": "少量",
+    "synonyms": [
+      "dearth"
+    ]
+  },
+  {
+    "word": "modulate",
+    "meaning": "調節",
+    "synonyms": [
+      "temper"
+    ]
+  },
+  {
+    "word": "momentary",
+    "meaning": "短暫的",
+    "synonyms": [
+      "evanescent"
+    ]
+  },
+  {
+    "word": "mordant",
+    "meaning": "尖刻的",
+    "synonyms": [
+      "acerbic"
+    ]
+  },
+  {
+    "word": "muddle",
+    "meaning": "使..混亂",
+    "synonyms": [
+      "confuse"
+    ]
+  },
+  {
+    "word": "mutable",
+    "meaning": "可變的",
+    "synonyms": [
+      "liquid"
+    ]
+  },
+  {
+    "word": "narcissism",
+    "meaning": "自戀",
+    "synonyms": [
+      "self-flattery"
+    ]
+  },
+  {
+    "word": "nascent",
+    "meaning": "剛出現的",
+    "synonyms": [
+      "budding",
+      "unformed"
+    ]
+  },
+  {
+    "word": "nebulous",
+    "meaning": "模糊的",
+    "synonyms": [
+      "vague"
+    ]
+  },
+  {
+    "word": "neutrality",
+    "meaning": "中立",
+    "synonyms": [
+      "impartiality"
+    ]
+  },
+  {
+    "word": "neutralize",
+    "meaning": "阻止",
+    "synonyms": [
+      "stymie"
+    ]
+  },
+  {
+    "word": "nimble",
+    "meaning": "敏捷的",
+    "synonyms": [
+      "adroit",
+      "dexterous",
+      "skillful"
+    ]
+  },
+  {
+    "word": "no-nonsense",
+    "meaning": "嚴肅的,高效能幹練的",
+    "synonyms": [
+      "businesslike"
+    ]
+  },
+  {
+    "word": "noisome",
+    "meaning": "令人討厭的,惡臭的",
+    "synonyms": [
+      "malodorous"
+    ]
+  },
+  {
+    "word": "nonchalant",
+    "meaning": "冷漠的",
+    "synonyms": [
+      "insouciant"
+    ]
+  },
+  {
+    "word": "nonconformist",
+    "meaning": "不守成規者",
+    "synonyms": [
+      "maverick"
+    ]
+  },
+  {
+    "word": "nondescript",
+    "meaning": "無個性的",
+    "synonyms": [
+      "unexceptional"
+    ]
+  },
+  {
+    "word": "nonspecialist",
+    "meaning": "非專業人士",
+    "synonyms": [
+      "layperson"
+    ]
+  },
+  {
+    "word": "novel",
+    "meaning": "新穎的",
+    "synonyms": [
+      "original",
+      "unexampled",
+      "unprecedented"
+    ]
+  },
+  {
+    "word": "novice",
+    "meaning": "新手",
+    "synonyms": [
+      "tyro"
+    ]
+  },
+  {
+    "word": "nuance",
+    "meaning": "細微差別",
+    "synonyms": [
+      "subtlety"
+    ]
+  },
+  {
+    "word": "numinous",
+    "meaning": "神聖的,超自然的,神秘的",
+    "synonyms": [
+      "occult"
+    ]
+  },
+  {
+    "word": "obdurate",
+    "meaning": "固執的",
+    "synonyms": [
+      "intransigent",
+      "fortitude"
+    ]
+  },
+  {
+    "word": "obedience",
+    "meaning": "服從",
+    "synonyms": [
+      "submission"
+    ]
+  },
+  {
+    "word": "obfuscate",
+    "meaning": "混淆,使迷惑",
+    "synonyms": [
+      "obscure",
+      "mystify"
+    ]
+  },
+  {
+    "word": "objective",
+    "meaning": "客觀的,公正的",
+    "synonyms": [
+      "fair"
+    ]
+  },
+  {
+    "word": "obscure",
+    "meaning": "1.不出名的 2.費解的 3.使...費解",
+    "synonyms": [
+      "anonymous",
+      "opaque",
+      "obfuscate"
+    ]
+  },
+  {
+    "word": "obsequious",
+    "meaning": "諂媚的",
+    "synonyms": [
+      "sycophantic"
+    ]
+  },
+  {
+    "word": "obsessed",
+    "meaning": "著迷的",
+    "synonyms": [
+      "fixated"
+    ]
+  },
+  {
+    "word": "obsolete",
+    "meaning": "廢棄的,老式的",
+    "synonyms": [
+      "outmoded",
+      "fusty"
+    ]
+  },
+  {
+    "word": "obtain",
+    "meaning": "獲得",
+    "synonyms": [
+      "glean"
+    ]
+  },
+  {
+    "word": "obtrusive",
+    "meaning": "惹眼的",
+    "synonyms": [
+      "conspicuous"
+    ]
+  },
+  {
+    "word": "occult",
+    "meaning": "神秘的",
+    "synonyms": [
+      "numinous",
+      "arcane"
+    ]
+  },
+  {
+    "word": "offset",
+    "meaning": "補償,抵消",
+    "synonyms": [
+      "compensate"
+    ]
+  },
+  {
+    "word": "ominous",
+    "meaning": "不祥的",
+    "synonyms": [
+      "inauspicious"
+    ]
+  },
+  {
+    "word": "omnipresent",
+    "meaning": "無所不在的",
+    "synonyms": [
+      "ubiquitous",
+      "universal"
+    ]
+  },
+  {
+    "word": "onerous",
+    "meaning": "繁重的",
+    "synonyms": [
+      "burdensome"
+    ]
+  },
+  {
+    "word": "onetime",
+    "meaning": "過去的",
+    "synonyms": [
+      "erstwhile"
+    ]
+  },
+  {
+    "word": "opaque",
+    "meaning": "不透明的,難懂的",
+    "synonyms": [
+      "obscure",
+      "inaccessible"
+    ]
+  },
+  {
+    "word": "opportune",
+    "meaning": "適時的",
+    "synonyms": [
+      "timely"
+    ]
+  },
+  {
+    "word": "opprobrium",
+    "meaning": "譴責,恥辱",
+    "synonyms": [
+      "disdain",
+      "vitriol"
+    ]
+  },
+  {
+    "word": "opulent",
+    "meaning": "富裕的",
+    "synonyms": [
+      "affluent"
+    ]
+  },
+  {
+    "word": "orderly",
+    "meaning": "有秩序的",
+    "synonyms": [
+      "coherent"
+    ]
+  },
+  {
+    "word": "orientation",
+    "meaning": "目標,態度",
+    "synonyms": [
+      "bias"
+    ]
+  },
+  {
+    "word": "original",
+    "meaning": "原創的,新穎的",
+    "synonyms": [
+      "novel"
+    ]
+  },
+  {
+    "word": "oust",
+    "meaning": "罷黜,驅逐,取代",
+    "synonyms": [
+      "expel",
+      "banish"
+    ]
+  },
+  {
+    "word": "outdo",
+    "meaning": "超過",
+    "synonyms": [
+      "eclipse"
+    ]
+  },
+  {
+    "word": "overshadow",
+    "meaning": "超越",
+    "synonyms": [
+      "outlast",
+      "obscure"
+    ]
+  },
+  {
+    "word": "overstate",
+    "meaning": "誇大",
+    "synonyms": [
+      "exaggerate"
+    ]
+  },
+  {
+    "word": "overwhelming",
+    "meaning": "壓倒性的,難以抵抗的",
+    "synonyms": [
+      "irresistible"
+    ]
+  },
+  {
+    "word": "pacific",
+    "meaning": "和平主義的",
+    "synonyms": [
+      "dovish"
+    ]
+  },
+  {
+    "word": "painstaking",
+    "meaning": "煞費苦心的",
+    "synonyms": [
+      "meticulous"
+    ]
+  },
+  {
+    "word": "palatable",
+    "meaning": "好吃的",
+    "synonyms": [
+      "appetizing"
+    ]
+  },
+  {
+    "word": "palliate",
+    "meaning": "減輕",
+    "synonyms": [
+      "damp"
+    ]
+  },
+  {
+    "word": "paltry",
+    "meaning": "很少的,無意義的",
+    "synonyms": [
+      "meager",
+      "insufficient"
+    ]
+  },
+  {
+    "word": "panacea",
+    "meaning": "萬用藥",
+    "synonyms": [
+      "remedy",
+      "cure-all"
+    ]
+  },
+  {
+    "word": "paradigm",
+    "meaning": "模板,典範",
+    "synonyms": [
+      "model"
+    ]
+  },
+  {
+    "word": "paradoxical",
+    "meaning": "矛盾的",
+    "synonyms": [
+      "ironic"
+    ]
+  },
+  {
+    "word": "parity",
+    "meaning": "平等,相等",
+    "synonyms": [
+      "equality"
+    ]
+  },
+  {
+    "word": "parochial",
+    "meaning": "狹隘的",
+    "synonyms": [
+      "provincial"
+    ]
+  },
+  {
+    "word": "parsimonious",
+    "meaning": "吝嗇的",
+    "synonyms": [
+      "stingy",
+      "illiberal"
+    ]
+  },
+  {
+    "word": "pastoral",
+    "meaning": "鄉村的",
+    "synonyms": [
+      "bucolic"
+    ]
+  },
+  {
+    "word": "patchwork",
+    "meaning": "大雜燴",
+    "synonyms": [
+      "hodgepodge"
+    ]
+  },
+  {
+    "word": "patent",
+    "meaning": "明顯的",
+    "synonyms": [
+      "evident",
+      "manifest"
+    ]
+  },
+  {
+    "word": "paucity",
+    "meaning": "不足",
+    "synonyms": [
+      "dearth"
+    ]
+  },
+  {
+    "word": "peculiar",
+    "meaning": "奇怪的",
+    "synonyms": [
+      "idiosyncratic"
+    ]
+  },
+  {
+    "word": "pecuniary",
+    "meaning": "金錢的",
+    "synonyms": [
+      "economic"
+    ]
+  },
+  {
+    "word": "pedantic",
+    "meaning": "迂腐的",
+    "synonyms": [
+      "hidebound"
+    ]
+  },
+  {
+    "word": "pellucid",
+    "meaning": "清晰的",
+    "synonyms": [
+      "limpid"
+    ]
+  },
+  {
+    "word": "perceptible",
+    "meaning": "可見的,可察覺的",
+    "synonyms": [
+      "discernible"
+    ]
+  },
+  {
+    "word": "perennial",
+    "meaning": "持久的",
+    "synonyms": [
+      "long-standing",
+      "constant"
+    ]
+  },
+  {
+    "word": "perfunctory",
+    "meaning": "敷衍的",
+    "synonyms": [
+      "cursory",
+      "casual"
+    ]
+  },
+  {
+    "word": "perilous",
+    "meaning": "危險的",
+    "synonyms": [
+      "dangerous",
+      "precarious"
+    ]
+  },
+  {
+    "word": "peripatetic",
+    "meaning": "巡迴的",
+    "synonyms": [
+      "itinerant"
+    ]
+  },
+  {
+    "word": "peripheral",
+    "meaning": "邊緣的,補充的",
+    "synonyms": [
+      "marginal",
+      "subsidiary"
+    ]
+  },
+  {
+    "word": "permeable",
+    "meaning": "可滲透的",
+    "synonyms": [
+      "porous"
+    ]
+  },
+  {
+    "word": "pernicious",
+    "meaning": "有害的",
+    "synonyms": [
+      "deleterious"
+    ]
+  },
+  {
+    "word": "perplex",
+    "meaning": "迷惑",
+    "synonyms": [
+      "confound",
+      "baffle"
+    ]
+  },
+  {
+    "word": "perspicacious",
+    "meaning": "有洞察力的",
+    "synonyms": [
+      "discernible"
+    ]
+  },
+  {
+    "word": "pervasive",
+    "meaning": "普遍的,瀰漫的",
+    "synonyms": [
+      "rife"
+    ]
+  },
+  {
+    "word": "pilfer",
+    "meaning": "偷竊",
+    "synonyms": [
+      "appropriate"
+    ]
+  },
+  {
+    "word": "placidity",
+    "meaning": "滿足,平和",
+    "synonyms": [
+      "complacency"
+    ]
+  },
+  {
+    "word": "plaintive",
+    "meaning": "悲傷的",
+    "synonyms": [
+      "elegiac"
+    ]
+  },
+  {
+    "word": "plastic",
+    "meaning": "可塑的,做作的",
+    "synonyms": [
+      "malleable"
+    ]
+  },
+  {
+    "word": "plausible",
+    "meaning": "1.真實的 2.看似真實(但實際虛假)",
+    "synonyms": [
+      "conceivable"
+    ]
+  },
+  {
+    "word": "plethora",
+    "meaning": "過量",
+    "synonyms": [
+      "surfeit",
+      "glut"
+    ]
+  },
+  {
+    "word": "pointless",
+    "meaning": "無意義的",
+    "synonyms": [
+      "futile"
+    ]
+  },
+  {
+    "word": "polymath",
+    "meaning": "博學者",
+    "synonyms": [
+      "encyclopedic"
+    ]
+  },
+  {
+    "word": "ponder",
+    "meaning": "深思熟慮",
+    "synonyms": [
+      "contemplate"
+    ]
+  },
+  {
+    "word": "porous",
+    "meaning": "多孔的,能滲透的",
+    "synonyms": [
+      "permeable"
+    ]
+  },
+  {
+    "word": "portend",
+    "meaning": "預言",
+    "synonyms": [
+      "predict",
+      "presage"
+    ]
+  },
+  {
+    "word": "pragmatic",
+    "meaning": "務實的",
+    "synonyms": [
+      "realistic"
+    ]
+  },
+  {
+    "word": "preachy",
+    "meaning": "愛說教的",
+    "synonyms": [
+      "sanctimonious",
+      "didactic"
+    ]
+  },
+  {
+    "word": "precarious",
+    "meaning": "危險的,不穩固的",
+    "synonyms": [
+      "perilous"
+    ]
+  },
+  {
+    "word": "precede",
+    "meaning": "比...先發生",
+    "synonyms": [
+      "predate",
+      "antedate"
+    ]
+  },
+  {
+    "word": "preclude",
+    "meaning": "排除,防止",
+    "synonyms": [
+      "prevent",
+      "rule out"
+    ]
+  },
+  {
+    "word": "precocious",
+    "meaning": "早熟的",
+    "synonyms": [
+      "mature"
+    ]
+  },
+  {
+    "word": "preconception",
+    "meaning": "先入之見",
+    "synonyms": [
+      "prejudice"
+    ]
+  },
+  {
+    "word": "precursor",
+    "meaning": "先驅",
+    "synonyms": [
+      "forerunner"
+    ]
+  },
+  {
+    "word": "predate",
+    "meaning": "早於",
+    "synonyms": [
+      "antedate",
+      "precede"
+    ]
+  },
+  {
+    "word": "predilection",
+    "meaning": "偏愛",
+    "synonyms": [
+      "proclivity",
+      "preference"
+    ]
+  },
+  {
+    "word": "prefigure",
+    "meaning": "預示",
+    "synonyms": [
+      "anticipate"
+    ]
+  },
+  {
+    "word": "prejudice",
+    "meaning": "偏見,先入之見",
+    "synonyms": [
+      "preconception"
+    ]
+  },
+  {
+    "word": "presage",
+    "meaning": "預示",
+    "synonyms": [
+      "portend"
+    ]
+  },
+  {
+    "word": "prescient",
+    "meaning": "有預知能力的",
+    "synonyms": [
+      "prophetic"
+    ]
+  },
+  {
+    "word": "prescriptive",
+    "meaning": "指定的,規定的",
+    "synonyms": [
+      "exacting"
+    ]
+  },
+  {
+    "word": "pressing",
+    "meaning": "緊迫的,重要的",
+    "synonyms": [
+      "exigent",
+      "critical"
+    ]
+  },
+  {
+    "word": "preternatural",
+    "meaning": "異乎尋常的",
+    "synonyms": [
+      "exceptional"
+    ]
+  },
+  {
+    "word": "prevalent",
+    "meaning": "流行的,普遍的",
+    "synonyms": [
+      "widespread",
+      "extensive"
+    ]
+  },
+  {
+    "word": "primitive",
+    "meaning": "原始的,初級的,簡陋的",
+    "synonyms": [
+      "rudimentary",
+      "ancient"
+    ]
+  },
+  {
+    "word": "pristine",
+    "meaning": "原始的,暫新的",
+    "synonyms": [
+      "unblemished"
+    ]
+  },
+  {
+    "word": "proclaim",
+    "meaning": "宣布,表明",
+    "synonyms": [
+      "profess"
+    ]
+  },
+  {
+    "word": "proclivity",
+    "meaning": "傾向,嗜好",
+    "synonyms": [
+      "predilection",
+      "affinity"
+    ]
+  },
+  {
+    "word": "prodigious",
+    "meaning": "巨大的",
+    "synonyms": [
+      "voracious"
+    ]
+  },
+  {
+    "word": "profess",
+    "meaning": "公開宣稱,信奉",
+    "synonyms": [
+      "proclaim"
+    ]
+  },
+  {
+    "word": "proficient",
+    "meaning": "精通的",
+    "synonyms": [
+      "adept"
+    ]
+  },
+  {
+    "word": "profligate",
+    "meaning": "揮霍的",
+    "synonyms": [
+      "extravagant",
+      "prodigal"
+    ]
+  },
+  {
+    "word": "profound",
+    "meaning": "重大深刻的",
+    "synonyms": [
+      "weighty"
+    ]
+  },
+  {
+    "word": "profusion",
+    "meaning": "大量",
+    "synonyms": [
+      "wealth"
+    ]
+  },
+  {
+    "word": "proliferate",
+    "meaning": "激增",
+    "synonyms": [
+      "abound"
+    ]
+  },
+  {
+    "word": "prolix",
+    "meaning": "冗長的",
+    "synonyms": [
+      "verbose",
+      "long-winded"
+    ]
+  },
+  {
+    "word": "prominent",
+    "meaning": "顯著的",
+    "synonyms": [
+      "conspicuous",
+      "salient"
+    ]
+  },
+  {
+    "word": "prophetic",
+    "meaning": "有預見的",
+    "synonyms": [
+      "prescient"
+    ]
+  },
+  {
+    "word": "prophylactic",
+    "meaning": "預防的",
+    "synonyms": [
+      "inhibitory"
+    ]
+  },
+  {
+    "word": "propitious",
+    "meaning": "吉利的",
+    "synonyms": [
+      "auspicious"
+    ]
+  },
+  {
+    "word": "proponent",
+    "meaning": "支持者",
+    "synonyms": [
+      "defender",
+      "champion"
+    ]
+  },
+  {
+    "word": "protean",
+    "meaning": "變化多端的,多才多藝的",
+    "synonyms": [
+      "versatile"
+    ]
+  },
+  {
+    "word": "provenance",
+    "meaning": "起源",
+    "synonyms": [
+      "origin"
+    ]
+  },
+  {
+    "word": "provincial",
+    "meaning": "狹隘的,省的",
+    "synonyms": [
+      "insular"
+    ]
+  },
+  {
+    "word": "provocative",
+    "meaning": "引發的,挑釁的",
+    "synonyms": [
+      "inflammatory"
+    ]
+  },
+  {
+    "word": "prudent",
+    "meaning": "審慎的",
+    "synonyms": [
+      "circumspect",
+      "provident"
+    ]
+  },
+  {
+    "word": "pugnacious",
+    "meaning": "好鬥的",
+    "synonyms": [
+      "truculent",
+      "belligerent"
+    ]
+  },
+  {
+    "word": "put to rest",
+    "meaning": "排出",
+    "synonyms": [
+      "eliminated"
+    ]
+  },
+  {
+    "word": "quaff",
+    "meaning": "痛飲",
+    "synonyms": [
+      "imbibe"
+    ]
+  },
+  {
+    "word": "quiescent",
+    "meaning": "不活躍的,靜止的",
+    "synonyms": [
+      "abeyant",
+      "calm"
+    ]
+  },
+  {
+    "word": "quirky",
+    "meaning": "奇怪的",
+    "synonyms": [
+      "unconventional"
+    ]
+  },
+  {
+    "word": "quixotic",
+    "meaning": "不切實際的",
+    "synonyms": [
+      "idealistic"
+    ]
+  },
+  {
+    "word": "quotidian",
+    "meaning": "普通的,常見的,日常的",
+    "synonyms": [
+      "workday"
+    ]
+  },
+  {
+    "word": "raillery",
+    "meaning": "開玩笑",
+    "synonyms": [
+      "banter"
+    ]
+  },
+  {
+    "word": "rampant",
+    "meaning": "氾濫的,瘋長的",
+    "synonyms": [
+      "luxuriant"
+    ]
+  },
+  {
+    "word": "rant",
+    "meaning": "嚴厲批評",
+    "synonyms": [
+      "diatribe"
+    ]
+  },
+  {
+    "word": "rapacious",
+    "meaning": "貪婪的",
+    "synonyms": [
+      "avaricious"
+    ]
+  },
+  {
+    "word": "rapprochement",
+    "meaning": "和解",
+    "synonyms": [
+      "reconciliation"
+    ]
+  },
+  {
+    "word": "readable",
+    "meaning": "清晰易懂的,可讀性強的",
+    "synonyms": [
+      "intelligible"
+    ]
+  },
+  {
+    "word": "realize",
+    "meaning": "實作",
+    "synonyms": [
+      "achieve"
+    ]
+  },
+  {
+    "word": "rebuke",
+    "meaning": "指責",
+    "synonyms": [
+      "mockery"
+    ]
+  },
+  {
+    "word": "recant",
+    "meaning": "宣布放棄",
+    "synonyms": [
+      "repudiate"
+    ]
+  },
+  {
+    "word": "reckon",
+    "meaning": "認為,估計",
+    "synonyms": [
+      "gauge"
+    ]
+  },
+  {
+    "word": "recoil",
+    "meaning": "畏縮,後退",
+    "synonyms": [
+      "shrink"
+    ]
+  },
+  {
+    "word": "reconciliation",
+    "meaning": "和解",
+    "synonyms": [
+      "rapprochement"
+    ]
+  },
+  {
+    "word": "recondite",
+    "meaning": "晦澀難懂的",
+    "synonyms": [
+      "esoteric",
+      "arcane",
+      "abstruse"
+    ]
+  },
+  {
+    "word": "recrudescent",
+    "meaning": "復發的",
+    "synonyms": [
+      "resurgent"
+    ]
+  },
+  {
+    "word": "reflexive",
+    "meaning": "本能的,無意識的",
+    "synonyms": [
+      "automatic"
+    ]
+  },
+  {
+    "word": "refractory",
+    "meaning": "難以約束的",
+    "synonyms": [
+      "recalcitrant"
+    ]
+  },
+  {
+    "word": "regular",
+    "meaning": "常出現的",
+    "synonyms": [
+      "abundant"
+    ]
+  },
+  {
+    "word": "rehabilitate",
+    "meaning": "恢復",
+    "synonyms": [
+      "restore"
+    ]
+  },
+  {
+    "word": "rehash",
+    "meaning": "老調重彈,炒冷飯",
+    "synonyms": [
+      "recycle"
+    ]
+  },
+  {
+    "word": "rejection",
+    "meaning": "拒絕,排斥",
+    "synonyms": [
+      "liberation from"
+    ]
+  },
+  {
+    "word": "relic",
+    "meaning": "遺跡",
+    "synonyms": [
+      "vestige"
+    ]
+  },
+  {
+    "word": "relief",
+    "meaning": "解脫",
+    "synonyms": [
+      "respite"
+    ]
+  },
+  {
+    "word": "relinquish",
+    "meaning": "放棄",
+    "synonyms": [
+      "cede"
+    ]
+  },
+  {
+    "word": "relish",
+    "meaning": "享受",
+    "synonyms": [
+      "delight in"
+    ]
+  },
+  {
+    "word": "reluctant",
+    "meaning": "不情願的",
+    "synonyms": [
+      "unwilling",
+      "loath"
+    ]
+  },
+  {
+    "word": "remedy",
+    "meaning": "治療藥物,改進措施,糾正,彌補",
+    "synonyms": [
+      "panacea"
+    ]
+  },
+  {
+    "word": "remiss",
+    "meaning": "懈怠的",
+    "synonyms": [
+      "dilatory"
+    ]
+  },
+  {
+    "word": "remunerative",
+    "meaning": "獲利的",
+    "synonyms": [
+      "lucrative"
+    ]
+  },
+  {
+    "word": "renaissance",
+    "meaning": "復興",
+    "synonyms": [
+      "revival"
+    ]
+  },
+  {
+    "word": "reprehensible",
+    "meaning": "應受譴責的",
+    "synonyms": [
+      "deplorable"
+    ]
+  },
+  {
+    "word": "repudiate",
+    "meaning": "拒絕承認,與...斷絕關係",
+    "synonyms": [
+      "recant"
+    ]
+  },
+  {
+    "word": "requisite",
+    "meaning": "必需的",
+    "synonyms": [
+      "essential"
+    ]
+  },
+  {
+    "word": "resemblance",
+    "meaning": "相似",
+    "synonyms": [
+      "homogeneity"
+    ]
+  },
+  {
+    "word": "resolve",
+    "meaning": "解決,決定,決心",
+    "synonyms": [
+      "tenacity",
+      "determination"
+    ]
+  },
+  {
+    "word": "resonate",
+    "meaning": "對某人有重要性,共振,一致",
+    "synonyms": [
+      "ring true"
+    ]
+  },
+  {
+    "word": "respite",
+    "meaning": "喘息",
+    "synonyms": [
+      "lull",
+      "relief",
+      "break"
+    ]
+  },
+  {
+    "word": "restive",
+    "meaning": "躁動不安的",
+    "synonyms": [
+      "fractious"
+    ]
+  },
+  {
+    "word": "restorative",
+    "meaning": "恢復健康的",
+    "synonyms": [
+      "tonic"
+    ]
+  },
+  {
+    "word": "restraint",
+    "meaning": "限制,適度",
+    "synonyms": [
+      "moderation"
+    ]
+  },
+  {
+    "word": "reverence",
+    "meaning": "尊敬",
+    "synonyms": [
+      "veneration"
+    ]
+  },
+  {
+    "word": "revision",
+    "meaning": "修訂",
+    "synonyms": [
+      "emendation"
+    ]
+  },
+  {
+    "word": "revolutionary",
+    "meaning": "反傳統的",
+    "synonyms": [
+      "iconoclastic"
+    ]
+  },
+  {
+    "word": "riddle",
+    "meaning": "謎",
+    "synonyms": [
+      "conundrum",
+      "enigma",
+      "puzzle"
+    ]
+  },
+  {
+    "word": "ridicule",
+    "meaning": "嘲弄",
+    "synonyms": [
+      "derision"
+    ]
+  },
+  {
+    "word": "ring true",
+    "meaning": "聽來真實",
+    "synonyms": [
+      "resonate"
+    ]
+  },
+  {
+    "word": "risible",
+    "meaning": "可笑的",
+    "synonyms": [
+      "ludicrous"
+    ]
+  },
+  {
+    "word": "robust",
+    "meaning": "健壯的,強有力的",
+    "synonyms": [
+      "strong",
+      "reliable"
+    ]
+  },
+  {
+    "word": "rudimentary",
+    "meaning": "基本的,未完全發布的",
+    "synonyms": [
+      "primitive",
+      "sketchy",
+      "embryonic",
+      "sketchy",
+      "elemental"
+    ]
+  },
+  {
+    "word": "rule out",
+    "meaning": "排除",
+    "synonyms": [
+      "preclude"
+    ]
+  },
+  {
+    "word": "safeguard",
+    "meaning": "保衛",
+    "synonyms": [
+      "preserve"
+    ]
+  },
+  {
+    "word": "salient",
+    "meaning": "顯著的,重要的",
+    "synonyms": [
+      "visible",
+      "prominent",
+      "obtrusive",
+      "conspicuous"
+    ]
+  },
+  {
+    "word": "sanctimonious",
+    "meaning": "假裝(比別人)聖潔的",
+    "synonyms": [
+      "preachy",
+      "didactic"
+    ]
+  },
+  {
+    "word": "sanction",
+    "meaning": "(經濟)制裁,批准",
+    "synonyms": [
+      "endorse",
+      "countenance"
+    ]
+  },
+  {
+    "word": "sanguine",
+    "meaning": "樂觀的",
+    "synonyms": [
+      "optimistic"
+    ]
+  },
+  {
+    "word": "scant",
+    "meaning": "缺乏的",
+    "synonyms": [
+      "limited"
+    ]
+  },
+  {
+    "word": "scarce",
+    "meaning": "缺乏的",
+    "synonyms": [
+      "deficient"
+    ]
+  },
+  {
+    "word": "scary",
+    "meaning": "令人害怕的",
+    "synonyms": [
+      "intimidating"
+    ]
+  },
+  {
+    "word": "schism",
+    "meaning": "分裂",
+    "synonyms": [
+      "factiousness"
+    ]
+  },
+  {
+    "word": "secure",
+    "meaning": "獲得",
+    "synonyms": [
+      "capture",
+      "earn"
+    ]
+  },
+  {
+    "word": "seed",
+    "meaning": "播種,萌芽",
+    "synonyms": [
+      "germ"
+    ]
+  },
+  {
+    "word": "self-evident",
+    "meaning": "不證自明的",
+    "synonyms": [
+      "manifest"
+    ]
+  },
+  {
+    "word": "senescence",
+    "meaning": "老化,老化",
+    "synonyms": [
+      "decrepitude"
+    ]
+  },
+  {
+    "word": "sequential",
+    "meaning": "連續的,順序的",
+    "synonyms": [
+      "successive"
+    ]
+  },
+  {
+    "word": "shackle",
+    "meaning": "束縛",
+    "synonyms": [
+      "stifle"
+    ]
+  },
+  {
+    "word": "short-lived",
+    "meaning": "短暫的",
+    "synonyms": [
+      "ephemeral"
+    ]
+  },
+  {
+    "word": "shortcoming",
+    "meaning": "缺點",
+    "synonyms": [
+      "fault"
+    ]
+  },
+  {
+    "word": "showy",
+    "meaning": "虛有其表的,炫耀的",
+    "synonyms": [
+      "meretricious"
+    ]
+  },
+  {
+    "word": "shrewd",
+    "meaning": "精明的",
+    "synonyms": [
+      "canny",
+      "artful"
+    ]
+  },
+  {
+    "word": "shriek",
+    "meaning": "尖叫",
+    "synonyms": [
+      "caterwaul"
+    ]
+  },
+  {
+    "word": "shrink",
+    "meaning": "退縮,迴避,縮小,減少",
+    "synonyms": [
+      "recoil"
+    ]
+  },
+  {
+    "word": "shun",
+    "meaning": "避免",
+    "synonyms": [
+      "eschew"
+    ]
+  },
+  {
+    "word": "sidestep",
+    "meaning": "迴避",
+    "synonyms": [
+      "circumvent"
+    ]
+  },
+  {
+    "word": "signify",
+    "meaning": "表明",
+    "synonyms": [
+      "betoken"
+    ]
+  },
+  {
+    "word": "simpleminded",
+    "meaning": "心思簡單的,純樸的",
+    "synonyms": [
+      "unsophisticated"
+    ]
+  },
+  {
+    "word": "simplicity",
+    "meaning": "簡單,簡樸",
+    "synonyms": [
+      "artlessness"
+    ]
+  },
+  {
+    "word": "singular",
+    "meaning": "單一的,非凡的,異常的",
+    "synonyms": [
+      "unique"
+    ]
+  },
+  {
+    "word": "sizable",
+    "meaning": "大量的",
+    "synonyms": [
+      "substantial"
+    ]
+  },
+  {
+    "word": "skeptical",
+    "meaning": "懷疑的",
+    "synonyms": [
+      "unimpressed"
+    ]
+  },
+  {
+    "word": "skepticism",
+    "meaning": "懷疑",
+    "synonyms": [
+      "doubt"
+    ]
+  },
+  {
+    "word": "sketchy",
+    "meaning": "粗略的,不完全的",
+    "synonyms": [
+      "rudimentary",
+      "superficial",
+      "undeveloped"
+    ]
+  },
+  {
+    "word": "skittish",
+    "meaning": "易受驚嚇的",
+    "synonyms": [
+      "restive",
+      "fractious"
+    ]
+  },
+  {
+    "word": "slanted",
+    "meaning": "有傾向的",
+    "synonyms": [
+      "tendentious"
+    ]
+  },
+  {
+    "word": "sleazy",
+    "meaning": "骯髒的,不誠實的,邪惡的",
+    "synonyms": [
+      "sordid"
+    ]
+  },
+  {
+    "word": "slight",
+    "meaning": "貶低",
+    "synonyms": [
+      "disparage",
+      "discount"
+    ]
+  },
+  {
+    "word": "slippery",
+    "meaning": "難以抓住的,棘手的",
+    "synonyms": [
+      "elusive"
+    ]
+  },
+  {
+    "word": "sluggish",
+    "meaning": "緩慢的",
+    "synonyms": [
+      "dilatory",
+      "listless"
+    ]
+  },
+  {
+    "word": "slumberous",
+    "meaning": "昏睡的",
+    "synonyms": [
+      "lethargic"
+    ]
+  },
+  {
+    "word": "slur",
+    "meaning": "貶低",
+    "synonyms": [
+      "aspersion"
+    ]
+  },
+  {
+    "word": "snag",
+    "meaning": "障礙",
+    "synonyms": [
+      "hitch"
+    ]
+  },
+  {
+    "word": "snub",
+    "meaning": "冷落",
+    "synonyms": [
+      "slight"
+    ]
+  },
+  {
+    "word": "sobering",
+    "meaning": "嚴肅的",
+    "synonyms": [
+      "staid"
+    ]
+  },
+  {
+    "word": "sociable",
+    "meaning": "好交際的",
+    "synonyms": [
+      "gregarious"
+    ]
+  },
+  {
+    "word": "sole",
+    "meaning": "僅有的",
+    "synonyms": [
+      "exclusive"
+    ]
+  },
+  {
+    "word": "solemn",
+    "meaning": "嚴肅的",
+    "synonyms": [
+      "somber"
+    ]
+  },
+  {
+    "word": "solidarity",
+    "meaning": "團結",
+    "synonyms": [
+      "camaraderie"
+    ]
+  },
+  {
+    "word": "somber",
+    "meaning": "嚴肅的,昏暗的",
+    "synonyms": [
+      "solemn"
+    ]
+  },
+  {
+    "word": "somnolent",
+    "meaning": "昏睡的,催眠的",
+    "synonyms": [
+      "lethargic"
+    ]
+  },
+  {
+    "word": "soothe",
+    "meaning": "使減少",
+    "synonyms": [
+      "deflate"
+    ]
+  },
+  {
+    "word": "sound",
+    "meaning": "健康的,正確的,可靠的",
+    "synonyms": [
+      "unassailable",
+      "valid"
+    ]
+  },
+  {
+    "word": "spartan",
+    "meaning": "樸素的",
+    "synonyms": [
+      "austere"
+    ]
+  },
+  {
+    "word": "spectacular",
+    "meaning": "壯觀的",
+    "synonyms": [
+      "dramatic"
+    ]
+  },
+  {
+    "word": "speculation",
+    "meaning": "推測",
+    "synonyms": [
+      "conjecture"
+    ]
+  },
+  {
+    "word": "splendor",
+    "meaning": "華麗,顯赫",
+    "synonyms": [
+      "brilliance"
+    ]
+  },
+  {
+    "word": "spontaneous",
+    "meaning": "自發的",
+    "synonyms": [
+      "intuitive"
+    ]
+  },
+  {
+    "word": "sporadic",
+    "meaning": "零星的",
+    "synonyms": [
+      "occasional",
+      "fitful"
+    ]
+  },
+  {
+    "word": "spur",
+    "meaning": "激勵",
+    "synonyms": [
+      "foster"
+    ]
+  },
+  {
+    "word": "spurious",
+    "meaning": "虛假的",
+    "synonyms": [
+      "artificial",
+      "implausible"
+    ]
+  },
+  {
+    "word": "spurn",
+    "meaning": "拒絕",
+    "synonyms": [
+      "flout"
+    ]
+  },
+  {
+    "word": "square with",
+    "meaning": "與...一致",
+    "synonyms": [
+      "conform to"
+    ]
+  },
+  {
+    "word": "stability",
+    "meaning": "穩定",
+    "synonyms": [
+      "order"
+    ]
+  },
+  {
+    "word": "staid",
+    "meaning": "古板的,嚴肅的",
+    "synonyms": [
+      "sober"
+    ]
+  },
+  {
+    "word": "stale",
+    "meaning": "陳舊的,厭倦的",
+    "synonyms": [
+      "banal"
+    ]
+  },
+  {
+    "word": "stave off",
+    "meaning": "延緩",
+    "synonyms": [
+      "forestall"
+    ]
+  },
+  {
+    "word": "stem",
+    "meaning": "阻止",
+    "synonyms": [
+      "check"
+    ]
+  },
+  {
+    "word": "stifle",
+    "meaning": "阻止",
+    "synonyms": [
+      "shackle"
+    ]
+  },
+  {
+    "word": "stingy",
+    "meaning": "吝嗇的,微小的",
+    "synonyms": [
+      "parsimonious"
+    ]
+  },
+  {
+    "word": "stratified",
+    "meaning": "形成階層的,分層的",
+    "synonyms": [
+      "hierarchical"
+    ]
+  },
+  {
+    "word": "stringent",
+    "meaning": "嚴格的",
+    "synonyms": [
+      "exacting"
+    ]
+  },
+  {
+    "word": "strip away",
+    "meaning": "除去",
+    "synonyms": [
+      "remove"
+    ]
+  },
+  {
+    "word": "stubborn",
+    "meaning": "固執的,難除去的",
+    "synonyms": [
+      "intractable"
+    ]
+  },
+  {
+    "word": "stymie",
+    "meaning": "阻礙",
+    "synonyms": [
+      "hinder"
+    ]
+  },
+  {
+    "word": "subversive",
+    "meaning": "顛覆的,反傳統的",
+    "synonyms": [
+      "iconoclastic"
+    ]
+  },
+  {
+    "word": "successive",
+    "meaning": "連續的",
+    "synonyms": [
+      "sequential"
+    ]
+  },
+  {
+    "word": "succumb",
+    "meaning": "屈服,死亡",
+    "synonyms": [
+      "yield"
+    ]
+  },
+  {
+    "word": "sullen",
+    "meaning": "鬱鬱寡歡的",
+    "synonyms": [
+      "surly",
+      "grumpy"
+    ]
+  },
+  {
+    "word": "superficial",
+    "meaning": "膚淺的,表面的",
+    "synonyms": [
+      "shallow"
+    ]
+  },
+  {
+    "word": "supplant",
+    "meaning": "取代",
+    "synonyms": [
+      "supersede"
+    ]
+  },
+  {
+    "word": "supple",
+    "meaning": "能適應的,靈活的,柔韌的",
+    "synonyms": [
+      "flexible"
+    ]
+  },
+  {
+    "word": "supplemental",
+    "meaning": "補充的",
+    "synonyms": [
+      "complementary"
+    ]
+  },
+  {
+    "word": "supplicate",
+    "meaning": "懇求",
+    "synonyms": [
+      "entreat",
+      "solicit"
+    ]
+  },
+  {
+    "word": "surfeit",
+    "meaning": "過量",
+    "synonyms": [
+      "glut",
+      "plethora"
+    ]
+  },
+  {
+    "word": "surly",
+    "meaning": "陰鬱的",
+    "synonyms": [
+      "sullen"
+    ]
+  },
+  {
+    "word": "surmise",
+    "meaning": "推測,猜測",
+    "synonyms": [
+      "infer"
+    ]
+  },
+  {
+    "word": "sycophantic",
+    "meaning": "諂媚的",
+    "synonyms": [
+      "obsequious",
+      "adulating"
+    ]
+  },
+  {
+    "word": "sympathetic",
+    "meaning": "懷有好意的",
+    "synonyms": [
+      "well-disposed"
+    ]
+  },
+  {
+    "word": "synonymous",
+    "meaning": "同義的",
+    "synonyms": [
+      "tantamount"
+    ]
+  },
+  {
+    "word": "synoptic",
+    "meaning": "概要的",
+    "synonyms": [
+      "abridged"
+    ]
+  },
+  {
+    "word": "synthesis",
+    "meaning": "合成,綜合體",
+    "synonyms": [
+      "fusion"
+    ]
+  },
+  {
+    "word": "taciturn",
+    "meaning": "沉默寡言的",
+    "synonyms": [
+      "laconic",
+      "terse",
+      "curt"
+    ]
+  },
+  {
+    "word": "tantamount",
+    "meaning": "等同於",
+    "synonyms": [
+      "synonymous"
+    ]
+  },
+  {
+    "word": "taxing",
+    "meaning": "費勁的",
+    "synonyms": [
+      "arduous"
+    ]
+  },
+  {
+    "word": "tedious",
+    "meaning": "單調乏味的",
+    "synonyms": [
+      "dreary",
+      "boring"
+    ]
+  },
+  {
+    "word": "temper",
+    "meaning": "緩和",
+    "synonyms": [
+      "modulate",
+      "mitigate",
+      "neutralize"
+    ]
+  },
+  {
+    "word": "temperate",
+    "meaning": "溫和的,適度的",
+    "synonyms": [
+      "dispassionate"
+    ]
+  },
+  {
+    "word": "tenacity",
+    "meaning": "頑強",
+    "synonyms": [
+      "resolve",
+      "endurance"
+    ]
+  },
+  {
+    "word": "tenuous",
+    "meaning": "纖細的,脆弱的",
+    "synonyms": [
+      "exiguous"
+    ]
+  },
+  {
+    "word": "terse",
+    "meaning": "簡短的",
+    "synonyms": [
+      "laconic",
+      "curt",
+      "taciturn",
+      "succinct"
+    ]
+  },
+  {
+    "word": "thorough",
+    "meaning": "周密的,徹底的",
+    "synonyms": [
+      "meticulous"
+    ]
+  },
+  {
+    "word": "tilt",
+    "meaning": "傾斜,偏見",
+    "synonyms": [
+      "list"
+    ]
+  },
+  {
+    "word": "timely",
+    "meaning": "適時的",
+    "synonyms": [
+      "opportune"
+    ]
+  },
+  {
+    "word": "timid",
+    "meaning": "膽怯的,羞怯的",
+    "synonyms": [
+      "diffident"
+    ]
+  },
+  {
+    "word": "tolerate",
+    "meaning": "容許",
+    "synonyms": [
+      "brook"
+    ]
+  },
+  {
+    "word": "tonic",
+    "meaning": "恢復健康的",
+    "synonyms": [
+      "restorative"
+    ]
+  },
+  {
+    "word": "tortuous",
+    "meaning": "冗長複雜的",
+    "synonyms": [
+      "convoluted"
+    ]
+  },
+  {
+    "word": "totemic",
+    "meaning": "象徵的",
+    "synonyms": [
+      "emblematic"
+    ]
+  },
+  {
+    "word": "tractable",
+    "meaning": "馴服的,溫馴的",
+    "synonyms": [
+      "compliant"
+    ]
+  },
+  {
+    "word": "transitory",
+    "meaning": "短暫的",
+    "synonyms": [
+      "ephemeral",
+      "evanescent"
+    ]
+  },
+  {
+    "word": "transmit",
+    "meaning": "傳播",
+    "synonyms": [
+      "propagate"
+    ]
+  },
+  {
+    "word": "trenchant",
+    "meaning": "有力的,有效的",
+    "synonyms": [
+      "profound",
+      "incisive"
+    ]
+  },
+  {
+    "word": "trepidation",
+    "meaning": "不安",
+    "synonyms": [
+      "misgiving",
+      "apprehension"
+    ]
+  },
+  {
+    "word": "tribute",
+    "meaning": "稱讚,貢品",
+    "synonyms": [
+      "encomium"
+    ]
+  },
+  {
+    "word": "trifling",
+    "meaning": "微不足道的",
+    "synonyms": [
+      "minimal"
+    ]
+  },
+  {
+    "word": "triumph",
+    "meaning": "偉大勝利",
+    "synonyms": [
+      "success"
+    ]
+  },
+  {
+    "word": "truculent",
+    "meaning": "好鬥的",
+    "synonyms": [
+      "pugnacious",
+      "bellicose",
+      "combative",
+      "aggressive"
+    ]
+  },
+  {
+    "word": "truncate",
+    "meaning": "截短",
+    "synonyms": [
+      "shorten",
+      "foreshorten"
+    ]
+  },
+  {
+    "word": "tyro",
+    "meaning": "新手",
+    "synonyms": [
+      "novice",
+      "neophyte"
+    ]
+  },
+  {
+    "word": "ubiquitous",
+    "meaning": "無所不在的",
+    "synonyms": [
+      "omnipresent",
+      "universal"
+    ]
+  },
+  {
+    "word": "unalloyed",
+    "meaning": "純粹的",
+    "synonyms": [
+      "unadulterated"
+    ]
+  },
+  {
+    "word": "unanticipated",
+    "meaning": "未預期的",
+    "synonyms": [
+      "unexpected"
+    ]
+  },
+  {
+    "word": "unassailable",
+    "meaning": "毋庸置疑的",
+    "synonyms": [
+      "sound",
+      "airtight"
+    ]
+  },
+  {
+    "word": "unassuming",
+    "meaning": "謙遜的",
+    "synonyms": [
+      "modest",
+      "humble"
+    ]
+  },
+  {
+    "word": "unblemished",
+    "meaning": "暫新的,清白的",
+    "synonyms": [
+      "pristine"
+    ]
+  },
+  {
+    "word": "unbounded",
+    "meaning": "無限的",
+    "synonyms": [
+      "immoderate",
+      "expansive"
+    ]
+  },
+  {
+    "word": "unceasing",
+    "meaning": "不停的",
+    "synonyms": [
+      "unremitting"
+    ]
+  },
+  {
+    "word": "uncertain",
+    "meaning": "不確定的,脆弱的",
+    "synonyms": [
+      "tenuous"
+    ]
+  },
+  {
+    "word": "unconventional",
+    "meaning": "非傳統的",
+    "synonyms": [
+      "original"
+    ]
+  },
+  {
+    "word": "undeniable",
+    "meaning": "不可否認的",
+    "synonyms": [
+      "unquestionable",
+      "irrefutable"
+    ]
+  },
+  {
+    "word": "undercut",
+    "meaning": "削弱",
+    "synonyms": [
+      "subvert",
+      "impair",
+      "undermine"
+    ]
+  },
+  {
+    "word": "undermine",
+    "meaning": "暗中破壞",
+    "synonyms": [
+      "impair",
+      "subvert",
+      "undercut"
+    ]
+  },
+  {
+    "word": "underscore",
+    "meaning": "強調",
+    "synonyms": [
+      "highlight"
+    ]
+  },
+  {
+    "word": "understandable",
+    "meaning": "容易理解的",
+    "synonyms": [
+      "transparent"
+    ]
+  },
+  {
+    "word": "underwrite",
+    "meaning": "簽章",
+    "synonyms": [
+      "endorse"
+    ]
+  },
+  {
+    "word": "undogmatic",
+    "meaning": "能容納的,不教條的",
+    "synonyms": [
+      "receptive"
+    ]
+  },
+  {
+    "word": "unerring",
+    "meaning": "萬無一失的",
+    "synonyms": [
+      "settled"
+    ]
+  },
+  {
+    "word": "unexampled",
+    "meaning": "前所未有的",
+    "synonyms": [
+      "novel"
+    ]
+  },
+  {
+    "word": "unexceptional",
+    "meaning": "普通的",
+    "synonyms": [
+      "nondescript"
+    ]
+  },
+  {
+    "word": "unfathomable",
+    "meaning": "不能理解的",
+    "synonyms": [
+      "inscrutable"
+    ]
+  },
+  {
+    "word": "unflagging",
+    "meaning": "不知疲倦的",
+    "synonyms": [
+      "unfatigued"
+    ]
+  },
+  {
+    "word": "unfocused",
+    "meaning": "分散的",
+    "synonyms": [
+      "diffuse"
+    ]
+  },
+  {
+    "word": "ungainly",
+    "meaning": "笨拙的,不優雅的",
+    "synonyms": [
+      "awkward"
+    ]
+  },
+  {
+    "word": "unimpeachable",
+    "meaning": "毋庸置疑的",
+    "synonyms": [
+      "blameless"
+    ]
+  },
+  {
+    "word": "uninformative",
+    "meaning": "缺乏資訊的",
+    "synonyms": [
+      "inscrutable"
+    ]
+  },
+  {
+    "word": "universal",
+    "meaning": "廣泛的,普遍適用的,無處不在的",
+    "synonyms": [
+      "omnipresent",
+      "ubiquitous"
+    ]
+  },
+  {
+    "word": "unmistakable",
+    "meaning": "毋庸置疑的,明顯的",
+    "synonyms": [
+      "decisive"
+    ]
+  },
+  {
+    "word": "unorthodox",
+    "meaning": "非正統的",
+    "synonyms": [
+      "unconventional"
+    ]
+  },
+  {
+    "word": "unostentatious",
+    "meaning": "不誇耀的",
+    "synonyms": [
+      "modest"
+    ]
+  },
+  {
+    "word": "unprecedented",
+    "meaning": "前所未有的",
+    "synonyms": [
+      "abnormal"
+    ]
+  },
+  {
+    "word": "unprepossessing",
+    "meaning": "不吸引人的",
+    "synonyms": [
+      "unremarkable"
+    ]
+  },
+  {
+    "word": "unqualified",
+    "meaning": "完全的,不受限制的,無資格的",
+    "synonyms": [
+      "unalloyed"
+    ]
+  },
+  {
+    "word": "unrelated",
+    "meaning": "無關的",
+    "synonyms": [
+      "separate"
+    ]
+  },
+  {
+    "word": "unremarkable",
+    "meaning": "普通的",
+    "synonyms": [
+      "commonplace"
+    ]
+  },
+  {
+    "word": "unremitting",
+    "meaning": "不停的",
+    "synonyms": [
+      "unceasing"
+    ]
+  },
+  {
+    "word": "unremunerative",
+    "meaning": "不賺錢的",
+    "synonyms": [
+      "unprofitable"
+    ]
+  },
+  {
+    "word": "unseemly",
+    "meaning": "不得體的",
+    "synonyms": [
+      "indecorous"
+    ]
+  },
+  {
+    "word": "unsettle",
+    "meaning": "使不安",
+    "synonyms": [
+      "alarm",
+      "disconcert"
+    ]
+  },
+  {
+    "word": "untenable",
+    "meaning": "站不住腳的",
+    "synonyms": [
+      "baseless"
+    ]
+  },
+  {
+    "word": "untether",
+    "meaning": "脫離",
+    "synonyms": [
+      "divorce"
+    ]
+  },
+  {
+    "word": "untrammeled",
+    "meaning": "沒有限制的",
+    "synonyms": [
+      "unrestrained"
+    ]
+  },
+  {
+    "word": "unwarranted",
+    "meaning": "無根據的",
+    "synonyms": [
+      "groundless"
+    ]
+  },
+  {
+    "word": "unwieldy",
+    "meaning": "笨重的,難操作的",
+    "synonyms": [
+      "cumbersome"
+    ]
+  },
+  {
+    "word": "unyielding",
+    "meaning": "不屈不撓的",
+    "synonyms": [
+      "implacable"
+    ]
+  },
+  {
+    "word": "upheaval",
+    "meaning": "劇變",
+    "synonyms": [
+      "convulsion"
+    ]
+  },
+  {
+    "word": "utilitarian",
+    "meaning": "實用的",
+    "synonyms": [
+      "functional"
+    ]
+  },
+  {
+    "word": "vacillation",
+    "meaning": "猶豫不決的",
+    "synonyms": [
+      "irresolution"
+    ]
+  },
+  {
+    "word": "vacuous",
+    "meaning": "空洞的",
+    "synonyms": [
+      "paucity"
+    ]
+  },
+  {
+    "word": "vague",
+    "meaning": "模糊的,不確定的",
+    "synonyms": [
+      "nebulous"
+    ]
+  },
+  {
+    "word": "valorize",
+    "meaning": "稱讚",
+    "synonyms": [
+      "exalt"
+    ]
+  },
+  {
+    "word": "venerate",
+    "meaning": "崇敬",
+    "synonyms": [
+      "honor",
+      "respect"
+    ]
+  },
+  {
+    "word": "verbose",
+    "meaning": "囉嗦的",
+    "synonyms": [
+      "prolix",
+      "long-winded"
+    ]
+  },
+  {
+    "word": "verisimilitude",
+    "meaning": "逼真",
+    "synonyms": [
+      "realism"
+    ]
+  },
+  {
+    "word": "versatile",
+    "meaning": "多才多藝的,多功能的",
+    "synonyms": [
+      "protean",
+      "fickle",
+      "volatile",
+      "flighty",
+      "erratic",
+      "capricious"
+    ]
+  },
+  {
+    "word": "vestige",
+    "meaning": "殘留部分",
+    "synonyms": [
+      "relic"
+    ]
+  },
+  {
+    "word": "vigilant",
+    "meaning": "警戒的",
+    "synonyms": [
+      "careful"
+    ]
+  },
+  {
+    "word": "vigorous",
+    "meaning": "精力充沛的",
+    "synonyms": [
+      "spirited"
+    ]
+  },
+  {
+    "word": "violate",
+    "meaning": "違反",
+    "synonyms": [
+      "contravene"
+    ]
+  },
+  {
+    "word": "visible",
+    "meaning": "看得見的,明顯的",
+    "synonyms": [
+      "salient"
+    ]
+  },
+  {
+    "word": "vitiate",
+    "meaning": "損害",
+    "synonyms": [
+      "impair"
+    ]
+  },
+  {
+    "word": "vitriolic",
+    "meaning": "尖酸刻薄的",
+    "synonyms": [
+      "acerbic",
+      "opprobrium"
+    ]
+  },
+  {
+    "word": "voracious",
+    "meaning": "貪吃的,貪得無厭的",
+    "synonyms": [
+      "prodigious",
+      "insatiable"
+    ]
+  },
+  {
+    "word": "wane",
+    "meaning": "衰落,減少,衰落期",
+    "synonyms": [
+      "ebb",
+      "decline"
+    ]
+  },
+  {
+    "word": "wanting",
+    "meaning": "有缺陷的",
+    "synonyms": [
+      "flawed"
+    ]
+  },
+  {
+    "word": "waver",
+    "meaning": "搖擺",
+    "synonyms": [
+      "oscillate"
+    ]
+  },
+  {
+    "word": "wayward",
+    "meaning": "任性的",
+    "synonyms": [
+      "errant",
+      "unpredictable"
+    ]
+  },
+  {
+    "word": "wealth",
+    "meaning": "財富,大量",
+    "synonyms": [
+      "profusion"
+    ]
+  },
+  {
+    "word": "welter",
+    "meaning": "混亂無序",
+    "synonyms": [
+      "hodgepodge"
+    ]
+  },
+  {
+    "word": "whimsical",
+    "meaning": "難以預測的",
+    "synonyms": [
+      "capricious"
+    ]
+  },
+  {
+    "word": "wield",
+    "meaning": "行使,施加",
+    "synonyms": [
+      "exert"
+    ]
+  },
+  {
+    "word": "witless",
+    "meaning": "愚蠢的",
+    "synonyms": [
+      "dense"
+    ]
+  },
+  {
+    "word": "wondrous",
+    "meaning": "奇妙的",
+    "synonyms": [
+      "amazing"
+    ]
+  },
+  {
+    "word": "yield",
+    "meaning": "產生,屈服",
+    "synonyms": [
+      "succumb",
+      "engender",
+      "output"
+    ]
+  },
+  {
+    "word": "zealot",
+    "meaning": "狂熱者",
+    "synonyms": [
+      "extremist",
+      "ideologue"
+    ]
+  },
+  {
+    "word": "zealous",
+    "meaning": "熱情的,狂熱的",
+    "synonyms": [
+      "impassioned",
+      "fervent",
+      "fiery",
+      "passionate"
+    ]
   }
 ]
