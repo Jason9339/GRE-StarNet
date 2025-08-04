@@ -246,7 +246,7 @@ function StarMap() {
                 y2={`${toPos.y}%`}
                 stroke="url(#magicalGradient)"
                 strokeWidth="2"
-                opacity={0.4 + connectionBrightness * 0.6}
+                opacity={0.6 + connectionBrightness * 0.4}
                 className="transition-all duration-500 drop-shadow-sm"
                 style={{
                   filter: `brightness(${0.8 + connectionBrightness * 0.5})`,
@@ -281,11 +281,11 @@ function StarMap() {
               onDoubleClick={() => handleStarDoubleClick(star.word)}
             >
               <div
-                className="rounded-full border-solid flex items-center justify-center transition-all duration-300"
+                className="rounded-full border-solid flex items-center justify-center overflow-hidden transition-all duration-300"
                 style={getStarStyle(star.word)}
               >
                 <span
-                  className={`font-bold text-center leading-tight ${isMainStar ? 'text-lg' : 'text-sm'} text-black`}
+                  className={`font-bold text-center leading-tight ${isMainStar ? 'text-lg' : 'text-xs'} text-black block w-full px-0.5 overflow-hidden whitespace-nowrap text-ellipsis`}
                   style={{ textShadow: '0 0 2px rgba(255,255,255,0.9)' }}
                 >
                   {star.word}
