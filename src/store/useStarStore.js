@@ -19,6 +19,10 @@ const useStarStore = create(
       
       // 目前的學習/挑戰狀態
       currentMission: null, // { word: 'alleviate', synonyms: [...], userInputs: [...] }
+
+      // 修復任務隊列狀態
+      missionQueue: [], // [{ word, meaning, synonyms }]
+      missionIndex: 0,
       
       // UI 狀態
       selectedStar: null,
@@ -83,6 +87,27 @@ const useStarStore = create(
                 synonyms: starItem.synonyms,
                 userInputs: [],
                 completed: false
+              },
+              missionQueue: [],
+              missionIndex: 0
+            });
+          }
+        },
+
+        // 開始一個修復任務序列
+        startMissionSession: (count = 15) => {
+          const shuffled = [...starDataJson].sort(() => Math.random() - 0.5);
+          const selected = shuffled.slice(0, count);
+          if (selected.length > 0) {
+            set({
+              missionQueue: selected,
+              missionIndex: 0,
+              currentMission: {
+                word: selected[0].word,
+                meaning: selected[0].meaning,
+                synonyms: selected[0].synonyms,
+                userInputs: [],
+                completed: false
               }
             });
           }
@@ -128,9 +153,32 @@ const useStarStore = create(
           }
           return state;
         }),
-        
-        // 清除當前任務
-        clearMission: () => set({ currentMission: null }),
+
+        // 進入下一個修復任務或結束序列
+        nextMission: () => set(state => {
+          const nextIndex = state.missionIndex + 1;
+          if (state.missionQueue && nextIndex < state.missionQueue.length) {
+            const nextItem = state.missionQueue[nextIndex];
+            return {
+              missionIndex: nextIndex,
+              currentMission: {
+                word: nextItem.word,
+                meaning: nextItem.meaning,
+                synonyms: nextItem.synonyms,
+                userInputs: [],
+                completed: false
+              }
+            };
+          }
+          return {
+            currentMission: null,
+            missionQueue: [],
+            missionIndex: 0
+          };
+        }),
+
+        // 清除當前任務與序列
+        clearMission: () => set({ currentMission: null, missionQueue: [], missionIndex: 0 }),
         
         // 選擇星星
         selectStar: (word) => set({ selectedStar: word }),

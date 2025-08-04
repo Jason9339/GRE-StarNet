@@ -1,13 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import useStarStore from '../store/useStarStore';
 
 function RestoreMission() {
-  const { currentMission, actions } = useStarStore();
+  const { currentMission, missionQueue, missionIndex, actions } = useStarStore();
   const [synonymInputs, setSynonymInputs] = useState({}); // 每個同義詞對應一個輸入值
   const [inputStatus, setInputStatus] = useState({}); // 每個輸入框的狀態
   const [showResults, setShowResults] = useState(false);
   const [sparkleAnimation, setSparkleAnimation] = useState(false);
   const [showHints, setShowHints] = useState(false);
+
+  // 預先生成星空，避免每次 render 重新計算造成閃爍
+  const introStars = useMemo(() =>
+    Array.from({ length: 20 }, () => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      animationDelay: `${Math.random() * 5}s`,
+      animationDuration: `${2 + Math.random() * 4}s`
+    })),
+  []);
+
+  const missionStars = useMemo(() =>
+    Array.from({ length: 15 }, () => ({
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      animationDelay: `${Math.random() * 5}s`,
+      animationDuration: `${3 + Math.random() * 4}s`
+    })),
+  []);
 
   useEffect(() => {
     if (currentMission) {
@@ -62,9 +81,9 @@ function RestoreMission() {
     actions.completeMission();
     setShowResults(true);
     
-    // 顯示結果3秒後清除任務
+    // 顯示結果3秒後進入下一題或結束
     setTimeout(() => {
-      actions.clearMission();
+      actions.nextMission();
     }, 3000);
   };
 
@@ -82,7 +101,7 @@ function RestoreMission() {
       });
     }
     
-    actions.clearMission();
+    actions.nextMission();
   };
 
   const getCorrectCount = () => {
@@ -110,13 +129,39 @@ function RestoreMission() {
 
   if (!currentMission) {
     return (
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6 rounded-lg shadow-lg">
-        <h2 className="text-2xl font-bold mb-4">🧠 修復任務</h2>
-        <p className="text-lg mb-4">點擊星圖中的星星或雙擊星星開始修復任務！</p>
-        <div className="text-sm opacity-80">
-          <p>📚 在修復任務中，你需要輸入指定單字的所有同義詞</p>
-          <p>⭐ 每答對一個同義詞，星星亮度就會增加</p>
-          <p>🎯 全部答對可以重建星座，讓所有相關星星閃閃發光！</p>
+      <div className="relative bg-gradient-to-br from-indigo-600 via-purple-500 to-pink-400 text-white p-8 rounded-lg shadow-xl overflow-hidden">
+        {/* 星空背景 */}
+        <div className="absolute inset-0 pointer-events-none">
+          {introStars.map((star, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-white rounded-full opacity-40 animate-pulse"
+              style={{
+                left: star.left,
+                top: star.top,
+                animationDelay: star.animationDelay,
+                animationDuration: star.animationDuration
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="relative z-10">
+          <h2 className="text-2xl font-bold mb-4">🧠 修復任務</h2>
+          <p className="text-lg mb-4">
+            點擊星圖中的星星開始，或直接開啟一個修復任務。
+          </p>
+          <button
+            onClick={() => actions.startMissionSession()}
+            className="px-6 py-3 bg-gradient-to-r from-indigo-400 to-purple-400 hover:from-indigo-300 hover:to-purple-300 rounded-lg font-bold shadow-lg transition-colors"
+          >
+            🌠 開始 15 題修復任務
+          </button>
+          <div className="text-sm opacity-80 mt-6">
+            <p>📚 在修復任務中，你需要輸入指定單字的所有同義詞</p>
+            <p>⭐ 每答對一個同義詞，星星亮度就會增加</p>
+            <p>🎯 全部答對可以重建星座，讓所有相關星星閃閃發光！</p>
+          </div>
         </div>
       </div>
     );
@@ -129,7 +174,7 @@ function RestoreMission() {
     const missedSynonyms = getMissedSynonyms();
 
     return (
-      <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-6 rounded-lg shadow-lg">
+      <div className="bg-gradient-to-r from-emerald-400 to-teal-400 text-white p-6 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-4">🎉 任務完成！</h2>
         <div className="text-lg mb-4">
           <p className="mb-2">主星詞: <span className="font-bold text-yellow-200">{currentMission.word}</span></p>
@@ -141,7 +186,7 @@ function RestoreMission() {
             <h3 className="font-bold mb-2">🔍 你遺漏的同義詞:</h3>
             <div className="flex flex-wrap gap-2">
               {missedSynonyms.map((synonym, index) => (
-                <span key={index} className="bg-red-500 bg-opacity-50 px-2 py-1 rounded text-sm">
+                <span key={index} className="bg-rose-400 bg-opacity-40 px-2 py-1 rounded text-sm">
                   {synonym}
                 </span>
               ))}
@@ -164,11 +209,32 @@ function RestoreMission() {
   }
 
   return (
-    <div className={`bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-lg shadow-lg transition-all duration-300 ${sparkleAnimation ? 'animate-pulse' : ''}`}>
-      <h2 className="text-2xl font-bold mb-4">
-        🧠 修復任務 
-        {sparkleAnimation && <span className="inline-block ml-2 animate-bounce">✨</span>}
-      </h2>
+    <div className={`relative bg-gradient-to-br from-indigo-600 via-purple-500 to-pink-400 text-white p-6 rounded-lg shadow-lg transition-all duration-300 ${sparkleAnimation ? 'animate-pulse' : ''} overflow-hidden`}>
+      <div className="absolute inset-0 pointer-events-none">
+        {missionStars.map((star, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full opacity-40 animate-pulse"
+            style={{
+              left: star.left,
+              top: star.top,
+              animationDelay: star.animationDelay,
+              animationDuration: star.animationDuration
+            }}
+          />
+        ))}
+      </div>
+      <div className="relative z-10">
+        <h2 className="text-2xl font-bold mb-4">
+          🧠 修復任務
+          {sparkleAnimation && <span className="inline-block ml-2 animate-bounce">✨</span>}
+        </h2>
+
+        {missionQueue.length > 0 && (
+          <p className="text-sm mb-4 opacity-80">
+            題目 {missionIndex + 1} / {missionQueue.length}
+          </p>
+        )}
       
       <div className="mb-6">
         <h3 className="text-xl mb-2">
@@ -187,7 +253,7 @@ function RestoreMission() {
           <h4 className="font-bold text-lg">請填入所有同義詞：</h4>
           <button
             onClick={() => setShowHints(!showHints)}
-            className="px-3 py-1 bg-yellow-500 bg-opacity-30 hover:bg-opacity-50 rounded-lg text-sm"
+            className="px-3 py-1 bg-yellow-300 bg-opacity-30 hover:bg-opacity-50 rounded-lg text-sm"
           >
             {showHints ? '🙈 隱藏提示' : '💡 顯示提示'}
           </button>
@@ -199,7 +265,7 @@ function RestoreMission() {
               <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
                 {index + 1}
               </div>
-              
+
               <div className="flex-1">
                 <div className="text-xs opacity-70 mb-1">
                   提示: {getHintText(synonym)}
@@ -210,11 +276,11 @@ function RestoreMission() {
                   onChange={(e) => handleInputChange(synonym, e.target.value)}
                   placeholder={`輸入第 ${index + 1} 個同義詞...`}
                   className={`w-full px-4 py-3 rounded-lg text-black border-2 focus:outline-none transition-all ${
-                    inputStatus[synonym] === 'correct' 
-                      ? 'border-green-400 bg-green-50' 
+                    inputStatus[synonym] === 'correct'
+                      ? 'border-emerald-300 bg-emerald-50'
                       : inputStatus[synonym] === 'incorrect'
-                      ? 'border-red-400 bg-red-50'
-                      : 'border-white bg-white focus:border-yellow-300'
+                      ? 'border-rose-300 bg-rose-50'
+                      : 'border-white bg-white focus:border-indigo-200'
                   }`}
                   autoFocus={index === 0}
                 />
@@ -222,10 +288,10 @@ function RestoreMission() {
 
               <div className="w-8 h-8 flex items-center justify-center">
                 {inputStatus[synonym] === 'correct' && (
-                  <span className="text-green-400 text-xl animate-bounce">✅</span>
+                  <span className="text-emerald-400 text-xl animate-bounce">✅</span>
                 )}
                 {inputStatus[synonym] === 'incorrect' && (
-                  <span className="text-red-400 text-xl">❌</span>
+                  <span className="text-rose-400 text-xl">❌</span>
                 )}
               </div>
             </div>
@@ -238,8 +304,8 @@ function RestoreMission() {
             <span>完成度: {Math.round((getCorrectCount() / currentMission.synonyms.length) * 100)}%</span>
           </div>
           <div className="w-full bg-white bg-opacity-20 rounded-full h-2 mt-2">
-            <div 
-              className="bg-green-400 h-2 rounded-full transition-all duration-500"
+            <div
+              className="bg-emerald-300 h-2 rounded-full transition-all duration-500"
               style={{ width: `${(getCorrectCount() / currentMission.synonyms.length) * 100}%` }}
             />
           </div>
@@ -249,13 +315,13 @@ function RestoreMission() {
       <div className="flex gap-2">
         <button
           onClick={handleComplete}
-          className="px-6 py-2 bg-green-500 hover:bg-green-400 font-bold rounded-lg"
+          className="px-6 py-2 bg-emerald-400 hover:bg-emerald-300 font-bold rounded-lg"
         >
           完成任務
         </button>
         <button
           onClick={handleSkip}
-          className="px-6 py-2 bg-gray-500 hover:bg-gray-400 font-bold rounded-lg"
+          className="px-6 py-2 bg-slate-300 hover:bg-slate-200 font-bold rounded-lg"
         >
           跳過並標記遺漏詞
         </button>
@@ -267,6 +333,7 @@ function RestoreMission() {
         <p>🎯 全部答對可獲得最高星星亮度獎勵！</p>
       </div>
     </div>
+  </div>
   );
 }
 
