@@ -5,7 +5,7 @@ import starDataJson from '../data/star_data.json';
 const useStarStore = create(
   persist(
     (set, get) => ({
-      // 詞彙資料
+      // 詞彙資料 (始終從 JSON 載入最新內容)
       starData: starDataJson,
       
       // 使用者進度資料
@@ -287,7 +287,13 @@ const useStarStore = create(
     }),
     {
       name: 'gre-starnet-storage',
-      // 只持久化必要的資料
+      // 忽略任何已持久化的詞彙資料，確保使用最新 JSON
+      merge: (persistedState, currentState) => ({
+        ...currentState,
+        ...persistedState,
+        starData: starDataJson
+      }),
+      // 只持久化必要的使用者進度資料
       partialize: (state) => ({
         starProgress: state.starProgress,
         connectionBrightness: state.connectionBrightness
