@@ -285,8 +285,8 @@ function StarMap() {
             const fromPos = positions[fromIndex];
             const toPos = positions[toIndex];
             const connectionBrightness = actions.getConnectionBrightness(from, to);
-            
-            
+
+
             return (
               <line
                 key={`${from}-${to}-${index}`}
@@ -294,13 +294,13 @@ function StarMap() {
                 y1={`${fromPos.y}%`}
                 x2={`${toPos.x}%`}
                 y2={`${toPos.y}%`}
-                stroke="url(#magicalGradient)"
+                stroke={connectionBrightness > 0 ? 'url(#magicalGradient)' : '#9ca3af'}
                 strokeWidth="2"
                 opacity={0.8 + connectionBrightness * 0.2}
                 className="transition-all duration-500 drop-shadow-sm"
                 style={{
                   filter: `brightness(${0.8 + connectionBrightness * 0.5})`,
-                  strokeDasharray: connectionBrightness > 0.5 ? 'none' : '5,5',
+                  strokeDasharray: 'none',
                   animation: connectionBrightness > 0.3 ? 'twinkle 2s ease-in-out infinite' : 'none'
                 }}
               />
