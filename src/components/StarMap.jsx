@@ -114,20 +114,33 @@ function StarMap() {
   };
 
   const getStarStyle = (word) => {
-    const progress = starProgress[word] || { brightness: 0, marked: false };
-    const baseSize = 60;
-    const brightnessSize = progress.brightness * 20;
+    const starState = actions.getStarState(word);
+    const baseSize = 16;
+    const brightnessSize = starState.brightness * 12;
+    const totalSize = baseSize + brightnessSize;
+    
+    // 根據亮度選擇顏色
+    const getStarColor = () => {
+      if (starState.marked) return '#fbbf24'; // 金色標記
+      if (starState.brightness > 0.7) return '#fbbf24'; // 金色高亮
+      if (starState.brightness > 0.4) return '#c084fc'; // 紫色中亮
+      if (starState.brightness > 0.1) return '#a5b4fc'; // 藍色低亮
+      return '#f8fafc'; // 白色未練習
+    };
     
     return {
-      width: baseSize + brightnessSize,
-      height: baseSize + brightnessSize,
-      backgroundColor: progress.marked ? '#ff6b6b' : '#ffffff',
-      borderWidth: progress.marked ? 4 : 2,
-      borderColor: progress.marked ? '#e55353' : 
-                   selectedStar === word ? '#4a90e2' : '#cccccc',
-      opacity: 0.4 + (progress.brightness * 0.6),
-      boxShadow: selectedStar === word ? '0 0 20px #4a90e2' : 
-                 progress.marked ? '0 0 15px #ff6b6b' : 'none'
+      width: totalSize,
+      height: totalSize,
+      backgroundColor: getStarColor(),
+      borderWidth: starState.marked ? 3 : 1,
+      borderColor: starState.marked ? '#f59e0b' : 
+                   selectedStar === word ? '#60a5fa' : 'transparent',
+      opacity: 0.6 + (starState.brightness * 0.4),
+      boxShadow: selectedStar === word ? `0 0 20px ${getStarColor()}` : 
+                 starState.marked ? `0 0 15px #fbbf24` : 
+                 starState.brightness > 0.3 ? `0 0 8px ${getStarColor()}` : 'none',
+      transform: starState.brightness > 0.5 ? 'scale(1.1)' : 'scale(1)',
+      filter: `brightness(${1 + starState.brightness * 0.3})`
     };
   };
 
@@ -164,25 +177,37 @@ function StarMap() {
     const positions = generatePositions(stars.length);
 
     return (
-      <div className="relative w-full h-96 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 rounded-lg overflow-hidden">
-        {/* 星空背景效果 */}
-        <div className="absolute inset-0 opacity-20">
-          {[...Array(30)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-white rounded-full animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${2 + Math.random() * 3}s`
-              }}
-            />
-          ))}
+      <div className="relative w-full h-96 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 rounded-lg overflow-hidden">
+        {/* 魔幻星空背景效果 */}
+        <div className="absolute inset-0 opacity-30">
+          {[...Array(50)].map((_, i) => {
+            const colors = ['bg-white', 'bg-yellow-200', 'bg-pink-200', 'bg-blue-200'];
+            const sizes = ['w-0.5 h-0.5', 'w-1 h-1', 'w-1.5 h-1.5'];
+            return (
+              <div
+                key={i}
+                className={`absolute ${colors[Math.floor(Math.random() * colors.length)]} ${sizes[Math.floor(Math.random() * sizes.length)]} rounded-full animate-pulse`}
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 4}s`,
+                  animationDuration: `${3 + Math.random() * 4}s`,
+                  boxShadow: '0 0 6px currentColor'
+                }}
+              />
+            );
+          })}
         </div>
 
         {/* 星座連線 */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none">
+          <defs>
+            <linearGradient id="magicalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#a5b4fc" />
+              <stop offset="50%" stopColor="#c084fc" />
+              <stop offset="100%" stopColor="#fbbf24" />
+            </linearGradient>
+          </defs>
           {currentConstellation.connections && 
            currentConstellation.connections.map(([from, to], index) => {
             const fromIndex = stars.findIndex(star => star && star.word === from);
@@ -194,9 +219,7 @@ function StarMap() {
             
             const fromPos = positions[fromIndex];
             const toPos = positions[toIndex];
-            const fromProgress = starProgress[from] || { brightness: 0 };
-            const toProgress = starProgress[to] || { brightness: 0 };
-            const avgBrightness = (fromProgress.brightness + toProgress.brightness) / 2;
+            const connectionBrightness = actions.getConnectionBrightness(from, to);
             
             return (
               <line
@@ -205,10 +228,15 @@ function StarMap() {
                 y1={`${fromPos.y}%`}
                 x2={`${toPos.x}%`}
                 y2={`${toPos.y}%`}
-                stroke="#a0a0ff"
+                stroke="url(#magicalGradient)"
                 strokeWidth="2"
-                opacity={0.3 + avgBrightness * 0.4}
-                className="transition-all duration-300"
+                opacity={0.4 + connectionBrightness * 0.6}
+                className="transition-all duration-500 drop-shadow-sm"
+                style={{
+                  filter: `brightness(${0.8 + connectionBrightness * 0.5})`,
+                  strokeDasharray: connectionBrightness > 0.5 ? 'none' : '5,5',
+                  animation: connectionBrightness > 0.3 ? 'twinkle 2s ease-in-out infinite' : 'none'
+                }}
               />
             );
           })}
@@ -220,10 +248,14 @@ function StarMap() {
           const position = positions[index];
           const isMainStar = index === 0;
           
+          const starState = actions.getStarState(star.word);
+          const animationClass = starState.brightness > 0.7 ? 'star-bright' : 
+                                 starState.brightness > 0.3 ? 'star-twinkle' : '';
+          
           return (
             <div
               key={star.word}
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-300 hover:scale-110"
+              className={`absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-500 hover:scale-125 fade-in ${animationClass}`}
               style={{
                 left: `${position.x}%`,
                 top: `${position.y}%`,

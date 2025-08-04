@@ -26,34 +26,53 @@ function App() {
   const ActiveComponent = tabs.find(tab => tab.id === activeTab)?.component || StarMap;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
+      {/* 魔幻背景粒子效果 */}
+      <div className="absolute inset-0 pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full opacity-20 animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${4 + Math.random() * 6}s`
+            }}
+          />
+        ))}
+      </div>
+      
       {/* Header */}
-      <header className="bg-black bg-opacity-50 text-white p-4">
+      <header className="bg-gradient-to-r from-slate-900/90 via-indigo-900/90 to-slate-900/90 backdrop-blur-md text-white p-6 border-b border-indigo-500/30">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-3xl font-bold mb-2">
+          <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
             🌌 GRE-StarNet 星語者計畫
           </h1>
-          <p className="text-sm opacity-80">
-            Restore the Stars — 喚回記憶的星辰
+          <p className="text-lg opacity-90 font-light tracking-wide">
+            ✨ Restore the Stars — 喚回記憶的星辰 ✨
           </p>
         </div>
       </header>
 
       {/* Navigation Tabs */}
-      <nav className="bg-black bg-opacity-30 backdrop-blur-sm sticky top-0 z-10">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex space-x-1">
+      <nav className="bg-gradient-to-r from-slate-800/80 via-indigo-800/80 to-slate-800/80 backdrop-blur-md sticky top-0 z-10 border-b border-indigo-400/20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex space-x-2">
             {tabs.map(tab => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 font-medium transition-all duration-200 ${
+                className={`px-8 py-4 font-medium transition-all duration-300 rounded-t-xl relative overflow-hidden group ${
                   activeTab === tab.id
-                    ? 'bg-white text-black rounded-t-lg'
-                    : 'text-white hover:bg-white hover:bg-opacity-20 rounded-t-lg'
+                    ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-lg shadow-indigo-500/30'
+                    : 'text-indigo-200 hover:text-white hover:bg-gradient-to-r hover:from-indigo-600/50 hover:to-purple-600/50'
                 }`}
               >
-                {tab.name}
+                <span className="relative z-10 fade-in">{tab.name}</span>
+                {activeTab === tab.id && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 animate-pulse" />
+                )}
               </button>
             ))}
           </div>

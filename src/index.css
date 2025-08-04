@@ -15,3 +15,63 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 魔幻星空動畫效果 */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes starPulse {
+  0%, 100% { 
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% { 
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  0%, 50% { border-color: transparent; }
+  51%, 100% { border-color: currentColor; }
+}
+
+/* 星星閃爍效果 */
+.star-twinkle {
+  animation: starPulse 3s ease-in-out infinite;
+}
+
+.star-bright {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+/* 打字機效果 */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid;
+  white-space: nowrap;
+  animation: typewriter 2s steps(40) 1s both, blink 1s step-end infinite;
+}
+
+/* 漸入效果 */
+.fade-in {
+  animation: fadeInUp 0.6s ease-out forwards;
+}

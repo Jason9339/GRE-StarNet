@@ -9,7 +9,10 @@ const useStarStore = create(
       starData: starDataJson,
       
       // 使用者進度資料
-      starProgress: {}, // { wordId: { brightness: 0.5, marked: false, attempts: 3, correct: 2 } }
+      starProgress: {}, // { wordId: { marked: false, attempts: 3, correct: 2 } }
+      
+      // 連線亮度資料 - 每條連線（單字間的等價關係）的亮度
+      connectionBrightness: {}, // { "word1-word2": 0.3, "word2-word3": 0.7 }
       
       // 標記模式狀態
       isMarkingMode: false,
@@ -32,7 +35,6 @@ const useStarStore = create(
           starProgress: {
             ...state.starProgress,
             [word]: {
-              brightness: state.starProgress[word]?.brightness || 0,
               marked: !state.starProgress[word]?.marked,
               attempts: state.starProgress[word]?.attempts || 0,
               correct: state.starProgress[word]?.correct || 0
@@ -40,25 +42,23 @@ const useStarStore = create(
           }
         })),
         
-        // 更新星星亮度（根據答題表現）
-        updateStarBrightness: (word, delta) => set(state => {
-          const current = state.starProgress[word] || { brightness: 0, marked: false, attempts: 0, correct: 0 };
-          const newBrightness = Math.max(0, Math.min(1, current.brightness + delta));
+        // 更新連線亮度（根據答題表現）
+        updateConnectionBrightness: (word1, word2, delta) => set(state => {
+          const connectionKey = [word1, word2].sort().join('-');
+          const currentBrightness = state.connectionBrightness[connectionKey] || 0;
+          const newBrightness = Math.max(0, Math.min(1, currentBrightness + delta));
           
           return {
-            starProgress: {
-              ...state.starProgress,
-              [word]: {
-                ...current,
-                brightness: newBrightness
-              }
+            connectionBrightness: {
+              ...state.connectionBrightness,
+              [connectionKey]: newBrightness
             }
           };
         }),
         
         // 記錄答題嘗試
         recordAttempt: (word, isCorrect) => set(state => {
-          const current = state.starProgress[word] || { brightness: 0, marked: false, attempts: 0, correct: 0 };
+          const current = state.starProgress[word] || { marked: false, attempts: 0, correct: 0 };
           
           return {
             starProgress: {
@@ -99,16 +99,24 @@ const useStarStore = create(
         // 完成任務
         completeMission: () => set(state => {
           if (state.currentMission) {
-            // 計算正確率並更新亮度
+            // 計算正確率並更新連線亮度
             const { word, synonyms, userInputs } = state.currentMission;
-            const correctCount = userInputs.filter(input => 
+            const correctInputs = userInputs.filter(input => 
               synonyms.some(synonym => synonym.toLowerCase() === input.toLowerCase())
-            ).length;
-            const accuracy = correctCount / synonyms.length;
-            const brightnessIncrease = accuracy * 0.2; // 全對可增加0.2亮度
+            );
+            const accuracy = correctInputs.length / synonyms.length;
             
-            // 更新星星亮度和記錄
-            get().actions.updateStarBrightness(word, brightnessIncrease);
+            // 對每個正確的同義詞，更新其與主詞的連線亮度
+            correctInputs.forEach(correctInput => {
+              const matchingSynonym = synonyms.find(synonym => 
+                synonym.toLowerCase() === correctInput.toLowerCase()
+              );
+              if (matchingSynonym) {
+                get().actions.updateConnectionBrightness(word, matchingSynonym, 0.1);
+              }
+            });
+            
+            // 記錄答題嘗試
             get().actions.recordAttempt(word, accuracy > 0.8);
             
             return {
@@ -136,19 +144,58 @@ const useStarStore = create(
           return Object.keys(starProgress).filter(word => starProgress[word]?.marked);
         },
         
+        // 獲取連線亮度
+        getConnectionBrightness: (word1, word2) => {
+          const { connectionBrightness } = get();
+          const connectionKey = [word1, word2].sort().join('-');
+          return connectionBrightness[connectionKey] || 0;
+        },
+        
+        // 計算星星亮度（所有相連線的亮度總和）
+        getStarBrightness: (word) => {
+          const { starData, connectionBrightness } = get();
+          const starItem = starData.find(item => item.word === word);
+          if (!starItem) return 0;
+          
+          let totalBrightness = 0;
+          
+          // 計算與同義詞的連線亮度總和
+          starItem.synonyms.forEach(synonym => {
+            const connectionKey = [word, synonym].sort().join('-');
+            totalBrightness += connectionBrightness[connectionKey] || 0;
+          });
+          
+          // 也要檢查其他星星是否將此詞作為同義詞
+          starData.forEach(otherItem => {
+            if (otherItem.word !== word && otherItem.synonyms.includes(word)) {
+              const connectionKey = [word, otherItem.word].sort().join('-');
+              totalBrightness += connectionBrightness[connectionKey] || 0;
+            }
+          });
+          
+          return Math.min(1, totalBrightness); // 最大亮度為1
+        },
+        
         // 獲取星星狀態
         getStarState: (word) => {
           const { starProgress } = get();
-          return starProgress[word] || { brightness: 0, marked: false, attempts: 0, correct: 0 };
+          const brightness = get().actions.getStarBrightness(word);
+          return { 
+            brightness, 
+            marked: starProgress[word]?.marked || false, 
+            attempts: starProgress[word]?.attempts || 0, 
+            correct: starProgress[word]?.correct || 0 
+          };
         },
         
         // 匯出進度
         exportProgress: () => {
-          const { starProgress } = get();
+          const { starProgress, connectionBrightness } = get();
           const exportData = {
-            version: '1.0',
+            version: '1.1',
             timestamp: new Date().toISOString(),
-            starProgress
+            starProgress,
+            connectionBrightness
           };
           
           const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
@@ -167,7 +214,11 @@ const useStarStore = create(
           try {
             const data = typeof progressData === 'string' ? JSON.parse(progressData) : progressData;
             if (data.starProgress) {
-              set({ starProgress: data.starProgress });
+              const updateData = { starProgress: data.starProgress };
+              if (data.connectionBrightness) {
+                updateData.connectionBrightness = data.connectionBrightness;
+              }
+              set(updateData);
               return true;
             }
             return false;
@@ -180,6 +231,7 @@ const useStarStore = create(
         // 重置所有進度
         resetProgress: () => set({ 
           starProgress: {},
+          connectionBrightness: {},
           currentMission: null,
           selectedStar: null
         })
@@ -189,7 +241,8 @@ const useStarStore = create(
       name: 'gre-starnet-storage',
       // 只持久化必要的資料
       partialize: (state) => ({
-        starProgress: state.starProgress
+        starProgress: state.starProgress,
+        connectionBrightness: state.connectionBrightness
       })
     }
   )
