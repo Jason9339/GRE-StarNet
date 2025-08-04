@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import useStarStore from '../store/useStarStore';
 
 function StarMap() {
-  const { 
-    starData, 
-    starProgress, 
-    isMarkingMode, 
+  const {
+    starData,
+    starProgress,
+    isMarkingMode,
     selectedStar,
-    actions 
+    actions
   } = useStarStore();
 
   const [currentPage, setCurrentPage] = useState(0);
   const [constellations, setConstellations] = useState([]);
+  const positionsRef = useRef([]);
+  const [tooltipPos, setTooltipPos] = useState(null);
 
   // 創建星座分組（使用圖算法找到所有相互連接的同義詞群組）
   useEffect(() => {
@@ -101,11 +103,12 @@ function StarMap() {
   const currentConstellation = constellations[currentPage];
   const totalPages = constellations.length;
 
-  const handleStarClick = (word) => {
+  const handleStarClick = (word, position) => {
     if (isMarkingMode) {
       actions.toggleStarMark(word);
     } else {
       actions.selectStar(word);
+      setTooltipPos(position);
     }
   };
 
@@ -115,7 +118,7 @@ function StarMap() {
 
   const getStarStyle = (word) => {
     const starState = actions.getStarState(word);
-    const baseSize = 16;
+    const baseSize = 20;
     const brightnessSize = starState.brightness * 12;
     const totalSize = baseSize + brightnessSize;
     
@@ -143,6 +146,18 @@ function StarMap() {
       filter: `brightness(${1 + starState.brightness * 0.3})`
     };
   };
+
+  // 當外部選擇星星時，更新提示框位置
+  useEffect(() => {
+    if (!selectedStar || !currentConstellation) {
+      setTooltipPos(null);
+      return;
+    }
+    const index = currentConstellation.stars.findIndex(s => s.word === selectedStar);
+    if (index !== -1 && positionsRef.current[index]) {
+      setTooltipPos(positionsRef.current[index]);
+    }
+  }, [selectedStar, currentConstellation]);
 
   const renderConstellation = () => {
     if (!currentConstellation) return null;
@@ -175,6 +190,7 @@ function StarMap() {
     };
     
     const positions = generatePositions(stars.length);
+    positionsRef.current = positions;
 
     return (
       <div className="relative w-full h-96 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 rounded-lg overflow-hidden">
@@ -261,26 +277,20 @@ function StarMap() {
                 top: `${position.y}%`,
                 cursor: isMarkingMode ? 'crosshair' : 'pointer'
               }}
-              onClick={() => handleStarClick(star.word)}
+              onClick={() => handleStarClick(star.word, position)}
               onDoubleClick={() => handleStarDoubleClick(star.word)}
             >
               <div
                 className="rounded-full border-solid flex items-center justify-center transition-all duration-300"
                 style={getStarStyle(star.word)}
               >
-                <span className={`font-bold text-center leading-tight ${
-                  isMainStar ? 'text-lg text-black' : 'text-sm text-gray-800'
-                }`}>
+                <span
+                  className={`font-bold text-center leading-tight ${isMainStar ? 'text-lg' : 'text-sm'} text-black`}
+                  style={{ textShadow: '0 0 2px rgba(255,255,255,0.9)' }}
+                >
                   {star.word}
                 </span>
               </div>
-              
-              {/* 主星標記 */}
-              {isMainStar && (
-                <div className="absolute -top-2 -right-2 text-yellow-400 text-xl animate-pulse">
-                  ⭐
-                </div>
-              )}
             </div>
           );
         })}
@@ -383,7 +393,18 @@ function StarMap() {
       {renderConstellation()}
       
       {selectedStar && (
-        <div className="absolute bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg max-w-sm z-10">
+        <div
+          className="absolute bg-white p-4 rounded-lg shadow-lg max-w-sm z-10"
+          style={
+            tooltipPos
+              ? {
+                  left: `${tooltipPos.x}%`,
+                  top: `${tooltipPos.y}%`,
+                  transform: 'translate(-50%, -120%)'
+                }
+              : { bottom: '1rem', right: '1rem' }
+          }
+        >
           <h3 className="font-bold text-lg text-black">{selectedStar}</h3>
           <p className="text-gray-600 mb-2">
             {starData.find(item => item.word === selectedStar)?.meaning}
@@ -402,21 +423,6 @@ function StarMap() {
           </button>
         </div>
       )}
-      
-      {/* 使用說明 */}
-      <div className="p-4 bg-gray-50 rounded-b-lg text-sm text-gray-600">
-        <p className="mb-1">
-          💡 <strong>使用說明:</strong> 單擊星星選擇，雙擊開始修復任務，翻頁瀏覽不同星座
-        </p>
-        <p className="mb-2">
-          🎯 星座自動分組相互關聯的同義詞（A-B-C 鏈式連接，但 A 不直接連 C）
-        </p>
-        {currentConstellation && (
-          <p className="text-xs opacity-75">
-            <strong>當前星座包含:</strong> {currentConstellation.stars.map(s => s.word).join(', ')}
-          </p>
-        )}
-      </div>
     </div>
   );
 }
