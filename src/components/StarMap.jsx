@@ -193,7 +193,7 @@ function StarMap() {
     positionsRef.current = positions;
 
     return (
-      <div className="relative w-full h-96 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 rounded-lg overflow-hidden">
+      <div className="relative w-full h-[600px] bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 rounded-lg overflow-hidden">
         {/* 魔幻星空背景效果 */}
         <div className="absolute inset-0 opacity-30">
           {[...Array(50)].map((_, i) => {
@@ -280,13 +280,14 @@ function StarMap() {
               onClick={() => handleStarClick(star.word, position)}
               onDoubleClick={() => handleStarDoubleClick(star.word)}
             >
-              <div
-                className="rounded-full border-solid flex items-center justify-center overflow-hidden transition-all duration-300"
-                style={getStarStyle(star.word)}
-              >
+              <div className="relative">
+                <div
+                  className="rounded-full border-solid transition-all duration-300"
+                  style={getStarStyle(star.word)}
+                />
                 <span
-                  className={`font-bold text-center leading-tight ${isMainStar ? 'text-lg' : 'text-xs'} text-black block w-full px-0.5 overflow-hidden whitespace-nowrap text-ellipsis`}
-                  style={{ textShadow: '0 0 2px rgba(255,255,255,0.9)' }}
+                  className={`absolute left-full ml-1 top-1/2 -translate-y-1/2 font-bold ${isMainStar ? 'text-lg' : 'text-xs'} text-white whitespace-nowrap`}
+                  style={{ textShadow: '0 0 2px rgba(0,0,0,0.8)' }}
                 >
                   {star.word}
                 </span>
@@ -294,19 +295,6 @@ function StarMap() {
             </div>
           );
         })}
-
-        {/* 星座名稱 */}
-        <div className="absolute top-4 left-4 bg-black bg-opacity-50 text-white px-4 py-2 rounded-lg">
-          <h3 className="text-lg font-bold">
-            {mainStar.word} 星座
-          </h3>
-          <p className="text-sm opacity-80 mb-1">
-            {mainStar.meaning}
-          </p>
-          <p className="text-xs opacity-60">
-            {stars.length} 顆星星 • {currentConstellation.connections ? currentConstellation.connections.length : 0} 條連線
-          </p>
-        </div>
 
         {/* 翻頁控制 */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-black bg-opacity-50 text-white px-6 py-3 rounded-full">
