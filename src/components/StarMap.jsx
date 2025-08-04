@@ -297,10 +297,11 @@ function StarMap() {
                 stroke={connectionBrightness > 0 ? 'url(#magicalGradient)' : '#9ca3af'}
                 strokeWidth="2"
                 opacity={0.8 + connectionBrightness * 0.2}
+                strokeLinecap="round"
                 className="transition-all duration-500 drop-shadow-sm"
                 style={{
                   filter: `brightness(${0.8 + connectionBrightness * 0.5})`,
-                  strokeDasharray: 'none',
+                  strokeDasharray: '4 4',
                   animation: connectionBrightness > 0.3 ? 'twinkle 2s ease-in-out infinite' : 'none'
                 }}
               />
@@ -321,7 +322,7 @@ function StarMap() {
           return (
             <div
               key={star.word}
-              className={`absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-500 hover:scale-125 fade-in ${animationClass}`}
+              className={`absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-500 hover:scale-125 fade-in z-10 ${animationClass}`}
               style={{
                 left: `${position.x}%`,
                 top: `${position.y}%`,
