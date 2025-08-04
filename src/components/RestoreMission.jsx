@@ -123,9 +123,9 @@ function RestoreMission() {
 
   const getHintText = (word) => {
     const length = word.length;
-    return showHints 
-      ? `${getFirstLetter(word)}${'_'.repeat(length - 1)} (${length} 字母)`
-      : `${getFirstLetter(word)}__ (${length} 字母)`;
+    return showHints
+      ? `${word} (${length} 字母)`
+      : `${getFirstLetter(word)}${'_'.repeat(length - 1)} (${length} 字母)`;
   };
 
   if (!currentMission) {
@@ -210,12 +210,12 @@ function RestoreMission() {
   }
 
   return (
-    <div className={`relative bg-gradient-to-br from-indigo-600 via-purple-500 to-pink-400 text-white p-6 rounded-lg shadow-lg transition-all duration-300 ${sparkleAnimation ? 'animate-pulse' : ''} overflow-hidden`}>
+    <div className={`relative bg-white text-gray-800 p-6 border-2 border-indigo-200 rounded-lg shadow-lg transition-all duration-300 ${sparkleAnimation ? 'animate-pulse' : ''} overflow-hidden`}>
       <div className="absolute inset-0 pointer-events-none">
         {missionStars.map((star, i) => (
           <div
             key={i}
-            className="absolute w-1 h-1 bg-white rounded-full opacity-40 animate-pulse"
+            className="absolute w-1 h-1 bg-indigo-200 rounded-full opacity-70"
             style={{
               left: star.left,
               top: star.top,
@@ -239,7 +239,7 @@ function RestoreMission() {
       
       <div className="mb-6">
         <h3 className="text-xl mb-2">
-          主星詞: <span className="font-bold text-yellow-200">{currentMission.word}</span>
+          主星詞: <span className="font-bold text-indigo-600">{currentMission.word}</span>
         </h3>
         <p className="text-lg opacity-80 mb-2">
           意思: {currentMission.meaning}
@@ -254,7 +254,7 @@ function RestoreMission() {
           <h4 className="font-bold text-lg">請填入所有同義詞：</h4>
           <button
             onClick={() => setShowHints(!showHints)}
-            className="px-3 py-1 bg-yellow-300 bg-opacity-30 hover:bg-opacity-50 rounded-lg text-sm"
+            className="px-3 py-1 bg-indigo-100 hover:bg-indigo-200 rounded-lg text-sm"
           >
             {showHints ? '🙈 隱藏提示' : '💡 顯示提示'}
           </button>
@@ -263,7 +263,7 @@ function RestoreMission() {
         <div className="grid gap-3">
           {currentMission.synonyms.map((synonym, index) => (
             <div key={synonym} className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-white bg-opacity-20 rounded-full flex items-center justify-center text-sm font-bold">
+              <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-sm font-bold">
                 {index + 1}
               </div>
 
@@ -304,7 +304,7 @@ function RestoreMission() {
             <span>進度: {getCorrectCount()} / {currentMission.synonyms.length}</span>
             <span>完成度: {Math.round((getCorrectCount() / currentMission.synonyms.length) * 100)}%</span>
           </div>
-          <div className="w-full bg-white bg-opacity-20 rounded-full h-2 mt-2">
+          <div className="w-full bg-slate-200 rounded-full h-2 mt-2">
             <div
               className="bg-emerald-300 h-2 rounded-full transition-all duration-500"
               style={{ width: `${(getCorrectCount() / currentMission.synonyms.length) * 100}%` }}

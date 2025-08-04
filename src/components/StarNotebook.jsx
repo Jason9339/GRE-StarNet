@@ -31,7 +31,7 @@ function StarNotebook() {
 
   if (markedWords.length === 0) {
     return (
-      <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-6 rounded-lg shadow-lg">
+      <div className="bg-gradient-to-r from-teal-100 to-blue-100 text-gray-800 p-6 rounded-lg shadow-lg">
         <h2 className="text-2xl font-bold mb-4">📖 星語冊</h2>
         <div className="text-center py-8">
           <div className="text-6xl mb-4">📝</div>
@@ -47,7 +47,7 @@ function StarNotebook() {
   }
 
   return (
-    <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white p-6 rounded-lg shadow-lg">
+    <div className="bg-gradient-to-r from-teal-100 to-blue-100 text-gray-800 p-6 rounded-lg shadow-lg">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-bold">📖 星語冊</h2>
         <div className="text-sm opacity-80">
@@ -57,38 +57,38 @@ function StarNotebook() {
 
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {markedWordDetails.map((wordDetail) => {
-          const accuracyRate = wordDetail.attempts > 0 ? 
+          const accuracyRate = wordDetail.attempts > 0 ?
             (wordDetail.correct / wordDetail.attempts * 100) : 0;
-          
+
           return (
-            <div 
+            <div
               key={wordDetail.word}
-              className="bg-white bg-opacity-20 p-4 rounded-lg backdrop-blur-sm"
+              className="bg-white p-4 rounded-lg shadow"
             >
               <div className="flex justify-between items-start mb-2">
-                <h3 className="text-lg font-bold text-yellow-200">
+                <h3 className="text-lg font-bold text-indigo-700">
                   {wordDetail.word}
                 </h3>
                 <button
                   onClick={() => handleRemoveMark(wordDetail.word)}
-                  className="text-red-300 hover:text-red-100 text-sm"
+                  className="text-red-500 hover:text-red-400 text-sm"
                   title="移除標記"
                 >
                   ❌
                 </button>
               </div>
-              
+
               <p className="text-sm mb-3 opacity-90">
                 {wordDetail.meaning}
               </p>
-              
+
               <div className="mb-3">
                 <p className="text-xs opacity-70 mb-1">同義詞:</p>
                 <div className="flex flex-wrap gap-1">
                   {wordDetail.synonyms.slice(0, 4).map((synonym, index) => (
-                    <span 
+                    <span
                       key={index}
-                      className="bg-white bg-opacity-30 px-2 py-1 rounded text-xs"
+                      className="bg-indigo-50 px-2 py-1 rounded text-xs"
                     >
                       {synonym}
                     </span>
@@ -104,9 +104,9 @@ function StarNotebook() {
               <div className="flex justify-between items-center text-xs mb-3">
                 <div className="flex items-center gap-2">
                   <span>亮度:</span>
-                  <div className="w-16 h-2 bg-white bg-opacity-30 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-yellow-300 transition-all duration-300"
+                  <div className="w-16 h-2 bg-slate-200 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-indigo-300 transition-all duration-300"
                       style={{ width: `${wordDetail.brightness * 100}%` }}
                     />
                   </div>
