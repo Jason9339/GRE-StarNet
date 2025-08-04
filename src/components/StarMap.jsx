@@ -116,23 +116,29 @@ function StarMap() {
             });
           });
 
-          // 如果沒有連線但有多個星星，創建基本的星型連線（從第一個星星到其他所有星星）
+          // 如果沒有連線但有多個星星，創建基本的星型連線（以主星為中心）
           if (constellationConnections.size === 0 && groupWords.length > 1) {
-            const centerWord = groupWords[0];
-            for (let i = 1; i < groupWords.length; i++) {
-              const connection = [centerWord, groupWords[i]].sort().join('-');
-              constellationConnections.add(connection);
-            }
+            const centerWord = mainStar.word;
+            groupWords.forEach(word => {
+              if (word !== centerWord) {
+                const connection = [centerWord, word].sort().join('-');
+                constellationConnections.add(connection);
+              }
+            });
           }
 
-
           const connectionsArray = Array.from(constellationConnections).map(conn => conn.split('-'));
-          
-          
+
+          // 確保主星位於星星列表的第一個位置
+          const orderedStars = [
+            mainStar,
+            ...stars.filter(s => s.word !== mainStar.word)
+          ];
+
           createdConstellations.push({
             id: `constellation-${createdConstellations.length}`,
             mainStar,
-            stars,
+            stars: orderedStars,
             connections: connectionsArray
           });
           
