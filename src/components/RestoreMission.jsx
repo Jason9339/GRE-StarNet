@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import useStarStore from '../store/useStarStore';
+import CharacterDisplay from './CharacterDisplay';
 
 function RestoreMission() {
   const { currentMission, missionQueue, missionIndex, actions } = useStarStore();
@@ -332,6 +333,15 @@ function RestoreMission() {
         <p>🔄 可以隨時完成任務，未完成的單字會自動加入標記列表</p>
         <p>🎯 全部答對可獲得最高星星亮度獎勵！</p>
       </div>
+
+      {/* 星語者陪伴 */}
+      <CharacterDisplay 
+        type="starnamer" 
+        position="bottom-right" 
+        size="medium" 
+        mood={getCorrectCount() === currentMission.synonyms.length ? 'happy' : 
+              getCorrectCount() > 0 ? 'encouraging' : 'thinking'} 
+      />
     </div>
   </div>
   );

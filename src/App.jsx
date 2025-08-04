@@ -3,18 +3,60 @@ import StarMap from './components/StarMap.jsx';
 import RestoreMission from './components/RestoreMission.jsx';
 import StarObservatory from './components/StarObservatory.jsx';
 import StarNotebook from './components/StarNotebook.jsx';
+import StoryIntro from './components/StoryIntro.jsx';
+import LandingPage from './components/LandingPage.jsx';
+import SettingsPanel from './components/SettingsPanel.jsx';
 import useStarStore from './store/useStarStore';
 
 function App() {
   const [activeTab, setActiveTab] = useState('starmap');
-  const { currentMission } = useStarStore();
+  const [showStoryIntro, setShowStoryIntro] = useState(true);
+  const [showLandingPage, setShowLandingPage] = useState(false);
+  const [isAppReady, setIsAppReady] = useState(false);
+  const { currentMission, actions } = useStarStore();
 
   // 當有任務開始時，自動切換到修復任務頁面
   useEffect(() => {
-    if (currentMission && !currentMission.completed) {
+    if (currentMission && !currentMission.completed && isAppReady) {
       setActiveTab('mission');
     }
-  }, [currentMission]);
+  }, [currentMission, isAppReady]);
+
+  // 處理故事介紹完成
+  const handleStoryComplete = () => {
+    setShowStoryIntro(false);
+    setShowLandingPage(true);
+  };
+
+  // 處理開始新旅程
+  const handleStartNewJourney = () => {
+    // 重置所有進度
+    actions.resetProgress();
+    setShowLandingPage(false);
+    setIsAppReady(true);
+  };
+
+  // 處理讀取進度
+  const handleLoadProgress = (progressData) => {
+    try {
+      if (actions.importProgress(progressData)) {
+        setShowLandingPage(false);
+        setIsAppReady(true);
+        // 可以顯示成功訊息
+      } else {
+        alert('進度讀取失敗，請檢查檔案格式。');
+      }
+    } catch (error) {
+      alert('進度讀取失敗，請檢查檔案格式。');
+    }
+  };
+
+  // 處理重播故事
+  const handleReplayStory = () => {
+    setIsAppReady(false);
+    setShowLandingPage(false);
+    setShowStoryIntro(true);
+  };
 
   const tabs = [
     { id: 'starmap', name: '🌌 星圖', component: StarMap },
@@ -27,6 +69,18 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
+      {/* 開場故事動畫 */}
+      {showStoryIntro && (
+        <StoryIntro onComplete={handleStoryComplete} />
+      )}
+
+      {/* Landing Page */}
+      {showLandingPage && (
+        <LandingPage 
+          onStartNewJourney={handleStartNewJourney}
+          onLoadProgress={handleLoadProgress}
+        />
+      )}
       {/* 魔幻背景粒子效果 */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(20)].map((_, i) => (
@@ -43,20 +97,28 @@ function App() {
         ))}
       </div>
       
+      {/* 主應用界面 - 只在app ready時顯示 */}
+      {isAppReady && (
+        <>
       {/* Header */}
       <header className="bg-gradient-to-r from-slate-900/90 via-indigo-900/90 to-slate-900/90 backdrop-blur-md text-white p-6 border-b border-indigo-500/30">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
-            🌌 GRE-StarNet 星語者計畫
-          </h1>
-          <p className="text-lg opacity-90 font-light tracking-wide">
-            ✨ Restore the Stars — 喚回記憶的星辰 ✨
-          </p>
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <div>
+            <h1 className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+              🌌 GRE-StarNet 星語者計畫
+            </h1>
+            <p className="text-lg opacity-90 font-light tracking-wide">
+              ✨ Restore the Stars — 喚回記憶的星辰 ✨
+            </p>
+          </div>
+          <div className="flex items-center gap-4">
+            <SettingsPanel onReplayStory={handleReplayStory} />
+          </div>
         </div>
       </header>
 
       {/* Navigation Tabs */}
-      <nav className="bg-gradient-to-r from-slate-800/80 via-indigo-800/80 to-slate-800/80 backdrop-blur-md sticky top-0 z-10 border-b border-indigo-400/20">
+      <nav className="bg-gradient-to-r from-slate-800/80 via-indigo-800/80 to-slate-800/80 backdrop-blur-md sticky top-0 z-20 border-b border-indigo-400/20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex space-x-2">
             {tabs.map(tab => (
@@ -97,6 +159,8 @@ function App() {
           </p>
         </div>
       </footer>
+      </>
+      )}
     </div>
   );
 }

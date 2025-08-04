@@ -75,3 +75,8 @@ code {
 .fade-in {
   animation: fadeInUp 0.6s ease-out forwards;
 }
+
+/* 徑向漸層背景 */
+.bg-gradient-radial {
+  background: radial-gradient(circle at center, var(--tw-gradient-from), var(--tw-gradient-to));
+}

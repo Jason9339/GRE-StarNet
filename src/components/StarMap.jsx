@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import useStarStore from '../store/useStarStore';
+import CharacterDisplay from './CharacterDisplay';
 
 function StarMap() {
   const {
@@ -17,32 +18,48 @@ function StarMap() {
 
   // 創建星座分組（使用圖算法找到所有相互連接的同義詞群組）
   useEffect(() => {
-    const wordMap = new Map();
-    
-    // 建立單字查找表
+    // 收集所有出現的詞彙（包括同義詞）
+    const allWords = new Set();
+    const wordData = new Map();
+    const connections = new Map();
+
+    // 第一步：收集所有詞彙和它們的數據
     starData.forEach(item => {
-      wordMap.set(item.word, item);
+      allWords.add(item.word);
+      wordData.set(item.word, item);
+      
+      // 也收集所有同義詞
+      item.synonyms.forEach(synonym => {
+        allWords.add(synonym);
+        // 如果同義詞沒有數據，創建基本數據
+        if (!wordData.has(synonym)) {
+          wordData.set(synonym, {
+            word: synonym,
+            meaning: "同義詞",
+            synonyms: []
+          });
+        }
+      });
     });
 
-    // 建立雙向連接圖（只建立原始的同義詞關係）
-    const connections = new Map();
+    // 第二步：建立連接關係
+    allWords.forEach(word => {
+      connections.set(word, new Set());
+    });
+
     starData.forEach(item => {
-      if (!connections.has(item.word)) {
-        connections.set(item.word, new Set());
-      }
-      
       item.synonyms.forEach(synonym => {
-        // 檢查同義詞是否存在於詞彙表中
-        if (wordMap.has(synonym)) {
-          // 只建立直接的雙向連接（A-B，B-A）
-          connections.get(item.word).add(synonym);
-          if (!connections.has(synonym)) {
-            connections.set(synonym, new Set());
-          }
+        // 建立單向連接：主詞 → 同義詞
+        connections.get(item.word).add(synonym);
+        
+        // 如果同義詞也有自己的同義詞列表，建立反向連接
+        const synonymData = starData.find(s => s.word === synonym);
+        if (synonymData && synonymData.synonyms.includes(item.word)) {
           connections.get(synonym).add(item.word);
         }
       });
     });
+
 
     // 使用深度優先搜索找到所有連通分量（星座）
     const visited = new Set();
@@ -62,17 +79,29 @@ function StarMap() {
     };
 
     // 找到所有星座群組
-    starData.forEach(item => {
-      if (!visited.has(item.word)) {
+    allWords.forEach(word => {
+      if (!visited.has(word)) {
         const constellationGroup = new Set();
-        dfs(item.word, constellationGroup);
+        dfs(word, constellationGroup);
         
         if (constellationGroup.size > 0) {
           const groupWords = Array.from(constellationGroup);
-          const stars = groupWords.map(word => wordMap.get(word)).filter(Boolean);
+          const stars = groupWords.map(word => wordData.get(word)).filter(Boolean);
           
-          // 選擇第一個單字作為主星（或可以選擇最重要的）
-          const mainStar = stars[0];
+          // 選擇中心星：優先選擇來自原始數據的詞，其次選擇連接最多的詞
+          const mainStar = stars.reduce((prev, current) => {
+            // 優先選擇來自starData的詞（有意思和同義詞的詞）
+            const prevHasData = starData.some(item => item.word === prev.word);
+            const currentHasData = starData.some(item => item.word === current.word);
+            
+            if (prevHasData && !currentHasData) return prev;
+            if (!prevHasData && currentHasData) return current;
+            
+            // 如果都有或都沒有數據，選擇連接最多的
+            const prevConnections = connections.get(prev.word)?.size || 0;
+            const currentConnections = connections.get(current.word)?.size || 0;
+            return currentConnections > prevConnections ? current : prev;
+          });
           
           // 生成這個星座內的實際連線（避免重複）
           const constellationConnections = new Set();
@@ -87,12 +116,26 @@ function StarMap() {
             });
           });
 
+          // 如果沒有連線但有多個星星，創建基本的星型連線（從第一個星星到其他所有星星）
+          if (constellationConnections.size === 0 && groupWords.length > 1) {
+            const centerWord = groupWords[0];
+            for (let i = 1; i < groupWords.length; i++) {
+              const connection = [centerWord, groupWords[i]].sort().join('-');
+              constellationConnections.add(connection);
+            }
+          }
+
+
+          const connectionsArray = Array.from(constellationConnections).map(conn => conn.split('-'));
+          
+          
           createdConstellations.push({
             id: `constellation-${createdConstellations.length}`,
             mainStar,
             stars,
-            connections: Array.from(constellationConnections).map(conn => conn.split('-'))
+            connections: connectionsArray
           });
+          
         }
       }
     });
@@ -237,6 +280,7 @@ function StarMap() {
             const toPos = positions[toIndex];
             const connectionBrightness = actions.getConnectionBrightness(from, to);
             
+            
             return (
               <line
                 key={`${from}-${to}-${index}`}
@@ -246,7 +290,7 @@ function StarMap() {
                 y2={`${toPos.y}%`}
                 stroke="url(#magicalGradient)"
                 strokeWidth="2"
-                opacity={0.6 + connectionBrightness * 0.4}
+                opacity={0.8 + connectionBrightness * 0.2}
                 className="transition-all duration-500 drop-shadow-sm"
                 style={{
                   filter: `brightness(${0.8 + connectionBrightness * 0.5})`,
@@ -286,7 +330,7 @@ function StarMap() {
                   style={getStarStyle(star.word)}
                 />
                 <span
-                  className={`absolute left-full ml-1 top-1/2 -translate-y-1/2 font-bold ${isMainStar ? 'text-lg' : 'text-xs'} text-white whitespace-nowrap`}
+                  className="absolute left-full ml-1 top-1/2 -translate-y-1/2 font-bold text-sm text-white whitespace-nowrap"
                   style={{ textShadow: '0 0 2px rgba(0,0,0,0.8)' }}
                 >
                   {star.word}
@@ -295,6 +339,14 @@ function StarMap() {
             </div>
           );
         })}
+
+        {/* 語星獸引導 */}
+        <CharacterDisplay 
+          type="glyphox" 
+          position="bottom-left" 
+          size="medium" 
+          mood={currentConstellation && currentConstellation.stars.some(s => actions.getStarState(s.word).brightness > 0.5) ? 'happy' : 'guiding'} 
+        />
 
         {/* 翻頁控制 */}
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-black bg-opacity-50 text-white px-6 py-3 rounded-full">
