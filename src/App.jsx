@@ -96,22 +96,13 @@ function App() {
       {isAppReady && (
         <div className="flex h-screen relative z-10">
           {/* 側邊欄 */}
-          <aside className="w-80 bg-slate-800/95 backdrop-blur-sm border-r border-slate-600/30 flex flex-col">
+          <aside className="w-64 bg-slate-800/95 backdrop-blur-sm border-r border-slate-600/30 flex flex-col">
             {/* 標題區域 */}
             <div className="p-6 border-b border-slate-600/30">
               <div className="animate-card-entrance">
-                <h1 className="text-2xl font-storybook mb-2 text-gradient">
+                <h1 className="text-2xl font-storybook text-gradient">
                   🌌 GRE-StarNet
                 </h1>
-                <h2 className="text-lg font-medium text-slate-100 mb-1">
-                  星語者計畫
-                </h2>
-                <p className="text-sm text-slate-300 font-light">
-                  ✨ Restore the Stars
-                </p>
-                <p className="text-xs text-slate-400 mt-1">
-                  喚回記憶的星辰
-                </p>
               </div>
             </div>
 

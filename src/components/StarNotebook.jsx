@@ -12,11 +12,12 @@ function StarNotebook() {
   const markedWordDetails = markedWords.map(word => {
     const wordData = starData.find(item => item.word === word);
     const progress = starProgress[word];
+    const wordState = actions.getStarState(word);
     return {
       word,
       meaning: wordData?.meaning || '未知',
       synonyms: wordData?.synonyms || [],
-      brightness: progress?.brightness || 0,
+      brightness: wordState.brightness,
       attempts: progress?.attempts || 0,
       correct: progress?.correct || 0
     };

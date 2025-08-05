@@ -29,7 +29,8 @@ function StarObservatory() {
   };
 
   if (selectedWord) {
-    const wordProgress = starProgress[selectedWord.word] || { brightness: 0, marked: false, attempts: 0, correct: 0 };
+    const wordProgress = starProgress[selectedWord.word] || { marked: false, attempts: 0, correct: 0 };
+    const wordState = actions.getStarState(selectedWord.word);
     const accuracyRate = wordProgress.attempts > 0 ? (wordProgress.correct / wordProgress.attempts * 100) : 0;
 
     return (
@@ -73,7 +74,7 @@ function StarObservatory() {
                 <div>
                   <div className="text-sm opacity-80 mb-1">星星亮度</div>
                   <Progress 
-                    value={wordProgress.brightness}
+                    value={wordState.brightness}
                     max={1}
                     variant="star"
                     showValue={true}
@@ -88,12 +89,12 @@ function StarObservatory() {
             <h3 className="text-lg font-bold mb-3">🌟 同義詞星座</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
               {selectedWord.synonyms.map((synonym, index) => {
-                const synonymProgress = starProgress[synonym] || { brightness: 0, marked: false };
+                const synonymState = actions.getStarState(synonym);
                 return (
                   <div 
                     key={index}
                     className={`p-3 rounded-lg border-2 cursor-pointer transition-all ${
-                      synonymProgress.marked 
+                      synonymState.marked 
                         ? 'bg-red-500 bg-opacity-30 border-red-300' 
                         : 'bg-white bg-opacity-20 border-white border-opacity-30'
                     } hover:bg-opacity-40`}
@@ -104,7 +105,7 @@ function StarObservatory() {
                   >
                     <div className="font-medium">{synonym}</div>
                     <div className="text-xs opacity-70 mt-1">
-                      亮度: {(synonymProgress.brightness * 100).toFixed(0)}%
+                      亮度: {(synonymState.brightness * 100).toFixed(0)}%
                     </div>
                   </div>
                 );
@@ -190,13 +191,13 @@ function StarObservatory() {
             </div>
           ) : (
             filteredWords.slice(0, 50).map((wordData) => {
-              const wordProgress = starProgress[wordData.word] || { brightness: 0, marked: false };
+              const wordState = actions.getStarState(wordData.word);
               return (
                 <div
                   key={wordData.word}
                   onClick={() => handleWordSelect(wordData)}
                   className={`bg-slate-700 p-4 rounded-xl cursor-pointer transition-all border-2 hover:scale-[1.01] ${
-                    wordProgress.marked 
+                    wordState.marked 
                       ? 'border-amber-400 bg-amber-900/30 hover:bg-amber-900/50' 
                       : 'border-slate-600 hover:border-slate-500 hover:bg-slate-600'
                   }`}
@@ -205,7 +206,7 @@ function StarObservatory() {
                     <div className="flex-1">
                       <h3 className="text-lg font-bold text-amber-300 mb-1">
                         {wordData.word}
-                        {wordProgress.marked && ' 🔫'}
+                        {wordState.marked && ' 🔫'}
                       </h3>
                       <p className="text-base opacity-90 mb-2">
                         {wordData.meaning}
@@ -219,11 +220,11 @@ function StarObservatory() {
                       <div className="w-16 h-2 bg-white/30 rounded-full overflow-hidden mb-1">
                         <div 
                           className="h-full bg-amber-400 transition-all duration-300"
-                          style={{ width: `${wordProgress.brightness * 100}%` }}
+                          style={{ width: `${wordState.brightness * 100}%` }}
                         />
                       </div>
                       <div className="text-xs opacity-80">
-                        {(wordProgress.brightness * 100).toFixed(0)}%
+                        {(wordState.brightness * 100).toFixed(0)}%
                       </div>
                     </div>
                   </div>

@@ -70,7 +70,7 @@ function SettingsPanel({ onReplayStory }) {
         <div className="space-y-2">
           <Button
             onClick={handleExportProgress}
-            variant="primary"
+            variant="soft"
             size="sm"
             className="w-full justify-start py-2.5"
           >
@@ -85,7 +85,7 @@ function SettingsPanel({ onReplayStory }) {
           />
           <label htmlFor="import-progress-sidebar" className="block">
             <Button
-              variant="secondary"
+              variant="soft"
               size="sm"
               className="w-full justify-start cursor-pointer py-2.5"
             >
