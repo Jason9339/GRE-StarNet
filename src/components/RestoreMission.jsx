@@ -4,12 +4,11 @@ import useStarStore from '../store/useStarStore';
 import CharacterDisplay from './CharacterDisplay';
 
 function RestoreMission() {
-  const { currentMission, missionQueue, missionIndex, actions } = useStarStore();
+  const { currentMission, missionQueue, missionIndex, starData, actions } = useStarStore();
   const [synonymInputs, setSynonymInputs] = useState({}); // 每個同義詞對應一個輸入值
   const [inputStatus, setInputStatus] = useState({}); // 每個輸入框的狀態
   const [showResults, setShowResults] = useState(false);
   const [sparkleAnimation, setSparkleAnimation] = useState(false);
-  const [showHints, setShowHints] = useState(false);
 
   // 預先生成星空，避免每次 render 重新計算造成閃爍
   const introStars = useMemo(() =>
@@ -42,7 +41,6 @@ function RestoreMission() {
       setSynonymInputs(initialInputs);
       setInputStatus(initialStatus);
       setShowResults(false);
-      setShowHints(false);
     }
   }, [currentMission]);
 
@@ -89,22 +87,6 @@ function RestoreMission() {
     }, 3000);
   };
 
-  const handleSkip = () => {
-    if (!currentMission) return;
-    
-    // 將遺漏的單字標記為需要複習
-    const missedSynonyms = currentMission.synonyms.filter(synonym => 
-      inputStatus[synonym] !== 'correct'
-    );
-    
-    if (missedSynonyms.length > 0) {
-      missedSynonyms.forEach(synonym => {
-        actions.toggleStarMark(synonym);
-      });
-    }
-    
-    actions.nextMission();
-  };
 
   const getCorrectCount = () => {
     if (!currentMission) return 0;
@@ -124,14 +106,12 @@ function RestoreMission() {
 
   const getHintText = (word) => {
     const length = word.length;
-    return showHints
-      ? `${word} (${length} 字母)`
-      : `${getFirstLetter(word)}${'_'.repeat(length - 1)} (${length} 字母)`;
+    return `${getFirstLetter(word)}${'_'.repeat(length - 1)} (${length} 字母)`;
   };
 
   if (!currentMission) {
     return (
-      <div className="h-full flex flex-col relative bg-gradient-to-br from-story-night via-story-twilight to-story-aurora text-white rounded-lg overflow-hidden">
+      <div className="h-full flex flex-col relative bg-slate-800 text-white rounded-lg overflow-hidden">
         {/* 星空背景 */}
         <div className="absolute inset-0 pointer-events-none">
           {introStars.map((star, i) => (
@@ -167,15 +147,15 @@ function RestoreMission() {
             </Button>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm opacity-80">
-              <div className="glass-effect p-4 rounded-xl">
+              <div className="bg-slate-700 p-4 rounded-xl">
                 <div className="text-2xl mb-2">📚</div>
                 <p>輸入指定單字的所有同義詞</p>
               </div>
-              <div className="glass-effect p-4 rounded-xl">
+              <div className="bg-slate-700 p-4 rounded-xl">
                 <div className="text-2xl mb-2">⭐</div>
                 <p>每答對一個同義詞，星星亮度增加</p>
               </div>
-              <div className="glass-effect p-4 rounded-xl">
+              <div className="bg-slate-700 p-4 rounded-xl">
                 <div className="text-2xl mb-2">🎯</div>
                 <p>全部答對重建星座，星星閃閃發光</p>
               </div>
@@ -201,19 +181,19 @@ function RestoreMission() {
     const missedSynonyms = getMissedSynonyms();
 
     return (
-      <div className="h-full flex flex-col bg-gradient-to-br from-story-forest via-story-ocean to-story-aurora text-white rounded-lg overflow-hidden">
+      <div className="h-full flex flex-col bg-slate-800 text-white rounded-lg overflow-hidden">
         {/* 頂部成績展示 */}
         <div className="p-8 text-center">
           <div className="text-6xl mb-4 animate-bounce">🎉</div>
           <h2 className="text-4xl font-storybook mb-6 text-gradient">任務完成！</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="glass-effect p-6 rounded-xl">
+            <div className="bg-slate-700 p-6 rounded-xl">
               <div className="text-3xl mb-2">⭐</div>
               <div className="text-xl font-bold text-story-star">{currentMission.word}</div>
               <div className="text-sm opacity-80">主星詞</div>
             </div>
-            <div className="glass-effect p-6 rounded-xl">
+            <div className="bg-slate-700 p-6 rounded-xl">
               <div className="text-3xl mb-2">📊</div>
               <div className="text-xl font-bold">{correctCount}/{totalCount}</div>
               <div className="text-sm opacity-80">正確率 {accuracy.toFixed(0)}%</div>
@@ -233,7 +213,7 @@ function RestoreMission() {
         {/* 遺漏的同義詞 */}
         {missedSynonyms.length > 0 && (
           <div className="px-8 mb-6">
-            <div className="glass-dark p-6 rounded-xl">
+            <div className="bg-slate-700 p-6 rounded-xl">
               <h3 className="font-bold mb-4 flex items-center gap-2">
                 <span className="text-2xl">🔍</span>
                 你遺漏的同義詞
@@ -284,7 +264,7 @@ function RestoreMission() {
   }
 
   return (
-    <div className={`h-full flex flex-col relative glass-effect text-white rounded-lg overflow-hidden ${sparkleAnimation ? 'animate-pulse' : ''}`}>
+    <div className={`h-full flex flex-col relative bg-slate-800 text-white rounded-lg overflow-hidden ${sparkleAnimation ? 'animate-pulse' : ''}`}>
       {/* 星空背景 */}
       <div className="absolute inset-0 pointer-events-none">
         {missionStars.map((star, i) => (
@@ -302,79 +282,115 @@ function RestoreMission() {
       </div>
 
       {/* 頂部標題區域 */}
-      <div className="relative z-10 p-6 border-b border-white/10">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-3xl font-storybook text-gradient flex items-center gap-3">
+      <div className="relative z-10 p-4 border-b border-white/10">
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-2xl font-storybook text-gradient flex items-center gap-3">
             🧠 修復任務
             {sparkleAnimation && <span className="inline-block animate-bounce">✨</span>}
           </h2>
           
           {missionQueue.length > 0 && (
-            <Badge variant="glass" className="text-base px-4 py-2">
+            <div className="bg-amber-500 text-white px-3 py-1 rounded-lg font-bold text-sm">
               {missionIndex + 1} / {missionQueue.length}
-            </Badge>
+            </div>
           )}
         </div>
         
+        {/* 提前結束按鈕 */}
+        <div className="flex justify-center mb-4">
+          <Button
+            onClick={handleComplete}
+            variant="ghost"
+            size="sm"
+            className="px-4 py-2 text-sm text-amber-300 hover:text-amber-200 hover:bg-amber-900/20"
+          >
+            ⏭️ 提前結束
+          </Button>
+        </div>
+        
         {/* 單字資訊卡片 */}
-        <div className="glass-dark p-6 rounded-xl">
-          <div className="flex items-center gap-4 mb-4">
-            <div className="text-4xl">⭐</div>
-            <div>
-              <h3 className="text-2xl font-bold text-story-star mb-1">
-                {currentMission.word}
-              </h3>
-              <p className="text-lg opacity-90">
-                {currentMission.meaning}
-              </p>
+        <div className="bg-slate-700 p-4 rounded-xl">
+          <div className="flex items-center gap-3 mb-2">
+            <div className="text-2xl">⭐</div>
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-1">
+                <h3 className="text-lg font-bold text-amber-300">
+                  {currentMission.word}
+                </h3>
+                <span className="text-sm opacity-90">
+                  {currentMission.meaning}
+                </span>
+              </div>
+              <div className="flex items-center gap-2">
+                <p className="text-xs opacity-70">
+                  請輸入所有你知道的同義詞 ({currentMission.synonyms.length} 個)
+                </p>
+                <div className="group relative">
+                  <button className="text-amber-300 hover:text-amber-200 text-sm">
+                    ❓
+                  </button>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-slate-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50">
+                    <div className="space-y-1">
+                      <p>💡 輸入正確的同義詞會立即顯示綠色勾勾！</p>
+                      <p>🔫 點擊"不會"可以標記不熟悉的單字到星語冊</p>
+                      <p>🎯 全部答對可獲得最高連線亮度獎勵！</p>
+                    </div>
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-900"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <p className="text-sm opacity-70">
-            請輸入所有你知道的同義詞 ({currentMission.synonyms.length} 個)
-          </p>
         </div>
       </div>
 
       {/* 主要輸入區域 */}
-      <div className="flex-1 p-6 overflow-auto">
-        <div className="flex justify-between items-center mb-6">
-          <h4 className="font-bold text-xl">填入所有同義詞：</h4>
-          <Button
-            onClick={() => setShowHints(!showHints)}
-            variant="soft"
-            size="sm"
-          >
-            {showHints ? '🙈 隱藏提示' : '💡 顯示提示'}
-          </Button>
+      <div className="flex-1 p-4 overflow-auto">
+        <div className="mb-4">
+          <h4 className="font-bold text-base">填入所有同義詞：</h4>
         </div>
 
-        <div className="grid gap-4">
+        <div className="grid gap-3">
           {currentMission.synonyms.map((synonym, index) => (
-            <div key={synonym} className="glass-dark p-4 rounded-xl flex items-center gap-4">
+            <div key={synonym} className="bg-slate-700 p-3 rounded-xl flex items-center gap-3">
               <Badge variant="primary" className="w-8 h-8 flex items-center justify-center">
                 {index + 1}
               </Badge>
 
               <div className="flex-1">
-                {showHints && (
-                  <div className="text-sm opacity-70 mb-2">
-                    💡 {getHintText(synonym)}
-                  </div>
-                )}
-                <input
-                  type="text"
-                  value={synonymInputs[synonym] || ''}
-                  onChange={(e) => handleInputChange(synonym, e.target.value)}
-                  placeholder={`輸入第 ${index + 1} 個同義詞...`}
-                  className={`w-full px-4 py-3 rounded-xl text-slate-800 border-2 focus:outline-none transition-all text-lg ${
-                    inputStatus[synonym] === 'correct'
-                      ? 'border-emerald-400 bg-emerald-50 text-emerald-800'
-                      : inputStatus[synonym] === 'incorrect'
-                      ? 'border-rose-400 bg-rose-50 text-rose-800'
-                      : 'border-white/50 bg-white/90 focus:border-story-aurora focus:bg-white'
-                  }`}
-                  autoFocus={index === 0}
-                />
+                <div className="text-sm opacity-80 mb-2 font-medium">
+                  💡 {getHintText(synonym)}
+                </div>
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    value={synonymInputs[synonym] || ''}
+                    onChange={(e) => handleInputChange(synonym, e.target.value)}
+                    placeholder={`輸入第 ${index + 1} 個同義詞...`}
+                    className={`flex-1 px-4 py-3 rounded-xl text-slate-800 border-2 focus:outline-none transition-all text-lg ${
+                      inputStatus[synonym] === 'correct'
+                        ? 'border-emerald-400 bg-emerald-50 text-emerald-800'
+                        : inputStatus[synonym] === 'incorrect'
+                        ? 'border-rose-400 bg-rose-50 text-rose-800'
+                        : 'border-white/50 bg-white/90 focus:border-story-aurora focus:bg-white'
+                    }`}
+                    autoFocus={index === 0}
+                  />
+                  <Button
+                    onClick={() => {
+                      // 標記單字為不會
+                      const synonymData = starData.find(item => item.synonyms.includes(synonym));
+                      if (synonymData) {
+                        actions.toggleStarMark(synonym);
+                      }
+                    }}
+                    variant="ghost"
+                    size="sm"
+                    className="px-3 py-2 text-amber-300 hover:text-amber-200 hover:bg-amber-900/20"
+                  >
+                    不會
+                  </Button>
+                </div>
               </div>
 
               <div className="w-10 h-10 flex items-center justify-center">
@@ -390,7 +406,7 @@ function RestoreMission() {
         </div>
 
         {/* 進度條 */}
-        <div className="mt-6">
+        <div className="mt-4">
           <Progress 
             value={getCorrectCount()}
             max={currentMission.synonyms.length}
@@ -402,33 +418,8 @@ function RestoreMission() {
         </div>
       </div>
 
-      {/* 底部操作區域 */}
-      <div className="relative z-10 p-6 border-t border-white/10">
-        <div className="flex gap-4 mb-4">
-          <Button
-            onClick={handleComplete}
-            variant="secondary"
-            size="lg"
-            className="flex-1"
-          >
-            ✨ 完成任務
-          </Button>
-          <Button
-            onClick={handleSkip}
-            variant="ghost"
-            size="lg"
-            className="flex-1"
-          >
-            ⏭️ 跳過並標記
-          </Button>
-        </div>
-
-        <div className="text-sm opacity-70 space-y-1">
-          <p>💡 每個輸入框對應一個同義詞，輸入正確會立即顯示綠色勾勾！</p>
-          <p>🔄 可以隨時完成任務，未完成的單字會自動加入標記列表</p>
-          <p>🎯 全部答對可獲得最高星星亮度獎勵！</p>
-        </div>
-
+      {/* 底部角色區域 */}
+      <div className="relative z-10 p-3">
         {/* 角色指導 */}
         <CharacterDisplay 
           type="starnamer" 
