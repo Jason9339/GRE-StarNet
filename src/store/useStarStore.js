@@ -23,6 +23,9 @@ const useStarStore = create(
       // 修復任務隊列狀態
       missionQueue: [], // [{ word, meaning, synonyms }]
       missionIndex: 0,
+      sessionStats: null, // { totalQuestions, correctAnswers, missedWords, dontKnowWords, sessionComplete }
+      isSessionComplete: false,
+      sessionData: [], // 儲存每題的詳細答題數據
       
       // UI 狀態
       selectedStar: null,
@@ -170,15 +173,38 @@ const useStarStore = create(
               }
             };
           }
+          // 任務序列結束，計算總體統計
+          const sessionStats = get().actions.calculateSessionStats();
           return {
             currentMission: null,
             missionQueue: [],
-            missionIndex: 0
+            missionIndex: 0,
+            isSessionComplete: true,
+            sessionStats
           };
         }),
 
+        // 計算任務統計
+        calculateSessionStats: () => {
+          const state = get();
+          // 這裡暫時返回空統計，需要在實際使用時收集數據
+          return {
+            totalQuestions: 0,
+            correctAnswers: 0,
+            missedWords: [],
+            dontKnowWords: [],
+            sessionComplete: true
+          };
+        },
+
         // 清除當前任務與序列
-        clearMission: () => set({ currentMission: null, missionQueue: [], missionIndex: 0 }),
+        clearMission: () => set({ 
+          currentMission: null, 
+          missionQueue: [], 
+          missionIndex: 0,
+          isSessionComplete: false,
+          sessionStats: null
+        }),
         
         // 選擇星星
         selectStar: (word) => set({ selectedStar: word }),
