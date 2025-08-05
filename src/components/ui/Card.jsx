@@ -47,7 +47,8 @@ const Card = React.forwardRef(({
       {glowing && (
         <div className="absolute -inset-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 rounded-3xl blur opacity-30 animate-pulse" />
       )}
-      <div className="relative z-10 p-6">
+      {/* Ensure children can expand to fill the card for full-height layouts like the star map */}
+      <div className="relative z-10 p-6 h-full">
         {children}
       </div>
     </div>
