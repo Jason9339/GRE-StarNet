@@ -122,11 +122,9 @@ function App() {
                   <Button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    variant={activeTab === tab.id ? 'primary' : 'ghost'}
+                    variant={activeTab === tab.id ? 'soft' : 'ghost'}
                     size="md"
-                    className={`w-full justify-start text-left transition-all duration-500 py-3 ${
-                      activeTab === tab.id ? '' : 'text-slate-200 hover:text-white hover:bg-slate-700/50'
-                    }`}
+                    className="w-full justify-start text-left transition-all duration-500 py-3"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     {tab.name}
