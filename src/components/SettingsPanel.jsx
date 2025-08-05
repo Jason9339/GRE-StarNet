@@ -1,15 +1,37 @@
 import React, { useState } from 'react';
+import { Button } from './ui';
 import useStarStore from '../store/useStarStore';
 
 function SettingsPanel({ onReplayStory }) {
   const [isOpen, setIsOpen] = useState(false);
-  const { actions } = useStarStore();
+  const { actions, isMarkingMode } = useStarStore();
 
   const handleExportProgress = () => {
     actions.exportProgress();
     setIsOpen(false);
   };
 
+  const handleImportProgress = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try {
+          const data = JSON.parse(e.target.result);
+          if (actions.importProgress(data)) {
+            alert('進度匯入成功！');
+          } else {
+            alert('匯入失敗：檔案格式不正確');
+          }
+        } catch (error) {
+          alert('匯入失敗：檔案無法解析');
+        }
+      };
+      reader.readAsText(file);
+    }
+    event.target.value = '';
+    setIsOpen(false);
+  };
 
   const handleResetProgress = () => {
     if (confirm('確定要重置所有學習進度嗎？此操作無法復原。')) {
@@ -23,70 +45,83 @@ function SettingsPanel({ onReplayStory }) {
     setIsOpen(false);
   };
 
+  const handleToggleMarking = () => {
+    actions.toggleMarkingMode();
+  };
+
   return (
-    <div className="relative">
-      {/* 設置按鈕 */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-full flex items-center justify-center hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
-      >
-        ⚙️
-      </button>
+    <div className="space-y-6">
+      {/* 標記模式切換 */}
+      <div className="space-y-3">
+        <h3 className="text-sm font-semibold text-slate-100">星星標記</h3>
+        <Button
+          onClick={handleToggleMarking}
+          variant={isMarkingMode ? 'accent' : 'soft'}
+          size="sm"
+          className="w-full justify-start py-2.5"
+        >
+          🔫 {isMarkingMode ? '標記模式 ON' : '標記模式 OFF'}
+        </Button>
+      </div>
 
-      {/* 設置面板 */}
-      {isOpen && (
-        <>
-          {/* 背景遮罩 */}
-          <div 
-            className="fixed inset-0 bg-black/20 z-30"
-            onClick={() => setIsOpen(false)}
+      {/* 進度管理 */}
+      <div className="space-y-3">
+        <h3 className="text-sm font-semibold text-slate-100">進度管理</h3>
+        <div className="space-y-2">
+          <Button
+            onClick={handleExportProgress}
+            variant="primary"
+            size="sm"
+            className="w-full justify-start py-2.5"
+          >
+            💾 匯出進度
+          </Button>
+          <input
+            type="file"
+            accept=".json"
+            onChange={handleImportProgress}
+            className="hidden"
+            id="import-progress-sidebar"
           />
-          
-          {/* 設置內容 */}
-          <div className="absolute top-12 right-0 w-64 bg-white rounded-lg shadow-xl border border-indigo-200 z-50 fade-in">
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-                ⚙️ 設置選單
-              </h3>
-              
-              <div className="space-y-3">
-                {/* 重播故事 */}
-                <button
-                  onClick={handleReplayStory}
-                  className="w-full text-left px-3 py-2 text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors flex items-center gap-2"
-                >
-                  📖 重播開場故事
-                </button>
+          <label htmlFor="import-progress-sidebar" className="block">
+            <Button
+              variant="secondary"
+              size="sm"
+              className="w-full justify-start cursor-pointer py-2.5"
+            >
+              📂 匯入進度
+            </Button>
+          </label>
+        </div>
+      </div>
 
-                {/* 儲存進度 */}
-                <button
-                  onClick={handleExportProgress}
-                  className="w-full text-left px-3 py-2 text-green-600 hover:bg-green-50 rounded-lg transition-colors flex items-center gap-2"
-                >
-                  💾 儲存學習進度
-                </button>
+      {/* 其他設定 */}
+      <div className="space-y-3">
+        <h3 className="text-sm font-semibold text-slate-100">其他設定</h3>
+        <div className="space-y-2">
+          <Button
+            onClick={handleReplayStory}
+            variant="ghost"
+            size="sm"
+            className="w-full justify-start text-slate-300 hover:text-white hover:bg-slate-700/50 py-2.5"
+          >
+            📖 重播故事
+          </Button>
+          <Button
+            onClick={handleResetProgress}
+            variant="ghost"
+            size="sm"
+            className="w-full justify-start text-red-300 hover:text-red-200 hover:bg-red-900/20 py-2.5"
+          >
+            🗑️重置進度
+          </Button>
+        </div>
+      </div>
 
-                {/* 分隔線 */}
-                <div className="border-t border-gray-200 my-2" />
-
-                {/* 重置進度 */}
-                <button
-                  onClick={handleResetProgress}
-                  className="w-full text-left px-3 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors flex items-center gap-2"
-                >
-                  🗑️ 重置所有進度
-                </button>
-              </div>
-
-              {/* 版本信息 */}
-              <div className="mt-4 pt-3 border-t border-gray-200 text-xs text-gray-500 text-center">
-                GRE-StarNet v1.1<br/>
-                星語者計畫
-              </div>
-            </div>
-          </div>
-        </>
-      )}
+      {/* 版本信息 */}
+      <div className="text-xs text-slate-400 text-center pt-3 border-t border-slate-600/30 font-medium">
+        GRE-StarNet v1.2
+      </div>
     </div>
   );
 }

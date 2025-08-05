@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Button } from './ui';
 import useStarStore from '../store/useStarStore';
 import CharacterDisplay from './CharacterDisplay';
 
@@ -209,7 +210,16 @@ function StarMap() {
   }, [selectedStar, currentConstellation]);
 
   const renderConstellation = () => {
-    if (!currentConstellation) return null;
+    if (!currentConstellation) {
+      return (
+        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 rounded-lg">
+          <div className="text-white text-center">
+            <div className="text-2xl mb-2">🌌</div>
+            <div className="text-lg font-medium">載入星座中...</div>
+          </div>
+        </div>
+      );
+    }
 
     const { mainStar, stars } = currentConstellation;
     
@@ -242,8 +252,8 @@ function StarMap() {
     positionsRef.current = positions;
 
     return (
-      <div className="relative w-full h-[600px] bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 rounded-lg overflow-hidden">
-        {/* 魔幻星空背景效果 */}
+      <div className="relative w-full h-full bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 rounded-lg overflow-hidden">
+        {/* 魔幻星空背景效果 - 移除浮動動畫 */}
         <div className="absolute inset-0 opacity-30">
           {[...Array(50)].map((_, i) => {
             const colors = ['bg-white', 'bg-yellow-200', 'bg-pink-200', 'bg-blue-200'];
@@ -251,12 +261,10 @@ function StarMap() {
             return (
               <div
                 key={i}
-                className={`absolute ${colors[Math.floor(Math.random() * colors.length)]} ${sizes[Math.floor(Math.random() * sizes.length)]} rounded-full animate-pulse`}
+                className={`absolute ${colors[Math.floor(Math.random() * colors.length)]} ${sizes[Math.floor(Math.random() * sizes.length)]} rounded-full`}
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
-                  animationDelay: `${Math.random() * 4}s`,
-                  animationDuration: `${3 + Math.random() * 4}s`,
                   boxShadow: '0 0 6px currentColor'
                 }}
               />
@@ -316,13 +324,11 @@ function StarMap() {
           const isMainStar = index === 0;
           
           const starState = actions.getStarState(star.word);
-          const animationClass = starState.brightness > 0.7 ? 'star-bright' : 
-                                 starState.brightness > 0.3 ? 'star-twinkle' : '';
           
           return (
             <div
               key={star.word}
-              className={`absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-500 hover:scale-125 fade-in z-10 ${animationClass}`}
+              className={`absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer transition-all duration-500 hover:scale-125 z-10`}
               style={{
                 left: `${position.x}%`,
                 top: `${position.y}%`,
@@ -337,8 +343,8 @@ function StarMap() {
                   style={getStarStyle(star.word)}
                 />
                 <span
-                  className="absolute left-full ml-1 top-1/2 -translate-y-1/2 font-bold text-sm text-white whitespace-nowrap"
-                  style={{ textShadow: '0 0 2px rgba(0,0,0,0.8)' }}
+                  className="absolute left-full ml-1 top-1/2 -translate-y-1/2 font-bold text-base text-white whitespace-nowrap"
+                  style={{ textShadow: '0 0 3px rgba(0,0,0,0.9)' }}
                 >
                   {star.word}
                 </span>
@@ -356,23 +362,23 @@ function StarMap() {
         />
 
         {/* 翻頁控制 */}
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-black bg-opacity-50 text-white px-6 py-3 rounded-full">
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center gap-4 bg-black/60 backdrop-blur-sm text-white px-6 py-3 rounded-full border border-white/20">
           <button
             onClick={() => setCurrentPage(Math.max(0, currentPage - 1))}
             disabled={currentPage === 0}
-            className="px-3 py-1 rounded hover:bg-white hover:bg-opacity-20 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 rounded-lg hover:bg-white hover:bg-opacity-20 disabled:opacity-50 disabled:cursor-not-allowed font-medium transition-all"
           >
             ← 上一個
           </button>
           
-          <span className="text-sm">
+          <span className="text-base font-semibold px-2">
             {currentPage + 1} / {totalPages}
           </span>
           
           <button
             onClick={() => setCurrentPage(Math.min(totalPages - 1, currentPage + 1))}
             disabled={currentPage === totalPages - 1}
-            className="px-3 py-1 rounded hover:bg-white hover:bg-opacity-20 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-4 py-2 rounded-lg hover:bg-white hover:bg-opacity-20 disabled:opacity-50 disabled:cursor-not-allowed font-medium transition-all"
           >
             下一個 →
           </button>
@@ -382,66 +388,12 @@ function StarMap() {
   };
 
   return (
-    <div className="w-full border-2 border-gray-300 rounded-lg relative">
-      <div className="flex justify-between items-center p-4 bg-gray-100 rounded-t-lg">
-        <h2 className="text-xl font-bold text-gray-800">🌌 我的詞彙星圖</h2>
-        <div className="flex gap-2">
-          <button
-            onClick={actions.toggleMarkingMode}
-            className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-              isMarkingMode 
-                ? 'bg-red-500 text-white hover:bg-red-600' 
-                : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-            }`}
-          >
-            🔫 {isMarkingMode ? '標記模式 ON' : '標記模式 OFF'}
-          </button>
-          <input
-            type="file"
-            accept=".json"
-            onChange={(e) => {
-              const file = e.target.files[0];
-              if (file) {
-                const reader = new FileReader();
-                reader.onload = (event) => {
-                  try {
-                    const data = JSON.parse(event.target.result);
-                    if (actions.importProgress(data)) {
-                      alert('進度匯入成功！');
-                    } else {
-                      alert('匯入失敗：檔案格式不正確');
-                    }
-                  } catch (error) {
-                    alert('匯入失敗：檔案無法解析');
-                  }
-                };
-                reader.readAsText(file);
-              }
-              e.target.value = '';
-            }}
-            className="hidden"
-            id="import-progress"
-          />
-          <label
-            htmlFor="import-progress"
-            className="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 font-medium cursor-pointer"
-          >
-            📂 匯入進度
-          </label>
-          <button
-            onClick={actions.exportProgress}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 font-medium"
-          >
-            💾 匯出進度
-          </button>
-        </div>
-      </div>
-      
+    <div className="w-full h-full relative">
       {renderConstellation()}
       
       {selectedStar && (
         <div
-          className="absolute bg-white p-4 rounded-lg shadow-lg max-w-sm z-10"
+          className="absolute bg-white/95 backdrop-blur-sm p-5 rounded-xl shadow-xl max-w-sm z-10 border border-white/20"
           style={
             tooltipPos
               ? {
@@ -452,19 +404,19 @@ function StarMap() {
               : { bottom: '1rem', right: '1rem' }
           }
         >
-          <h3 className="font-bold text-lg text-black">{selectedStar}</h3>
-          <p className="text-gray-600 mb-2">
+          <h3 className="font-bold text-xl text-black mb-2">{selectedStar}</h3>
+          <p className="text-gray-700 mb-3 text-base">
             {starData.find(item => item.word === selectedStar)?.meaning}
           </p>
-          <div className="text-sm">
-            <p className="font-medium text-black">同義詞:</p>
+          <div className="text-base">
+            <p className="font-semibold text-black mb-1">同義詞:</p>
             <p className="text-blue-600">
               {starData.find(item => item.word === selectedStar)?.synonyms.join(', ')}
             </p>
           </div>
           <button
             onClick={() => actions.startMission(selectedStar)}
-            className="mt-2 px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600 text-sm"
+            className="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 text-base font-medium transition-colors"
           >
             開始修復任務
           </button>

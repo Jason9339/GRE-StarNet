@@ -1,22 +1,135 @@
+@import '@fontsource/inter/300.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/fredoka-one/400.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* 全域樣式重置 */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* 滾動條美化 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-/* 魔幻星空動畫效果 */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+/* 選擇文字樣式 */
+::selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+/* 焦點樣式 */
+:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* 可訪問性 - 減少動畫 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 互動狀態改善 */
+@media (hover: hover) {
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease;
+  }
+}
+
+/* 繪本風格輔助類 */
+.storybook-shadow {
+  box-shadow: 
+    0 10px 25px rgba(0, 0, 0, 0.1),
+    0 4px 10px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.gradient-border {
+  position: relative;
+  background: white;
+  border-radius: 1.5rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(45deg, #a855f7, #ec4899, #3b82f6, #10b981);
+  border-radius: inherit;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
+
+/* 打字機效果 */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid;
+  white-space: nowrap;
+  animation: typewriter 3s steps(40) 1s both;
+}
+
+/* 魔幻效果 */
+.magic-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.magic-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: shimmer 2s linear infinite;
+}
+
+/* 舊版動畫保留（向後兼容） */
 @keyframes twinkle {
   0%, 100% { opacity: 0.5; }
   50% { opacity: 1; }
@@ -44,31 +157,18 @@ code {
   }
 }
 
-@keyframes typewriter {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
 @keyframes blink {
   0%, 50% { border-color: transparent; }
   51%, 100% { border-color: currentColor; }
 }
 
-/* 星星閃爍效果 */
+/* 星星效果類別 */
 .star-twinkle {
   animation: starPulse 3s ease-in-out infinite;
 }
 
 .star-bright {
   animation: twinkle 2s ease-in-out infinite;
-}
-
-/* 打字機效果 */
-.typewriter {
-  overflow: hidden;
-  border-right: 2px solid;
-  white-space: nowrap;
-  animation: typewriter 2s steps(40) 1s both, blink 1s step-end infinite;
 }
 
 /* 漸入效果 */

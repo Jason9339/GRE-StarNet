@@ -15,10 +15,22 @@
   "type": "module",
   "private": true,
   "dependencies": {
+    "@fontsource/fredoka-one": "^5.2.5",
+    "@fontsource/inter": "^5.2.6",
+    "@headlessui/react": "^2.2.7",
+    "@heroicons/react": "^2.2.0",
+    "@use-gesture/react": "^10.3.1",
     "@vitejs/plugin-react": "^4.7.0",
+    "clsx": "^2.1.1",
     "cytoscape": "^3.27.0",
+    "framer-motion": "^12.23.12",
+    "howler": "^2.2.4",
+    "lucide-react": "^0.536.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.5.2",
+    "react-use": "^17.6.0",
+    "tailwind-merge": "^3.3.1",
     "zustand": "^4.5.0"
   },
   "devDependencies": {
