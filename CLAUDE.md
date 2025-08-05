@@ -93,7 +93,30 @@ Key store actions include progress tracking, mission management, marking difficu
 
 ### Recent Updates (Latest)
 
-**🎨 Storybook Style UI Overhaul (v1.2):**
+**🚀 RestoreMission Major Overhaul (v1.3):**
+- **Enhanced Task Flow**: Complete redesign of 15-question mission flow with proper session management
+- **Smart "Don't Know" System**: Full implementation with answer revelation, red border styling, and automatic star notebook marking
+- **Optimized UI Layout**: Moved progress bar to header, reduced input heights, compact spacing throughout
+- **Manual Progression Control**: Replaced auto-advance with user-controlled "Next Question" and "End Task" buttons
+- **Session Statistics**: Added comprehensive tracking for 15-question sessions with completion detection
+- **Hover Tooltips**: Replaced bottom explanation text with question mark hover tooltips for space efficiency
+- **Improved UX Flow**: Removed individual question completion screens, show only final session summary
+
+**Key Functional Changes:**
+- **Progress Bar**: Moved to top-right next to word info with real-time updates
+- **Don't Know Functionality**: Click reveals correct answer, disables input, shows red border and ❓ icon
+- **Task Control**: "Next Question" (primary blue) vs "End Task" (secondary red) button distinction
+- **Session Management**: Proper 15-question completion detection with comprehensive statistics
+- **Input Optimization**: Smaller height, inline placeholders with first-letter hints (e.g., "A____")
+- **Space Efficiency**: Removed redundant text, optimized spacing, cleaner visual hierarchy
+
+**Technical Improvements:**
+- **Store Enhancement**: Added `sessionStats`, `isSessionComplete`, `sessionData` for proper session tracking
+- **State Management**: Clean separation of question-level vs session-level state
+- **Error Handling**: Improved edge case handling for incomplete sessions
+- **Performance**: Reduced re-renders with optimized state updates
+
+**🎨 Previous Updates (v1.2):**
 - **Sidebar Layout**: Moved header, navigation, and settings to left sidebar for better space utilization
 - **Glass Morphism Design**: Implemented backdrop blur effects and translucent backgrounds
 - **Custom Color Palette**: Added story-themed colors (night, twilight, star, aurora, dream, ocean, forest)
@@ -101,22 +124,16 @@ Key store actions include progress tracking, mission management, marking difficu
 - **Animation System**: Custom Tailwind keyframes for twinkle, float, card entrance, button pulse effects
 - **Component Library**: Built reusable UI components (Button, Card, Progress, Badge)
 - **Accessibility**: Added reduced motion support and improved focus states
-- **Fixed Layout**: Removed floating animations for stars and text positioning
 
-**Improved RestoreMission Component:**
+**Previous RestoreMission Features:**
 - Multi-input system: Each synonym gets its own input field
-- First letter hints: Shows initial letter and word length (e.g., "A__ (8 letters)")
 - Real-time validation: Instant feedback with color coding (green/red)
 - Progress tracking: Visual progress bar and completion percentage
-- Hint toggle: Option to show/hide additional hints
 
-**Redesigned StarMap Component:**
+**StarMap Component Status:**
 - Pagination system: Browse constellations one at a time
 - Dynamic positioning: Stars arranged in circles based on constellation size
 - Constellation grouping: Uses graph algorithms to find connected synonym groups
-- Proper connection handling: A-B-C chain connections (A connects B, B connects C, but A doesn't directly connect C)
-- Reduced visual clutter: Only shows one constellation per page
-- Enhanced navigation: Page controls with current/total indicators
 - **Known Issue**: StarMap rendering needs debugging (import path fixed but display issue remains)
 
 ### Design Documentation
@@ -146,7 +163,11 @@ Refer to `GRE-StarNet_Design_v6.md` for detailed feature specifications, visual 
 - Font loading optimization needed for better initial load performance
 
 ### Memories
-- to memorize
-- Fixed star positioning and removed floating animations as requested
-- Improved sidebar text contrast with proper color selections
-- Implemented comprehensive storybook aesthetic with glass morphism
+- RestoreMission completely overhauled with user-controlled progression and comprehensive session management
+- Don't Know functionality fully implemented with answer revelation and proper state tracking
+- UI optimized for space efficiency with progress bar repositioning and tooltip system
+- Task flow redesigned to show session summary only at completion, not individual question results
+- Session statistics infrastructure added to store for future analytics and progress tracking
+- Fixed star positioning and removed floating animations as requested (previous)
+- Improved sidebar text contrast with proper color selections (previous)
+- Implemented comprehensive storybook aesthetic with glass morphism (previous)
